@@ -7,6 +7,9 @@ gem 'rails', '~> 5.0.0'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
+gem 'simple_form'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'paperclip'
 # mysql pass AtrForMe1!
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
