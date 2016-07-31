@@ -13,27 +13,32 @@
 ActiveRecord::Schema.define(version: 20160730125850) do
 
   create_table "advantages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "page_id"
     t.text     "description", limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.index ["page_id"], name: "index_advantages_on_page_id", using: :btree
   end
 
   create_table "feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "page_id"
     t.text     "description", limit: 65535
     t.string   "author"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.index ["page_id"], name: "index_feedbacks_on_page_id", using: :btree
   end
 
   create_table "offers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "page_id"
     t.integer  "discount"
     t.string   "name"
     t.integer  "price"
     t.integer  "price_old"
     t.string   "button_text"
-    t.string   "string"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["page_id"], name: "index_offers_on_page_id", using: :btree
   end
 
   create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

@@ -4,8 +4,10 @@ class PagesController < ApplicationController
   
 
   def index
+    # @pages=Page.all
     @pages=Page.all
-    render layout: "application"
+    @page=Page.last
+    # render layout: "application"
   end
 
   # def second
@@ -19,17 +21,17 @@ class PagesController < ApplicationController
   end
 
   def create
-    @page=Page.new(Page_params)
-    if @Page.save
-      redirect_to Pages_path
-    else
-      render :new
-    end
+    @page=Page.new(page_params)
+    # if @Page.save
+    #   redirect_to Pages_path
+    # else
+    #   render :new
+    # end
   end
 
   def show
     # Comment.order('comments.impressions_count DESC').limit(5)
-    @params[:]age=Page.find(params[:id])
+    @page=Page.find(params[:id])
     @pages=Page.all
 
     # @pages=Page.all.order('Pages.views DESC')
