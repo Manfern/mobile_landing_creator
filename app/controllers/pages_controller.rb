@@ -5,9 +5,13 @@ class PagesController < ApplicationController
 
   def index
     # @pages=Page.all
+    @page=Page.first
     @pages=Page.all
-    @page=Page.last
-    # render layout: "application"
+
+    @advantages=Page.first.advantages.all
+    @offers=Page.first.offers.all
+    @feedbacks=Page.first.feedbacks.all
+    render layout: "application"
   end
 
   # def second
@@ -22,11 +26,11 @@ class PagesController < ApplicationController
 
   def create
     @page=Page.new(page_params)
-    # if @Page.save
-    #   redirect_to Pages_path
-    # else
-    #   render :new
-    # end
+    if @Page.save
+      redirect_to pages_path
+    else
+      render :new
+    end
   end
 
   def show
@@ -74,6 +78,6 @@ class PagesController < ApplicationController
   # end
 
   def page_params
-    params.require(:Page).permit(:title, :content, :image)
+    params.require(:Page).permit(:title, :name, :offer, :footer_text)
   end
 end

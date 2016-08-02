@@ -1,12 +1,56 @@
-<h1>Pages#index</h1>
-
-<div class="containter">
-
-  <ul>
-    <li><%= @page.title %></li>
-  </ul>
 
 
+<div class="container text-center ">
+  <div class="header">
+  <h1><%= @page.title %></h1>
+    <div class="logo">
+      <img src="" alt="">
+    </div>
+    <p><%= @page.offer %></p>
+    <div class="btn btn-info">
+      <div class="span">Go on!</div>
+    </div>
+
+
+    <h2>Awesome page list</h2>
+
+  </div>
+  <div class="offers">
+    <% @offers.each do |offer| %>
+        <div class="offer">
+          <h3><%= offer.name %></h3>
+          <span class="discount"><%= offer.discount %></span>
+              <div class="price">
+                <div class="old_price">
+                  <%= offer.price_old %>
+                </div>
+                <div class="new_price">
+                  <%= offer.price %>
+                </div>
+                <div class="btn btn-show"><%= offer.button_text %></div>
+              </div>
+        </div>
+    <% end %>
+  </div>
+  <div class="feedbacks">
+    <% @feedbacks.each do |feedback| %>
+        <div class="feedback">
+          <p><%= feedback.description %></p>
+          <span><%= feedback.author %></span>
+        <% end %>
+    </div>
+  </div>
+
+ <div class="advantages">
+    <% @advantages.each do |advantage| %>
+      <div class="advantage">
+        <p><%= advantage.description %></p>
+      </div>
+    <% end %>
+ </div>
+  <div class="footer">
+    <p text-center><%=@page.footer_text %></p>
+  </div>
 </div>
 
 <%#= @pages.each do |page| %>

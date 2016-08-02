@@ -12,4 +12,10 @@
  *
  *= require_tree .
  *= require_self
+
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+.container{
+  width: 320px !important;
+}

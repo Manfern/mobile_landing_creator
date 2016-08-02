@@ -5,7 +5,7 @@ class AdvantagesController < ApplicationController
 
   def index
     # @pages=Page.all
-    @advantages=Page.includes(:advantages).all
+    @advantages=Advantage.all
     render layout: "application"
   end
 
@@ -21,8 +21,8 @@ class AdvantagesController < ApplicationController
 
   def create
     @advantage=Advantage.new(advantage_params)
-    if Advantage.save
-      redirect_to Advantages_path
+    if @advantage.save
+      redirect_to advantages_path
     else
       render :new
     end
