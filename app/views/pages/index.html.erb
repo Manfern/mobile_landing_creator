@@ -1,6 +1,7 @@
 
 
 <div class="container text-center ">
+
   <div class="header">
   <h1><%= @page.title %></h1>
     <div class="logo">
@@ -18,11 +19,14 @@
   <div class="offers">
 
     <% @offers.each do |offer| %>
-
-        <%= link_to 'Редактировать', edit_page_offer_url(offer, page_id: 1) %>
+        <%= link_to 'Редактировать блок', edit_page_path %>
+        <%= link_to 'Редактировать оффер', edit_page_offer_path(offer, page_id: 1) %>
         <div class="offer">
-          <h3><%= offer.name %></h3>
           <span class="discount"><%= offer.discount %></span>
+          <h3><%= offer.name %></h3>
+          <div class="img"><%= image_tag offer.image.normal %></div>
+
+
               <div class="price">
                 <div class="price_old">
                   <%= offer.price_old %>
@@ -37,6 +41,7 @@
     <% end %>
   </div>
   <div class="feedbacks">
+    <%= link_to 'Редактировать блок', edit_page_path %>
     <% @feedbacks.each do |feedback| %>
         <div class="feedback">
           <p><%= feedback.description %></p>
@@ -47,6 +52,7 @@
   </div>
 
  <div class="advantages">
+   <%= link_to 'Редактировать блок', edit_page_path %>
     <% @advantages.each do |advantage| %>
       <div class="advantage">
         <p><%= advantage.description %></p>

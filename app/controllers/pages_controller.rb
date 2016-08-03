@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   # layout 'admin'
   # before_action :authenticate_admin!, only: [:new, :create, :edit, :update,:destroy]
-  
+  before_action :set_page, only: [:edit,:show, :update, :destroy]
 
   def index
     # @pages=Page.all
@@ -35,7 +35,6 @@ class PagesController < ApplicationController
 
   def show
     # Comment.order('comments.impressions_count DESC').limit(5)
-    @page=Page.find(params[:id])
     @pages=Page.all
 
     # @pages=Page.all.order('Pages.views DESC')
@@ -45,12 +44,10 @@ class PagesController < ApplicationController
 
 
   def edit
-    @page=Page.find(params[:id])
 
   end
 
   def update
-    @page=Page.find(params[:id])
     if @page.update!(page_params)
       redirect_to pages_path
     else
@@ -61,7 +58,7 @@ class PagesController < ApplicationController
 
 
   def destroy
-    @page=Page.find(params[:id])
+
     if @page.destroy
       redirect_to root_path
     else
@@ -76,6 +73,9 @@ class PagesController < ApplicationController
   # def set_Page
   # 	@Page = Page.find(params[:id])
   # end
+  def set_page
+    @page=Page.find(params[:page_id])
+  end
 
   def page_params
     params.require(:Page).permit(:title, :name, :offer, :footer_text)

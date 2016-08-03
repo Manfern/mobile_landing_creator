@@ -17,6 +17,10 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 
+# gem for uploading and cropping images
+gem 'carrierwave'
+gem 'mini_magick'
+
 # imageMagick install
 # sudo apt-get -y install imagemagick
 # sudo apt-get -y install libmagic-dev
