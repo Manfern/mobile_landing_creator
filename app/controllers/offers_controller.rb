@@ -19,7 +19,7 @@ class OffersController < ApplicationController
   end
 
   def show
-    @offer=Offer.find(offer_params)
+    @offer=Offer.find(params[:id])
   end
 
   def update
@@ -35,8 +35,9 @@ class OffersController < ApplicationController
     @offer=offer.find(offer_params)
     @offer.destroy
   end
+
   private
   def offer_params
-      params.require(:offer).permit(:)
+      params.require(:offer).permit(:name, :discount, :price, :price_old, :price_new)
   end
 end

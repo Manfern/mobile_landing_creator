@@ -16,6 +16,26 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 .container{
+  background-color: lightgrey;
   width: 320px !important;
+}
+
+.price{
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 15px;
+  .price_new{
+    width: 50%;
+    float: right;
+  }
+  .price_old{
+    width: 50%;
+    float: left;
+  }
+}
+
+h1{
+  font-size: 28px;
 }

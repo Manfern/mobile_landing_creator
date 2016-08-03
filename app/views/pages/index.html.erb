@@ -7,28 +7,32 @@
       <img src="" alt="">
     </div>
     <p><%= @page.offer %></p>
-    <div class="btn btn-info">
-      <div class="span">Go on!</div>
+    <div class="btn btn-success">
+      <div class="span">Заказать!</div>
     </div>
 
 
-    <h2>Awesome page list</h2>
 
+    <hr>
   </div>
   <div class="offers">
+
     <% @offers.each do |offer| %>
+
+        <%= link_to 'Редактировать', edit_page_offer_url(offer, page_id: 1) %>
         <div class="offer">
           <h3><%= offer.name %></h3>
           <span class="discount"><%= offer.discount %></span>
               <div class="price">
-                <div class="old_price">
+                <div class="price_old">
                   <%= offer.price_old %>
                 </div>
-                <div class="new_price">
+                <div class="price_new">
                   <%= offer.price %>
                 </div>
-                <div class="btn btn-show"><%= offer.button_text %></div>
               </div>
+          <div class="btn btn-success"><%= offer.button_text %></div>
+          <hr>
         </div>
     <% end %>
   </div>
@@ -36,7 +40,8 @@
     <% @feedbacks.each do |feedback| %>
         <div class="feedback">
           <p><%= feedback.description %></p>
-          <span><%= feedback.author %></span>
+          <span><b><%= feedback.author %></b></span>
+          <hr>
         <% end %>
     </div>
   </div>
@@ -46,10 +51,12 @@
       <div class="advantage">
         <p><%= advantage.description %></p>
       </div>
+       <hr>
     <% end %>
  </div>
   <div class="footer">
-    <p text-center><%=@page.footer_text %></p>
+
+      <a href=""><p text-center><%=@page.footer_text %></p></a>
   </div>
 </div>
 

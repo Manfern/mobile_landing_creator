@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  get '/pages/:page_id/offers/:id/edit', to:'offers#edit', method: patch
   root 'pages#index'
+
   resources :pages do
     resources :offers
     resources :feedbacks
     resources :advantages
-
   end
 
 
