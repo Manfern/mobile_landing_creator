@@ -1,13 +1,12 @@
 class PagesController < ApplicationController
   # layout 'admin'
   # before_action :authenticate_admin!, only: [:new, :create, :edit, :update,:destroy]
-  before_action :set_page, only: [:edit,:show, :update, :destroy]
+  before_action :get_page, only: [:edit,:show, :update, :destroy]
 
   def index
     # @pages=Page.all
     @page=Page.first
     @pages=Page.all
-
     @advantages=Page.first.advantages.all
     @offers=Page.first.offers.all
     @feedbacks=Page.first.feedbacks.all
@@ -58,7 +57,6 @@ class PagesController < ApplicationController
 
 
   def destroy
-
     if @page.destroy
       redirect_to root_path
     else
@@ -73,7 +71,7 @@ class PagesController < ApplicationController
   # def set_Page
   # 	@Page = Page.find(params[:id])
   # end
-  def set_page
+  def get_page
     @page=Page.find(params[:page_id])
   end
 

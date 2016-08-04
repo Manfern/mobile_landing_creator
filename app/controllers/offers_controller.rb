@@ -1,5 +1,9 @@
 class OffersController < ApplicationController
-  before_action :set_page
+  before_action :get_page
+
+  def index
+    @offers=@page.offers
+  end
 
   def create
 
@@ -21,7 +25,10 @@ class OffersController < ApplicationController
     respond_to do |format|
       if @offer.update!(offer_params)
         #1st argument of redirect_to is an array, in order to build the correct route to the nested resource offer
-        format.html { redirect_to([@offer.page, @offer], :notice => 'offer was successfully updated.') }
+        format.html {
+          # redirect_to([@offer.page, @offer], :notice => 'offer was successfully updated.')
+          redirect_to pages_path
+        }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -36,7 +43,7 @@ class OffersController < ApplicationController
 
   private
 
-  def set_page
+  def get_page
     @page=Page.find(params[:page_id])
   end
 

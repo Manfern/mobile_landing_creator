@@ -19,8 +19,9 @@
   <div class="offers">
 
     <% @offers.each do |offer| %>
-        <%= link_to 'Редактировать блок', edit_page_path %>
-        <%= link_to 'Редактировать оффер', edit_page_offer_path(offer, page_id: 1) %>
+
+        <%= link_to 'Редактировать оффер', edit_page_offer_path(@page, offer) %>
+        <%= check_box_tag "offer_ids[]", offer.id %>
         <div class="offer">
           <span class="discount"><%= offer.discount %></span>
           <h3><%= offer.name %></h3>
@@ -41,7 +42,7 @@
     <% end %>
   </div>
   <div class="feedbacks">
-    <%= link_to 'Редактировать блок', edit_page_path %>
+
     <% @feedbacks.each do |feedback| %>
         <div class="feedback">
           <p><%= feedback.description %></p>
@@ -52,7 +53,7 @@
   </div>
 
  <div class="advantages">
-   <%= link_to 'Редактировать блок', edit_page_path %>
+   <%#= link_to 'Редактировать блок', edit_page_path %>
     <% @advantages.each do |advantage| %>
       <div class="advantage">
         <p><%= advantage.description %></p>
