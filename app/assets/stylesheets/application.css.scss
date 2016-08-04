@@ -40,3 +40,19 @@
 h1{
   font-size: 28px;
 }
+.add_for_edit_check{
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  //height: 35px;
+  height: auto;
+  background-color: lightgreen;
+  padding: 5px;
+}
+.edit_block{
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+}

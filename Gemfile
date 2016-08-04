@@ -7,7 +7,8 @@ gem 'rails', '~> 5.0.0'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 # Use Puma as the app server
-gem 'puma'
+# gem 'puma'
+gem 'thin', '~> 1.7'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.2.0'
 # gem 'paperclip'

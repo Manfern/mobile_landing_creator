@@ -1,5 +1,5 @@
 
-
+<% @edit_name=[" оффер "," преимущесто ", " отзыв "]%>
 <div class="container text-center ">
 
   <div class="header">
@@ -17,12 +17,14 @@
     <hr>
   </div>
   <div class="offers">
-
     <% @offers.each do |offer| %>
-
-        <%= link_to 'Редактировать оффер', edit_page_offer_path(@page, offer) %>
-        <%= check_box_tag "offer_ids[]", offer.id %>
+        <hr>
+        <div class="add_for_edit_check">
+          <span><%= check_box_tag "offer_ids[]", offer.id %>Добавить <%=@edit_name[0] %>для редактирования </span>
+        </div>
+        <%#= link_to 'Редактировать оффер', edit_page_offer_path(@page, offer) %>
         <div class="offer">
+
           <span class="discount"><%= offer.discount %></span>
           <h3><%= offer.name %></h3>
           <div class="img"><%= image_tag offer.image.normal %></div>
@@ -37,29 +39,40 @@
                 </div>
               </div>
           <div class="btn btn-success"><%= offer.button_text %></div>
-          <hr>
+
         </div>
     <% end %>
+    <%= submit_tag "Редактировать блок", class:"btn btn-info edit_block" %>
   </div>
   <div class="feedbacks">
 
     <% @feedbacks.each do |feedback| %>
         <div class="feedback">
+          <hr>
+          <div class="add_for_edit_check">
+            <span><%= check_box_tag "feedback_ids[]", feedback.id %>Добавить <%=@edit_name[2] %>для редактирования </span>
+          </div>
           <p><%= feedback.description %></p>
           <span><b><%= feedback.author %></b></span>
-          <hr>
+
         <% end %>
+    <%= submit_tag "Редактировать блок", class:"btn btn-info edit_block" %>
     </div>
   </div>
 
  <div class="advantages">
    <%#= link_to 'Редактировать блок', edit_page_path %>
     <% @advantages.each do |advantage| %>
+       <hr>
+       <div class="add_for_edit_check">
+         <span><%= check_box_tag "advantage_ids[]", advantage.id %>Добавить <%=@edit_name[1] %>для редактирования </span>
+       </div>
       <div class="advantage">
         <p><%= advantage.description %></p>
       </div>
-       <hr>
+
     <% end %>
+   <%= submit_tag "Редактировать блок", class:"btn btn-info edit_block" %>
  </div>
   <div class="footer">
 
