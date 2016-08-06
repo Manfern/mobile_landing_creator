@@ -6,13 +6,24 @@ class OffersController < ApplicationController
   end
 
   def create
-
     @offer = @page.offers.create(offer_params)
     redirect_to page_path(@page)
   end
 
-  def destroy
+  def edit_all
 
+    @offers=Offer.where(id: params[:offer_ids])
+
+  end
+  # @offers=Offer.find(params[:offer_ids])
+  # @offers=@page.offers
+  # @offers=Offer.find(params[:offer_ids])
+  def update_all
+    Offer.update(params[:offers].keys, params[:offers].values)
+    redirect_to pages_path
+  end
+
+  def destroy
     @offer = @page.offers.find(params[:id])
     @offer.destroy
     redirect_to page_path(@page)
@@ -40,6 +51,7 @@ class OffersController < ApplicationController
   def edit
     @offer = @page.offers.find(params[:id])
   end
+
 
   private
 

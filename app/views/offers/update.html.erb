@@ -1,3 +1,38 @@
-<%=  form_for @offer, html: { method: :post,multipart: true } do |f| %>
-    <%= render 'form', f: f %>
+<%#= form_tag({action: :edit_all}, multipart: true) do |f| %>
+<%#=  form_for(@offers, url:update_all_page_offers_path,html: { method: :put}) do |f| %>
+
+<%= form_tag update_all_page_offers_path, method: :put do  %>
+    <% @offers.each do |offer| %>
+        <%= fields_for "offers[]", offer do |f| %>
+            <h2><%= offer.name %></h2>
+            <div class="field">
+              <%= f.input :name  %>
+            </div>
+        <% end %>
+    <% end %>
+<% end %>
+            <div class="field">
+              <%= f.text_field :discount  %>
+            </div>
+            <div class="field">
+              <%= f.text_field :price_old  %>
+            </div>
+            <div class="field">
+              <%= f.text_field :price  %>
+            </div>
+            <div class="field">
+              <%= f.text_field :button_text  %>
+            </div>
+            <div class="field">
+              <%= f.label :image %><br>
+              <%= f.file_field :image %>
+            </div>
+            <div class="actions">
+              <%= f.button :submit %>
+            </div>
+            <div class="actions">
+              <%= submit_tag "Обновить" %>
+            </div>
+        <% end %>
+    <% end %>
 <% end %>

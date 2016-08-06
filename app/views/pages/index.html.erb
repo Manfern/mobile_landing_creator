@@ -13,23 +13,19 @@
     </div>
 
 
-
-    <hr>
   </div>
   <div class="offers">
-    <% @offers.each do |offer| %>
+    <%= form_tag edit_all_page_offers_path(page_id: @page.id), method: :get do %>
+    <% @offers.shuffle.each do |offer| %>
         <hr>
         <div class="add_for_edit_check">
           <span><%= check_box_tag "offer_ids[]", offer.id %>Добавить <%=@edit_name[0] %>для редактирования </span>
         </div>
         <%#= link_to 'Редактировать оффер', edit_page_offer_path(@page, offer) %>
         <div class="offer">
-
           <span class="discount"><%= offer.discount %></span>
           <h3><%= offer.name %></h3>
           <div class="img"><%= image_tag offer.image.normal %></div>
-
-
               <div class="price">
                 <div class="price_old">
                   <%= offer.price_old %>
@@ -39,14 +35,15 @@
                 </div>
               </div>
           <div class="btn btn-success"><%= offer.button_text %></div>
-
         </div>
     <% end %>
     <%= submit_tag "Редактировать блок", class:"btn btn-info edit_block" %>
+    <% end %>
   </div>
   <div class="feedbacks">
+    <%= form_tag edit_all_page_feedbacks_path(page_id:@page.id), method: :get do %>
+    <% @feedbacks.shuffle.each do |feedback| %>
 
-    <% @feedbacks.each do |feedback| %>
         <div class="feedback">
           <hr>
           <div class="add_for_edit_check">
@@ -54,15 +51,16 @@
           </div>
           <p><%= feedback.description %></p>
           <span><b><%= feedback.author %></b></span>
-
         <% end %>
-    <%= submit_tag "Редактировать блок", class:"btn btn-info edit_block" %>
+      <%= submit_tag "Редактировать блок", class:"btn btn-info edit_block" %>
+    <% end %>
     </div>
   </div>
 
  <div class="advantages">
+   <%= form_tag edit_all_page_advantages_path(page_id:@page.id), method: :get do %>
    <%#= link_to 'Редактировать блок', edit_page_path %>
-    <% @advantages.each do |advantage| %>
+    <% @advantages.shuffle.each do |advantage| %>
        <hr>
        <div class="add_for_edit_check">
          <span><%= check_box_tag "advantage_ids[]", advantage.id %>Добавить <%=@edit_name[1] %>для редактирования </span>
@@ -70,9 +68,9 @@
       <div class="advantage">
         <p><%= advantage.description %></p>
       </div>
-
     <% end %>
-   <%= submit_tag "Редактировать блок", class:"btn btn-info edit_block" %>
+    <%= submit_tag "Редактировать блок", class:"btn btn-info edit_block" %>
+   <% end %>
  </div>
   <div class="footer">
 
@@ -81,6 +79,7 @@
 </div>
 
 <%#= @pages.each do |page| %>
+<%#= page.title %>
 <%#= page.title %>
 <%# end %>
 
