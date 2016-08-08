@@ -3,8 +3,8 @@
 class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
-  include CarrierWave::MiniMagick
+  include CarrierWave::RMagick
+  # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -33,8 +33,41 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :normal do
-    process :resize_to_fit => [200, 200]
+    process :crop
+    resize_to_fit(200, 200)
   end
+
+  version :fullfill do
+    resize_to_fill(200, 200)
+  end
+
+  version :large do
+    resize_to_limit(600, 600)
+  end
+
+  def crop
+    if model.crop_x.present?
+      resize_to_limit(600, 600)
+      manipulate! do |img|
+        x=model.crop_x.to_i
+        y=model.crop_y.to_i
+        w=model.crop_w.to_i
+        h=model.crop_h.to_i
+        img.crop!(x,y,w,h)
+      end
+    end
+
+  end
+
+
+  # version :normal do
+  #   process :resize_to_fit=>(200, 200)
+  # end
+  #
+  # version :fullfill do
+  #   process :resize_to_fill=>(200, 200)
+  # end
+  # kill -9 $(lsof -i tcp:3000 -t)
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

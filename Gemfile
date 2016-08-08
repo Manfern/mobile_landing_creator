@@ -17,6 +17,11 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
+gem 'rmagick'
+group :development do
+  gem 'better_errors'
+  gem 'meta_request'
+end
 
 # gem for uploading and cropping images
 gem 'carrierwave'

@@ -1,2 +1,4 @@
-<h1>Offers#new</h1>
-<p>Find me in app/views/offers/new.html.erb</p>
+<h1>Create new Offer/h1>
+<%=  simple_form_for(@offer,url: page_offers_path,html: { method: :post,multipart: true}) do |f| %>
+    <%= render 'form', f: f %>
+<% end %>
