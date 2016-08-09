@@ -1,0 +1,35 @@
+<div class="container">
+
+  <%= simple_form_for(@page, class: 'form-horizontal' ) do |f| %>
+      <% if @page.errors.any?  %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@page.errors.count, "error") %>prohibited this post from being saved</h2>
+
+            <ul>
+              <% @page.errors.full_messages.each do |message|  %>
+                  <li><%= message %></li>
+              <% end %>
+
+            </ul>
+          </div>
+
+      <% end %>
+
+      <div class="field">
+        <%= f.input :name, label: 'Название страницы', error: 'Название страницы обязателено'  %>
+      </div>
+      <div class="field">
+        <%= f.input :title, label: 'Заголовок страницы', error: 'Не введен заголовок страницы H1'  %>
+      </div>
+      <div class="field">
+        <%= f.text_area :offer, label: 'Текст УТП', error: 'Текст УТП обязателен' %>
+      </div>
+      <div class="field">
+        <%= f.text_area :footer_text, label: 'Текст кнопки заказа товара', error: 'Текст кнопки обязателен' %>
+      </div>
+      <div class="actions">
+        <%= f.button :submit, "Добавить новую страницу", class: "btn-success" %>
+      </div>
+  <% end %>
+
+</div>

@@ -1,7 +1,7 @@
 
 <% @edit_name=[" оффер "," преимущесто ", " отзыв "]%>
 <div class="container text-center ">
-
+  <%= link_to "Добавить новую страницу", new_page_path,class: "btn btn-success edit_block"  %>
   <div class="header">
   <h1><%= @page.title %></h1>
     <div class="logo">
@@ -14,22 +14,23 @@
 
 
   </div>
+  <% @obj_counter=0 %>
   <div class="offers">
     <%= form_tag edit_all_page_offers_path(page_id: @page.id), method: :get do %>
-      <% @offers.shuffle.each do |offer| %>
+      <% @offers.shuffle.each_with_index do |offer, index | %>
           <hr>
           <div class="add_for_edit_check">
-            <span><%= check_box_tag "offer_ids[]", offer.id %>Добавить <%=@edit_name[0] %>для редактирования </span>
+            <span><%= check_box_tag "offer_ids[]", offer.id,class:"big_check" %>Добавить <%=@edit_name[0] %>для редактирования </span>
           </div>
           <%#= link_to 'Редактировать оффер', edit_page_offer_path(@page, offer) %>
           <div class="offer">
-            <span class="discount"><%= offer.discount %></span>
+            <span class="discount"><%= offer.discount %>%</span>
             <h3><%= offer.name %></h3>
             <!--<div class="img"><%#= image_tag offer.image.normal %></div>-->
             <div class="img"><%= image_tag offer.image.fullfill %></div>
                 <div class="price">
                   <div class="price_old">
-                    <%= offer.price_old %>
+                    <strike><%= offer.price_old %></strike>
                   </div>
                   <div class="price_new">
                     <%= offer.price %>
@@ -37,58 +38,101 @@
                 </div>
             <div class="btn btn-success"><%= offer.button_text %></div>
           </div>
+
+            <div class="edit_buttons">
+
+              <% if index==@offers.count-1 %>
+                <%= link_to new_page_offer_path(page_id: @page.id) do  %>
+                    <button type="button" class="btn btn-success btn-circle btn-lg">
+                      <i class="glyphicon glyphicon-plus"></i>
+                    </button>
+                <% end %>
+              <% end %>
+              <%= link_to new_page_offer_path(page_id: @page.id) do  %>
+                  <button type="button" class="btn btn-danger btn-circle btn-lg">
+                    <i class="glyphicon glyphicon-minus"></i>
+                  </button>
+              <% end %>
+            </div>
       <% end %>
 
 
 
-    <% end %>
-    <%= link_to new_page_offer_path(page_id: @page.id) do  %>
-        <button type="button" class="btn btn-success btn-circle btn-lg">
-          <i class="glyphicon glyphicon-plus"></i>
-        </button>
-    <% end %>
-    <%= button_tag type: "submit" do %>
-        <button type="button" class="btn btn-info btn-circle btn-lg">
-          <i class="glyphicon glyphicon-pencil"></i>
-    <% end %>
-    <%= link_to new_page_offer_path(page_id: @page.id) do  %>
-        <button type="button" class="btn btn-danger btn-circle btn-lg">
-          <i class="glyphicon glyphicon-minus"></i>
-        </button>
-    <% end %>
+      <%#= button_tag type: "submit" do %>
 
+          <!--<button type="button" class="btn btn-info btn-circle btn-lg">-->
+            <!--<i class="glyphicon glyphicon-pencil"></i>-->
+      <%# end %>
+
+      <%= submit_tag "Редактировать выбранные", class: "btn btn-info edit_block" %>
+    <% end %>
   </div>
   <div class="feedbacks">
     <%= form_tag edit_all_page_feedbacks_path(page_id: @page.id), method: :get do %>
-    <% @feedbacks.shuffle.each do |feedback| %>
-
+    <% @feedbacks.shuffle.each_with_index do |feedback, index | %>
         <div class="feedback">
           <hr>
           <div class="add_for_edit_check">
-            <span><%= check_box_tag "feedback_ids[]", feedback.id %>Добавить <%=@edit_name[2] %>для редактирования </span>
+            <span><%= check_box_tag "feedback_ids[]", feedback.id,class:"big_check" %>Добавить <%=@edit_name[2] %>для редактирования </span>
           </div>
           <p><%= feedback.description %></p>
           <span><b><%= feedback.author %></b></span>
+          <div class="edit_buttons">
+
+            <% if index==@feedbacks.count-1 %>
+              <%= link_to new_page_offer_path(page_id: @page.id) do  %>
+                  <button type="button" class="btn btn-success btn-circle btn-lg">
+                    <i class="glyphicon glyphicon-plus"></i>
+                  </button>
+              <% end %>
+            <% end %>
+            <%= link_to new_page_offer_path(page_id: @page.id) do  %>
+                <button type="button" class="btn btn-danger btn-circle btn-lg">
+                  <i class="glyphicon glyphicon-minus"></i>
+                </button>
+            <% end %>
+
+          </div>
         <% end %>
-      <%= submit_tag "Редактировать блок", class:"btn btn-info edit_block" %>
+      <%= submit_tag "Редактировать выбранные", class:"btn btn-info edit_block" %>
     <% end %>
     </div>
   </div>
-
+  <% @obj_counter=0 %>
  <div class="advantages">
    <%= form_tag edit_all_page_advantages_path(page_id:@page.id), method: :get do %>
-   <%#= link_to 'Редактировать блок', edit_page_path %>
-    <% @advantages.shuffle.each do |advantage| %>
+   <%#= link_to 'Редактировать выбранные', edit_page_path %>
+    <% @advantages.shuffle.each_with_index do |advantage, index | %>
+
+             <% @obj_counter+=1 %>
+
        <hr>
        <div class="add_for_edit_check">
-         <span><%= check_box_tag "advantage_ids[]", advantage.id %>Добавить <%=@edit_name[1] %>для редактирования </span>
+         <span><%= check_box_tag "advantage_ids[]", advantage.id,class:"big_check" %>Добавить <%=@edit_name[1] %>для редактирования </span>
        </div>
       <div class="advantage">
         <p><%= advantage.description %></p>
       </div>
+
+           <div class="edit_buttons">
+             <% if index==@advantages.count-1 %>
+               <%= link_to new_page_offer_path(page_id: @page.id) do  %>
+                   <button type="button" class="btn btn-success btn-circle btn-lg">
+                     <i class="glyphicon glyphicon-plus"></i>
+                   </button>
+               <% end %>
+             <% end %>
+             <%= link_to new_page_offer_path(page_id: @page.id) do  %>
+                 <button type="button" class="btn btn-danger btn-circle btn-lg">
+                   <i class="glyphicon glyphicon-minus"></i>
+                 </button>
+             <% end %>
+           </div>
     <% end %>
-    <%= submit_tag "Редактировать блок", class:"btn btn-info edit_block" %>
+    <%= submit_tag "Редактировать выбранные", class:"btn btn-info edit_block" %>
    <% end %>
+
+
  </div>
   <div class="footer">
 

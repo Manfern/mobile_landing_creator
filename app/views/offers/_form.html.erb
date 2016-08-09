@@ -16,26 +16,25 @@
       <% end %>
 
       <div class="field">
-        <%= f.input :name  %>
+        <%= f.input :name, label: 'Имя предложения', error: 'Название предложения обязательно'  %>
       </div>
       <div class="field">
-        <%= f.input :discount  %>
+        <%= f.input :discount, label: 'Скидка', error: 'Скидка обязательна'   %>
       </div>
       <div class="field">
-        <%= f.input :price_old  %>
+        <%= f.input :price_old, label: 'Скидка', error: 'Старая цена(зачеркнутая)'  %>
       </div>
       <div class="field">
-        <%= f.input :price  %>
+        <%= f.input :price, label: 'Текущая', error: 'Текущая ценя должна быть указана'  %>
       </div>
       <div class="field">
-        <%= f.input :button_text  %>
+        <%= f.input :button_text, label: 'Текст кнопки заказа товара', error: 'Текст кнопки обязателен'  %>
       </div>
       <div class="field">
-        <%= f.label :image %><br>
-        <%= f.file_field :image %>
+        <%= f.input :image, as: :file, label: 'Изображение товара', error: 'Приложите изображение товра' %>
       </div>
       <div class="actions">
-        <%= f.button :submit %>
+        <%= f.button :submit, "Добавить предложение", class: "btn-success" %>
       </div>
   <% end %>
 
