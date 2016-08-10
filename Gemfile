@@ -22,7 +22,8 @@ group :development do
   gem 'better_errors'
   gem 'meta_request'
 end
-
+gem 'jquery-rails'
+gem "binding_of_caller"
 # gem for uploading and cropping images
 gem 'carrierwave'
 gem 'mini_magick'

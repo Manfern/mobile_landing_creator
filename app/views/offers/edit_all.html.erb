@@ -1,4 +1,4 @@
-<div class="container text-center">
+<h1 class="text-center">Редактирования предложения</h1
 <%= form_tag update_all_page_offers_path, class: "form-inline",multipart: true, method: :put do  %>
     <% @offers.each do |offer| %>
         <%#= simple_fields_for "offers[]", offer, html: {multipart: true } do |f| %>
@@ -40,7 +40,6 @@
     <% end %>
   <% end %>
     <div class="actions">
-      <%= submit_tag "Обновить предложения",class: "btn btn-default" %>
+      <%= submit_tag "Сохранить предложения",class: "btn btn-success btn-lg" %>
     </div>
 <% end %>
-</div>

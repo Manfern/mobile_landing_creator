@@ -1,4 +1,4 @@
-<div class="container">
+
 
   <%= simple_form_for([@page,@offer], class: 'form-horizontal' ) do |f| %>
       <% if @offer.errors.any?  %>
@@ -19,13 +19,13 @@
         <%= f.input :name, label: 'Имя предложения', error: 'Название предложения обязательно'  %>
       </div>
       <div class="field">
-        <%= f.input :discount, label: 'Скидка', error: 'Скидка обязательна'   %>
+        <%= f.input :discount, label: 'Скидка в процентах', error: 'Скидка обязательна'   %>
       </div>
       <div class="field">
-        <%= f.input :price_old, label: 'Скидка', error: 'Старая цена(зачеркнутая)'  %>
+        <%= f.input :price_old, label: 'Старая цена(зачеркнутая)', error: 'Укажите пожалуйста старую цену'  %>
       </div>
       <div class="field">
-        <%= f.input :price, label: 'Текущая', error: 'Текущая ценя должна быть указана'  %>
+        <%= f.input :price, label: 'Текущая цена', error: 'Текущая ценя должна быть указана'  %>
       </div>
       <div class="field">
         <%= f.input :button_text, label: 'Текст кнопки заказа товара', error: 'Текст кнопки обязателен'  %>
@@ -34,8 +34,8 @@
         <%= f.input :image, as: :file, label: 'Изображение товара', error: 'Приложите изображение товра' %>
       </div>
       <div class="actions">
-        <%= f.button :submit, "Добавить предложение", class: "btn-success" %>
+        <%= f.button :submit, "Сохранить предложение", class: "btn-success btn-lg" %>
       </div>
   <% end %>
 
-</div>
+

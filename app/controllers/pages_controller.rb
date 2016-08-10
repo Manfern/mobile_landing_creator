@@ -1,7 +1,8 @@
 class PagesController < ApplicationController
   # layout 'admin'
   # before_action :authenticate_admin!, only: [:new, :create, :edit, :update,:destroy]
-  before_action :get_page, only: [:edit,:show, :update, :destroy]
+  before_action :get_page,only: [ :edit, :update,:destroy]
+  skip_before_action :verify_authenticity_token
 
   def index
     # @pages=Page.all

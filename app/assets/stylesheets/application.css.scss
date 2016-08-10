@@ -19,11 +19,22 @@
 @import "bootstrap";
 
 .container{
-  background-color: lightgrey;
+  text-align: center;
+  background-color: #e0e0eb;
   width: 320px !important;
+  padding-bottom: 20px;
+  .actions{
+    margin-top: 20px;
+  }
 }
-
+body{
+  //background-color: #e0e0eb;
+}
+.btn-file{
+  width: 290px;
+}
 .price{
+  text-align: center;
   width: 100%;
   display: inline-block;
   padding-bottom: 15px;
@@ -87,9 +98,9 @@ h1{
   line-height: 1.33;
   border-radius: 35px;
 }
-.big_check {
-  width: 50px;
-  height: 50px;
+.add_for_edit_check input{
+  width: 30px;
+  height: 30px;
 }
 .discount, .price{
   padding: 20px;
@@ -98,4 +109,13 @@ h1{
 }
 .offer{
   margin-top: 20px;
+}
+.btn-success{
+  //width: 290px;
+  //margin-bottom: 10px;
+}
+.add_for_edit_check{
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
 }

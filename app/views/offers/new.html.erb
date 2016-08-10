@@ -1,4 +1,4 @@
-<h1>Create new Offer/h1>
+<h1>Добавить новое предложение</h1>
 <%=  simple_form_for(@offer,url: page_offers_path,html: { method: :post,multipart: true}) do |f| %>
     <%= render 'form', f: f %>
 <% end %>
