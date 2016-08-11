@@ -10,8 +10,17 @@ class OffersController < ApplicationController
   end
 
   def create
-    @offer = @page.offers.create(offer_params)
-    redirect_to pages_path(@page)
+    @offer = @page.offers.new(offer_params)
+    if @offer.save
+      if params[:offer][:image].present?
+        render :crop
+      else
+        redirect_to pages_path(@page), notice: "Предложение добавлено."
+      end
+    else
+      render :new
+    end
+    # redirect_to pages_path(@page)
   end
 
   def edit_all
@@ -25,7 +34,10 @@ class OffersController < ApplicationController
     Offer.update(params[:offers].keys, params[:offers].values)
     redirect_to pages_path
   end
+  def crop
+    @offer = @page.offers.find(params[:id])
 
+  end
   def destroy
     @offer = @page.offers.find(params[:id])
     @offer.destroy
@@ -41,7 +53,7 @@ class OffersController < ApplicationController
           #1st argument of redirect_to is an array, in order to build the correct route to the nested resource offer
           format.html {
             # redirect_to([@offer.page, @offer], :notice => 'offer was successfully updated.')
-            redirect_to pages_path
+            redirect_to pages_path(@page)
           }
           format.xml  { head :ok }
         else

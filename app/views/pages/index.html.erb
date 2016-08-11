@@ -28,7 +28,7 @@
             <span class="discount"><%= offer.discount %>%</span>
             <h3><%= offer.name %></h3>
             <!--<div class="img"><%#= image_tag offer.image.normal %></div>-->
-            <div class="img"><%= image_tag offer.image.fullfill %></div>
+            <div class="img"><%= image_tag offer.image.normal %></div>
                 <div class="price">
                   <div class="price_old">
                     <strike><%= offer.price_old %></strike>
@@ -78,7 +78,7 @@
         <div class="feedback">
           <hr>
           <div class="add_for_edit_check">
-            <span><%= check_box_tag "feedback_ids[]", feedback.id,class:"big_check" %>Добавить <%=@edit_name[2] %>для редактирования </span>
+            <span><%= check_box_tag "feedback_ids[]", feedback.id,class:"big_check" %>Редактировать </span>
           </div>
           <p><%= feedback.description %></p>
           <span><b><%= feedback.author %></b></span>
@@ -116,7 +116,7 @@
 
        <hr>
        <div class="add_for_edit_check">
-         <span><%= check_box_tag "advantage_ids[]", advantage.id,class:"big_check" %>Добавить <%=@edit_name[1] %>для редактирования </span>
+         <span><%= check_box_tag "advantage_ids[]", advantage.id,class:"big_check" %>Редактировать </span>
        </div>
       <div class="advantage">
         <p><%= advantage.description %></p>

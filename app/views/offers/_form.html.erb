@@ -28,7 +28,7 @@
         <%= f.input :price, label: 'Текущая цена', error: 'Текущая ценя должна быть указана'  %>
       </div>
       <div class="field">
-        <%= f.input :button_text, label: 'Текст кнопки заказа товара', error: 'Текст кнопки обязателен'  %>
+        <%= f.input :button_text, label: 'Текст кнопки заказа товара', error: 'Текст кнопки обязателен', default: "Положить в корзину!"  %>
       </div>
       <div class="field">
         <%= f.input :image, as: :file, label: 'Изображение товара', error: 'Приложите изображение товра' %>

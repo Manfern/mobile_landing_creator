@@ -34,7 +34,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
   version :normal do
     process :crop
-    resize_to_fit(200, 200)
+    resize_to_fill(200, 200)
   end
 
   version :fullfill do
@@ -42,12 +42,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   version :large do
-    resize_to_limit(600, 600)
+    resize_to_limit(320, 320)
   end
 
   def crop
     if model.crop_x.present?
-      resize_to_limit(600, 600)
+      resize_to_limit(320, 320)
       manipulate! do |img|
         x=model.crop_x.to_i
         y=model.crop_y.to_i
