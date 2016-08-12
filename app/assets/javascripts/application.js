@@ -14,7 +14,5 @@
 //= require jquery_ujs
 //= require jquery.Jcrop
 //= require turbolinks
-//= require_tree .
 //= require bootstrap-sprockets
-//= require jquery.cropzoom
-//= require jquery-ui.min
+//= require_tree .

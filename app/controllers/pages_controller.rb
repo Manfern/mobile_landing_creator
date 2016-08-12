@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   # layout 'admin'
   # before_action :authenticate_admin!, only: [:new, :create, :edit, :update,:destroy]
   before_action :get_page,only: [ :edit, :update,:destroy]
-  skip_before_action :verify_authenticity_token
+  # skip_before_action :verify_authenticity_token
 
   def index
     # @pages=Page.all
@@ -11,14 +11,9 @@ class PagesController < ApplicationController
     @advantages=Page.first.advantages.all
     @offers=Page.first.offers.all
     @feedbacks=Page.first.feedbacks.all
-    render layout: "application"
   end
 
-  # def second
-  #   @Pages=Page.all
-  #   render layout: "second"
-  #   # redirect_to "Pages#second"
-  # end
+
 
   def new
     @page=Page.new
@@ -26,7 +21,8 @@ class PagesController < ApplicationController
 
   def create
     @page=Page.new(page_params)
-    if @Page.save
+    # @page.page_id = params[:page_id] if params.has_key?(:page_id)
+    if @page.save
       redirect_to pages_path
     else
       render :new
@@ -34,11 +30,11 @@ class PagesController < ApplicationController
   end
 
   def show
-    # Comment.order('comments.impressions_count DESC').limit(5)
-    @pages=Page.all
+    @page=Page.find(params[:id])
+    @advantages=@page.advantages.all
+    @offers=@page.offers.all
+    @feedbacks=@page.feedbacks.all
 
-    # @pages=Page.all.order('Pages.views DESC')
-    render layout: "application"
   end
 
 
@@ -77,6 +73,6 @@ class PagesController < ApplicationController
   end
 
   def page_params
-    params.require(:Page).permit(:title, :name, :offer, :footer_text)
+    params.require(:page).permit(:title, :name, :offer, :footer_text)
   end
 end
