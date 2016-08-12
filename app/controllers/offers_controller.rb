@@ -9,6 +9,10 @@ class OffersController < ApplicationController
     @offer=Offer.new
   end
 
+  def show
+    @offer=Offer.find(params[:id])
+  end
+
   def create
     @offer = @page.offers.new(offer_params)
     if @offer.save
@@ -49,7 +53,7 @@ class OffersController < ApplicationController
       if params[:offer][:image].present?
         render :crop
       else
-        redirect_to pages_path(@page), notice: "Предложение отредактировано."
+        redirect_to page_offer_path, notice: "Предложение отредактировано."
       end
     else
       render :edit

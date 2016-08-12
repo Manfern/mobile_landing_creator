@@ -1,4 +1,5 @@
 class Offer < ApplicationRecord
+  after_update :crop_image
   belongs_to :page
   mount_uploader :image, ImageUploader
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
@@ -7,10 +8,9 @@ class Offer < ApplicationRecord
   validates :price_old, numericality: true
   validates :discount, numericality: true
 
-  after_update :crop_image
 
   def crop_image
-    model.image.recreate_versions! if crop_x.present?
+    image.recreate_versions! if crop_x.present?
   end
 
 # validations

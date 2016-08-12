@@ -15,10 +15,10 @@
   <%= simple_form_for([@page,@offer],multipart:true, class: 'form-horizontal' ) do |f| %>
   <%#= form_for @offer do |f| %>
       <% %w[x y w h].each do |attribute| %>
-          <%= f.text_field "crop_#{attribute}" %> <br>
+          <%= f.input "crop_#{attribute}" %> <br>
       <% end %>
       <div class="actions">
-        <%= f.button :submit, "Сохранить иображение", class: "btn-success btn-lg" %>
+        <%= f.button :submit, "Сохранить изображение", class: "btn-success btn-lg" %>
       </div>
   <% end %>
 </div>

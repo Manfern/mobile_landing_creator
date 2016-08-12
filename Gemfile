@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3'
+ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 # gem 'rails', '4.2.4'
@@ -27,7 +27,7 @@ gem "binding_of_caller"
 # gem for uploading and cropping images
 gem 'carrierwave'
 # gem 'mini_magick'
-
+gem 'jcrop-rails-v2'
 # imageMagick install
 # sudo apt-get -y install imagemagick
 # sudo apt-get -y install libmagic-dev

@@ -38,19 +38,19 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   version :fullfill do
-    process :crop
+
     resize_to_fill(200, 200)
   end
 
   version :large do
-    process :crop
+
     resize_to_limit(320, 320)
   end
 
   def crop
     if model.crop_x.present?
       resize_to_limit(200, 200)
-      model.manipulate! do |img|
+      manipulate! do |img|
         x=model.crop_x.to_i
         y=model.crop_y.to_i
         w=model.crop_w.to_i
