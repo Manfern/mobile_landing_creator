@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160803154538) do
+ActiveRecord::Schema.define(version: 20160813160341) do
 
   create_table "advantages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "page_id"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160803154538) do
     t.text     "footer_text", limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.integer  "design"
   end
 
 end

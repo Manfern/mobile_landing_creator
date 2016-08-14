@@ -2,7 +2,10 @@
 <% @edit_name=[" оффер "," преимущесто ", " отзыв "]%>
 
   <%= link_to "Добавить новую страницу", new_page_path(page_id: @page.id+1),class: "btn btn-success edit_block"  %>
+  <%= link_to "Редактировать страницу", edit_page_path(id: @page.id, page_id: @page.id),class: "btn btn-warning edit_block"  %>
+
   <div class="header">
+    <h1><%= @page.design %></h1>
   <h1><%= @page.title %></h1>
     <div class="logo">
       <img src="" alt="">

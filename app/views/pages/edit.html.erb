@@ -1,0 +1,6 @@
+<h1 class="text-center">Редактировать страницу</h1>
+<%=  form_for(@page,html: { method: :put,multipart: true }) do |f| %>
+    <%= render 'form', f: f %>
+<% end %>
+
+<!--url: offer_path(@offer)-->

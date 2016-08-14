@@ -1,16 +1,24 @@
 class PagesController < ApplicationController
   # layout 'admin'
   # before_action :authenticate_admin!, only: [:new, :create, :edit, :update,:destroy]
-  before_action :get_page,only: [ :edit, :update,:destroy]
+  before_action :get_page,only: [ :show]
   # skip_before_action :verify_authenticity_token
+  layout :resolve_layout
+
+
 
   def index
-    # @pages=Page.all
     @page=Page.first
     @pages=Page.all
     @advantages=Page.first.advantages.all
     @offers=Page.first.offers.all
     @feedbacks=Page.first.feedbacks.all
+    # if params[:page][:design].present?
+    #   render :redesign
+
+
+    # @pages=Page.all
+
   end
 
 
@@ -40,10 +48,11 @@ class PagesController < ApplicationController
 
 
   def edit
-
+    @page=Page.find(params[:id])
   end
 
   def update
+    @page=Page.find(params[:id])
     if @page.update!(page_params)
       redirect_to pages_path
     else
@@ -73,6 +82,17 @@ class PagesController < ApplicationController
   end
 
   def page_params
-    params.require(:page).permit(:title, :name, :offer, :footer_text)
+    params.require(:page).permit(:title, :name, :offer, :footer_text, :design)
+  end
+
+  def resolve_layout
+      @page=Page.first
+    if @page.design==1
+      "page_dark"
+    elsif @page.design==2
+      "page_bright"
+    else
+      "application"
+    end
   end
 end

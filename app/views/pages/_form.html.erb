@@ -14,7 +14,10 @@
           </div>
 
       <% end %>
-
+      <div class="select_design">
+        <h3>Выбрать дизайн</h3>
+            <%= f.select(:design,  [['Normal', 1], ['Light', 2], ['Dark', 3]], class: "form-control") %>
+      </div>
       <div class="field">
         <%= f.input :name, label: 'Название страницы', error: 'Название страницы обязателено'  %>
       </div>
@@ -29,7 +32,8 @@
         <%= f.input :footer_text, label: 'Текст футера, копирайт', error: 'Введите текст футера' %>
       </div>
       <div class="actions">
-        <%= f.button :submit, "Добавить новую страницу", class: "btn-success btn-lg" %>
+        <%#= f.button :submit, "Добавить новую страницу", class: "btn-success btn-lg" %>
+        <%= f.button :submit, "Применить", class: "btn-warning btn-lg" %>
       </div>
   <% end %>
 

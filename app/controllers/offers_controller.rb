@@ -53,7 +53,7 @@ class OffersController < ApplicationController
       if params[:offer][:image].present?
         render :crop
       else
-        redirect_to page_offer_path, notice: "Предложение отредактировано."
+        redirect_to page_path(@page), notice: "Предложение отредактировано."
       end
     else
       render :edit
@@ -72,6 +72,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:name, :discount, :price, :price_old, :button_text,:id, :image)
+    params.require(:offer).permit(:name, :discount, :price, :price_old, :button_text,:id, :image, :crop_x, :crop_y, :crop_w, :crop_h)
   end
 end

@@ -22,25 +22,12 @@
 @import "bootstrap";
 
 .container{
-  background: #fff;
   text-align: center;
-  background-color: #e0e0eb;
+  background-color: #000;
   width: 320px !important;
   padding-bottom: 20px;
   .actions{
     margin-top: 20px;
-  }
-  .select_design{
-    h3{
-      color: #fff;
-    }
-    padding: 10px;
-    font-weight: bold;
-    color: #000;
-    background-color: #000;
-    border-top: 0px;
-    border-radius: 15px;
-    margin-top: 10px;
   }
 }
 body{
