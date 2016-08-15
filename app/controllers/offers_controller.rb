@@ -6,7 +6,8 @@ class OffersController < ApplicationController
   end
 
   def new
-    @offer=Offer.new
+    @offer=Offer.new(link: "http://", button_text:"Перейти в корзину", discount:"50")
+
   end
 
   def show
@@ -72,6 +73,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:name, :discount, :price, :price_old, :button_text,:id, :image, :crop_x, :crop_y, :crop_w, :crop_h)
+    params.require(:offer).permit(:name, :discount, :price, :price_old, :button_text,:id,:link, :image, :crop_x, :crop_y, :crop_w, :crop_h)
   end
 end

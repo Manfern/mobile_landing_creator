@@ -15,13 +15,17 @@ class PagesController < ApplicationController
     @feedbacks=Page.first.feedbacks.all
     # if params[:page][:design].present?
     #   render :redesign
-
-
-    # @pages=Page.all
-
+    # utm хвосты из текущего url присоединить к ссылке на товар\предложение
+    require 'uri'
+    # @uri=URI.parse(request.original_url)
+    @uri=request.fullpath
+    if @uri!=nil
+      @uri.to_s.split('?')[1]
+    else
+      @uri="?utm_source=empty"
+    end
+    @link_params="?"+@uri
   end
-
-
 
   def new
     @page=Page.new
@@ -78,7 +82,7 @@ class PagesController < ApplicationController
   # 	@Page = Page.find(params[:id])
   # end
   def get_page
-    @page=Page.find(params[:page_id])
+    @page=Page.find(params[:id])
   end
 
   def page_params
@@ -86,13 +90,12 @@ class PagesController < ApplicationController
   end
 
   def resolve_layout
-      @page=Page.first
-    if @page.design==1
+    if @page.design==3
       "page_dark"
     elsif @page.design==2
       "page_bright"
-    else
-      "application"
+    elsif @page.design==1
+      "page_normal"
     end
   end
 end

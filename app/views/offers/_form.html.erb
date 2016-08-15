@@ -28,10 +28,13 @@
         <%= f.input :price, label: 'Текущая цена', error: 'Текущая ценя должна быть указана'  %>
       </div>
       <div class="field">
-        <%= f.input :button_text, label: 'Текст кнопки заказа товара', error: 'Текст кнопки обязателен', default: "Положить в корзину!"  %>
+        <%= f.input :link, label: 'Текст ссылки', error: 'Ссылка на товар должна быть указать', defautl: "http://" %>
       </div>
       <div class="field">
-        <%= f.input :image, as: :file, label: 'Изображение товара', error: 'Приложите изображение товра' %>
+        <%= f.input :button_text, label: 'Текст кнопки заказа', error: 'Текст кнопки обязателен', default: "Положить в корзину!"  %>
+      </div>
+      <div class="field">
+        <%= f.input :image, as: :file, label: 'Изображение', error: 'Приложите изображение' %>
       </div>
       <div class="actions">
         <%= f.button :submit, "Сохранить предложение", class: "btn-success btn-lg" %>

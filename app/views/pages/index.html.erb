@@ -1,20 +1,18 @@
 
-<% @edit_name=[" оффер "," преимущесто ", " отзыв "]%>
-
   <%= link_to "Добавить новую страницу", new_page_path(page_id: @page.id+1),class: "btn btn-success edit_block"  %>
   <%= link_to "Редактировать страницу", edit_page_path(id: @page.id, page_id: @page.id),class: "btn btn-warning edit_block"  %>
 
   <div class="header">
-    <h1><%= @page.design %></h1>
   <h1><%= @page.title %></h1>
+
+    <h2><% request.original_url %></h2>
+    <h2><% request.fullpath %></h2>
+
+
     <div class="logo">
       <img src="" alt="">
     </div>
     <p><%= @page.offer %></p>
-    <div class="btn btn-success">
-      <div class="span">Заказать!</div>
-    </div>
-
 
   </div>
 
@@ -40,7 +38,12 @@
                     <%= offer.price %>
                   </div>
                 </div>
-            <div class="btn btn-success btn-lg"><%= offer.button_text %></div>
+            <% if offer.link==nil %>
+                <% offer.link="http://google.com" %>
+            <% end %>
+            <%= link_to (offer.link+@link_params) do  %>
+              <div class="btn btn-success btn-lg"><%= offer.button_text %></div>
+             <% end %>
           </div>
             <div class="edit_buttons">
 

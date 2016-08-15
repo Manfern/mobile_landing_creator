@@ -37,7 +37,7 @@
     padding: 10px;
     font-weight: bold;
     color: #000;
-    background-color: #000;
+    background-color: rgba(20, 0, 128, 0.47);
     border-top: 0px;
     border-radius: 15px;
     margin-top: 10px;
@@ -45,6 +45,9 @@
 }
 body{
   //background-color: #e0e0eb;
+}
+.btn-lg{
+  //width: 100% !important;
 }
 .btn-file{
   width: 290px;
