@@ -1,0 +1,6 @@
+<h1 class="text-center">Редактирования отзыва</h1>
+<%=  form_for([@page,@feedback],html: { method: :put,multipart: true }) do |f| %>
+    <%= render 'form', f: f %>
+<% end %>
+
+<!--url: offer_path(@offer)-->

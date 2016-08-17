@@ -4,11 +4,11 @@ class PagesController < ApplicationController
   before_action :get_page,only: [ :show]
   # skip_before_action :verify_authenticity_token
   layout :resolve_layout
-
+  before_action :authenticate_admin!
 
 
   def index
-    @page=Page.first
+    @page=Page.find(params[:id])
     @pages=Page.all
     @advantages=Page.first.advantages.all
     @offers=Page.first.offers.all

@@ -4,13 +4,18 @@
     <title>MobileLandingCreator</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'page_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'page_bright', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
   <div class="container">
     <h1>Page Bright</h1>
     <%= yield %>
+    <div class="errors">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+
   </div>
 
   </body>

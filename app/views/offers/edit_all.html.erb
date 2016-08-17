@@ -1,8 +1,8 @@
-<h1 class="text-center">Редактирования предложения</h1
-<%= form_tag update_all_page_offers_path, class: "form-inline",multipart: true, method: :put do  %>
+<%#= simple_fields_for "offers[]", offer, html: {multipart: true } do |f| %>
+<h1 class="text-center">Редактирование предложений</h1>
+<%= form_tag update_all_page_offers_path, method: :put do  %>
     <% @offers.each do |offer| %>
-        <%#= simple_fields_for "offers[]", offer, html: {multipart: true } do |f| %>
-          <%= simple_fields_for "offers[]", offer, class: 'form-horizontal' ,multipart: true do |f| %>
+          <%= simple_fields_for "offers[]", offer, multipart: true do |f| %>
               <% if offer.errors.any?  %>
                   <div id="error_explanation">
                     <h2><%= pluralize(offer.errors.count, "error") %>prohibited this post from being saved</h2>
@@ -16,30 +16,33 @@
             <h2><%= offer.name %></h2>
     <div class="form-group">
             <div class="field">
-              <%= f.input_field :name, class: "form-control"  %>
+              <%= f.input :name, class: "form-control"  %>
             </div>
             <div class="field">
-              <%= f.input_field :discount, class: "form-control"  %>
+              <%= f.input :discount, class: "form-control"  %>
             </div>
             <div class="field">
-              <%= f.input_field :price_old, class: "form-control"  %>
+              <%= f.input :price_old, class: "form-control"  %>
             </div>
             <div class="field">
-              <%= f.input_field :price, class: "form-control"  %>
+              <%= f.input :price, class: "form-control"  %>
             </div>
             <div class="field">
-              <%= f.input_field :button_text, class: "form-control"  %>
+              <%= f.input :button_text, class: "form-control"  %>
             </div>
-            <div class="field fileinput ">
-              <%= f.label :image %><br>
+            <div class="field">
+              <%= f.input :link, class: "form-control"  %>
+            </div>
+
               <div class="fileinput fileinput-new ">
-                <%= f.input_field :image, class: "btn btn-default btn-file" %>
+                <%= f.input :image, as: :file, label: "Файл изображения", error: 'Приложите изображение', class: "btn btn-default btn-file" %>
               </div>
-            </div>
+
     </div>
     <% end %>
+        <hr>
   <% end %>
     <div class="actions">
-      <%= submit_tag "Сохранить предложения",class: "btn btn-success btn-lg" %>
+      <%= submit_tag "Сохранить предложения", class: "btn btn-success btn-lg" %>
     </div>
 <% end %>

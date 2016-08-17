@@ -24,10 +24,18 @@
 .container{
   text-align: center;
   background-color: #000;
+  color: #fff;
   width: 320px !important;
   padding-bottom: 20px;
   .actions{
     margin-top: 20px;
+  }
+  form.new_admin{
+    background-color: lightskyblue;
+    color: #000;
+  }
+  .errors{
+    color: #fff;
   }
 }
 body{
@@ -62,6 +70,9 @@ h1{
   height: auto;
   background-color: lightgreen;
   padding: 5px;
+  span{
+    color: #000;
+  }
 }
 .edit_block{
   font-weight: bold;

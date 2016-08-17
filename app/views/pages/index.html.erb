@@ -1,8 +1,13 @@
 
   <%= link_to "Добавить новую страницу", new_page_path(page_id: @page.id+1),class: "btn btn-success edit_block"  %>
-  <%= link_to "Редактировать страницу", edit_page_path(id: @page.id, page_id: @page.id),class: "btn btn-warning edit_block"  %>
-
+  <%= link_to "Редактировать страницу", edit_page_path(id: @page.id, page_id: @page.id),class: "btn btn-info edit_block"  %>
+  <h3>Выбрать страницу</h3>
+  <%= simple_form_for(@page, class: 'form-horizontal' ) do |f| %>
+    <%= select("page","id", Page.all.collect {|p| [ p.name, p.id ] }, {prompt: "Выберите страницу"}, class: "form-control") %>
+    <%= f.button :submit,"Загрузить страницу", class: "btn btn-success edit_block" %>
+  <% end %>
   <div class="header">
+
   <h1><%= @page.title %></h1>
 
     <h2><% request.original_url %></h2>
@@ -75,7 +80,7 @@
             <!--<i class="glyphicon glyphicon-pencil"></i>-->
       <%# end %>
 
-      <%= submit_tag "Редактировать выбранные", class: "btn btn-info edit_block" %>
+      <%= submit_tag "Редактировать предложения", class: "btn btn-info edit_block" %>
     <% end %>
   </div>
   <div class="feedbacks">
@@ -91,7 +96,7 @@
           <div class="edit_buttons">
 
             <% if index==@feedbacks.count-1 %>
-              <%= link_to new_page_offer_path(page_id: @page.id) do  %>
+              <%= link_to new_page_feedback_path(page_id: @page.id) do  %>
                   <button type="button" class="btn btn-success btn-circle btn-lg">
                     <i class="glyphicon glyphicon-plus"></i>
                   </button>
@@ -102,7 +107,7 @@
                   <i class="glyphicon glyphicon-pencil"></i>
                 </button>
             <% end %>
-            <%= link_to new_page_offer_path(page_id: @page.id) do  %>
+            <%= link_to  page_feedback_path(page_id: @page.id,id: feedback.id), method: :delete, data: {confirm: "Вы уверены что хотите удалить элемент?"}  do  %>
                 <button type="button" class="btn btn-danger btn-circle btn-lg">
                   <i class="glyphicon glyphicon-minus"></i>
                 </button>
@@ -110,7 +115,7 @@
 
           </div>
         <% end %>
-      <%= submit_tag "Редактировать выбранные", class:"btn btn-info edit_block" %>
+      <%= submit_tag "Редактировать отзывы", class:"btn btn-info edit_block" %>
     <% end %>
     </div>
   </div>
@@ -129,13 +134,7 @@
       </div>
 
            <div class="edit_buttons">
-             <% if index==@advantages.count-1 %>
-               <%= link_to new_page_offer_path(page_id: @page.id) do  %>
-                   <button type="button" class="btn btn-success btn-circle btn-lg">
-                     <i class="glyphicon glyphicon-plus"></i>
-                   </button>
-               <% end %>
-             <% end %>
+
              <%= link_to edit_page_advantage_path(page_id: @page.id, id: advantage.id) do  %>
                  <button type="button" class="btn btn-info btn-circle btn-lg">
                    <i class="glyphicon glyphicon-pencil"></i>
@@ -147,8 +146,17 @@
                  </button>
              <% end %>
            </div>
+           <div class="edit_buttons">
+             <% if index==@advantages.count-1 %>
+                 <%= link_to new_page_offer_path(page_id: @page.id) do  %>
+                     <button type="button" class="btn btn-success btn-circle btn-lg">
+                       <i class="glyphicon glyphicon-plus"></i>
+                     </button>
+                 <% end %>
+             <% end %>
+           </div>
     <% end %>
-    <%= submit_tag "Редактировать выбранные", class:"btn btn-info edit_block" %>
+    <%= submit_tag "Редактировать преимущества", class:"btn btn-info edit_block" %>
    <% end %>
 
 

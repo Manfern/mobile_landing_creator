@@ -1,42 +1,31 @@
-<div class="container">
 
-  <%= simple_form_for([@page,@feedback], class: 'form-horizontal' ) do |f| %>
-      <% if @feedback.errors.any?  %>
-          <div id="error_explanation">
-            <h2><%= pluralize(@feedback.errors.count, "error") %>prohibited this post from being saved</h2>
 
-            <ul>
-              <% @feedback.errors.full_messages.each do |message|  %>
-                  <li><%= message %></li>
-              <% end %>
+<%= simple_form_for([@page,@feedback], class: 'form-horizontal' ) do |f| %>
+    <% if @feedback.errors.any?  %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@feedback.errors.count, "error") %>препятствует сохранению отзыва</h2>
 
-            </ul>
-          </div>
+          <ul>
+            <% @feedback.errors.full_messages.each do |message|  %>
+                <li><%= message %></li>
+            <% end %>
 
-      <% end %>
+          </ul>
+        </div>
 
-      <div class="field">
-        <%= f.input :name  %>
-      </div>
-      <div class="field">
-        <%= f.input :discount  %>
-      </div>
-      <div class="field">
-        <%= f.input :price_old  %>
-      </div>
-      <div class="field">
-        <%= f.input :price  %>
-      </div>
-      <div class="field">
-        <%= f.input :button_text  %>
-      </div>
-      <div class="field">
-        <%= f.label :image %><br>
-        <%= f.file_field :image %>
-      </div>
-      <div class="actions">
-        <%= f.button :submit %>
-      </div>
-  <% end %>
+    <% end %>
 
-</div>
+    <div class="field">
+      <%= f.input :description, as: :text, label: 'Текст описания', error: 'Введите текст описания'  %>
+    </div>
+
+    <div class="field">
+      <%= f.input :author, label: 'Автор отзыва', error: 'Введите автора отзыва', defautl: "" %>
+    </div>
+
+    <div class="actions">
+      <%= f.button :submit, "Сохранить отзыв", class: "btn-success btn-lg" %>
+    </div>
+<% end %>
+
+

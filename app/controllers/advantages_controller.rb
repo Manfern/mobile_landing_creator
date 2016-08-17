@@ -1,19 +1,15 @@
 class AdvantagesController < ApplicationController
+
   # layout 'admin'
   # before_action :authenticate_admin!, only: [:new, :create, :edit, :update,:destroy]
 
+  layout :resolve_layout
+  before_action :admin_signed_in?
+  before_action :get_page
 
   def index
-    # @pages=Page.all
-    @advantages=Advantage.all
-    render layout: "application"
+    @advantages=@page.advantages
   end
-
-  # def second
-  #   @Pages=Page.all
-  #   render layout: "second"
-  #   # redirect_to "Pages#second"
-  # end
 
   def new
     @advantage=Advantage.new
@@ -29,19 +25,25 @@ class AdvantagesController < ApplicationController
   end
 
   def show
-    # Comment.order('comments.impressions_count DESC').limit(5)
-    # @params[:age]=Advantage.find(params[:id])
     @advantage=Advantage.all
-
-    # @pages=Page.all.order('Pages.views DESC')
-    render layout: "application"
   end
 
+  def edit_all
+    @advantages=Advantage.where(id: params[:advantage_ids])
+  end
 
+  def update_all
+    @advantages=Advantage.update(params[:advantages].keys, params[:advantages].values)
+    @advantages.reject! {|p| p.errors.empty? }
+    if @advantages.empty?
+      redirect_to pages_path
+    else
+      render "edit_all"
+    end
+  end
 
   def edit
     @advantage=Advantage.find(params[:id])
-
   end
 
   def update
@@ -52,8 +54,6 @@ class AdvantagesController < ApplicationController
       render :edit
     end
   end
-
-
 
   def destroy
     @advantage=Advantage.find(params[:id])
@@ -66,13 +66,22 @@ class AdvantagesController < ApplicationController
 
   private
 
-  # Use strong_parameters for attribute whitelisting
-  # Be sure to update your create() and update() controller methods.
-  # def set_Page
-  # 	@Page = Page.find(params[:id])
-  # end
+  def get_page
+    @page=Page.find(params[:page_id])
+  end
+
 
   def advantage_params
     params.require(:Advantage).permit(:description)
+  end
+
+  def resolve_layout
+    if @page.design==3
+      "page_dark"
+    elsif @page.design==2
+      "page_bright"
+    elsif @page.design==1
+      "page_normal"
+    end
   end
 end

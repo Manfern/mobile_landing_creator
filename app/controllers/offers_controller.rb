@@ -1,4 +1,6 @@
 class OffersController < ApplicationController
+  layout :resolve_layout
+  before_action :admin_signed_in?
   before_action :get_page
 
   def index
@@ -25,7 +27,6 @@ class OffersController < ApplicationController
     else
       render :new
     end
-
   end
 
   def edit_all
@@ -33,8 +34,14 @@ class OffersController < ApplicationController
   end
 
   def update_all
-    Offer.update(params[:offers].keys, params[:offers].values)
-    redirect_to pages_path
+    @offers=Offer.update(params[:offers].keys, params[:offers].values)
+    @offers.reject! {|p| p.errors.empty? }
+    if @offers.empty?
+      redirect_to pages_path
+    else
+      render "edit_all"
+    end
+
   end
 
   def crop
@@ -73,6 +80,16 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:name, :discount, :price, :price_old, :button_text,:id,:link, :image, :crop_x, :crop_y, :crop_w, :crop_h)
+    params.require(:offer).permit(:name, :discount, :price, :price_old, :button_text,:link, :image)
+  end
+  # , :crop_x, :crop_y, :crop_w, :crop_
+  def resolve_layout
+    if @page.design==3
+      "page_dark"
+    elsif @page.design==2
+      "page_bright"
+    elsif @page.design==1
+      "page_normal"
+    end
   end
 end

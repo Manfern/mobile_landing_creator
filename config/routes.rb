@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   root 'pages#index'
 
   resources :pages do
@@ -13,12 +14,14 @@ Rails.application.routes.draw do
       collection do
         get :edit_all
         put :update_all
+        post :update_all
       end
     end
     resources :advantages do
       collection do
         get :edit_all
         put :update_all
+        post :update_all
       end
     end
   end

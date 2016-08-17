@@ -1,0 +1,30 @@
+<h1 class="text-center">Редактировать предложения</h1>
+<%= form_tag update_all_page_feedbacks_path, method: :put do  %>
+    <% @feedbacks.each do |feedback| %>
+          <%= simple_fields_for "feedbacks[]", feedback, class: 'form-horizontal' do |f| %>
+              <% if feedback.errors.any?  %>
+                  <div id="error_explanation">
+                    <h2><%= pluralize(feedback.errors.count, "error") %>prohibited this post from being saved</h2>
+                    <ul>
+                      <% feedback.errors.full_messages.each do |message|  %>
+                          <li><%= message %></li>
+                      <% end %>
+                    </ul>
+                  </div>
+              <% end %>
+            <h2>Отзыв №<%= feedback.id %></h2>
+      <div class="form-group">
+          <div class="field">
+            <%= f.input :description, as: :text, label: 'Текст описания', error: 'Введите текст описания'  %>
+          </div>
+
+          <div class="field">
+            <%= f.input :author, label: 'Автор отзыва', error: 'Введите автора отзыва', default: "" %>
+          </div>
+      </div>
+    <% end %>
+  <% end %>
+    <div class="actions">
+      <%= submit_tag "Сохранить отзывы",class: "btn btn-success btn-lg" %>
+    </div>
+<% end %>
