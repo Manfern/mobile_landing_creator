@@ -1,6 +1,6 @@
 class OffersController < ApplicationController
   layout :resolve_layout
-  before_action :admin_signed_in?
+
   before_action :get_page
 
   def index

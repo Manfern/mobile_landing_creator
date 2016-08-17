@@ -1,0 +1,53 @@
+
+<div class="header">
+  <h1><%= @page.title %></h1>
+    <img src="" alt="">
+
+  <p><%= @page.offer %></p>
+
+</div>
+
+<div class="offers">
+      <% @offers.shuffle.each_with_index do |offer, index | %>
+          <div class="offer">
+            <span class="discount"><%= offer.discount %>%</span>
+            <h3><%= offer.name %></h3>
+            <div class="img"><%= image_tag offer.image.normal %></div>
+            <div class="price">
+              <div class="price_old">
+                <strike><%= offer.price_old %></strike>
+              </div>
+              <div class="price_new">
+                <%= offer.price %>
+              </div>
+            </div>
+            <% if offer.link==nil %>
+                <% offer.link="http://google.com" %>
+            <% end %>
+            <%= link_to (offer.link+@link_params) do  %>
+                <div class="btn btn-success btn-lg"><%= offer.button_text %></div>
+            <% end %>
+          </div>
+      <% end %>
+</div>
+<div class="feedbacks">
+      <% @feedbacks.shuffle.each_with_index do |feedback, index | %>
+          <div class="feedback">
+            <p><%= feedback.description %></p>
+            <span><b><%= feedback.author %></b></span>
+      <% end %>
+</div>
+
+<div class="advantages">
+      <% @advantages.shuffle.each_with_index do |advantage, index | %>
+          <div class="advantage">
+            <p><%= advantage.description %></p>
+          </div>
+      <% end %>
+</div>
+<div class="footer">
+  <a href=""><p text-center><%=@page.footer_text %></p></a>
+</div>
+
+
+

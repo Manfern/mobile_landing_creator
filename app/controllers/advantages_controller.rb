@@ -4,7 +4,6 @@ class AdvantagesController < ApplicationController
   # before_action :authenticate_admin!, only: [:new, :create, :edit, :update,:destroy]
 
   layout :resolve_layout
-  before_action :admin_signed_in?
   before_action :get_page
 
   def index

@@ -1,7 +1,6 @@
 class FeedbacksController < ApplicationController
   before_action :get_page
   layout :resolve_layout
-  before_action :admin_signed_in?
 
 
 

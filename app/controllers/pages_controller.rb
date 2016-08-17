@@ -2,29 +2,26 @@ class PagesController < ApplicationController
   # layout 'admin'
   # before_action :authenticate_admin!, only: [:new, :create, :edit, :update,:destroy]
   before_action :get_page,only: [ :show]
+  before_action :add_utm_end, only: [:index, :show]
   # skip_before_action :verify_authenticity_token
   layout :resolve_layout
-  before_action :authenticate_admin!
+
 
 
   def index
-    @page=Page.find(params[:id])
+    if admin_signed_in?
+       @page=Page.find_by(id: current_admin.selected_page)
+    else
+      @page=Page.first
+    end
     @pages=Page.all
     @advantages=Page.first.advantages.all
     @offers=Page.first.offers.all
     @feedbacks=Page.first.feedbacks.all
-    # if params[:page][:design].present?
-    #   render :redesign
-    # utm хвосты из текущего url присоединить к ссылке на товар\предложение
-    require 'uri'
-    # @uri=URI.parse(request.original_url)
-    @uri=request.fullpath
-    if @uri!=nil
-      @uri.to_s.split('?')[1]
-    else
-      @uri="?utm_source=empty"
+    respond_to do |format|
+      format.html
     end
-    @link_params="?"+@uri
+
   end
 
   def new
@@ -42,14 +39,17 @@ class PagesController < ApplicationController
   end
 
   def show
+    @page_id=params[:id]
     @page=Page.find(params[:id])
+    @pages=Page.all
     @advantages=@page.advantages.all
     @offers=@page.offers.all
     @feedbacks=@page.feedbacks.all
-
+    current_admin.update!(selected_page: @page.id)
+    respond_to do |format|
+      format.html
+    end
   end
-
-
 
   def edit
     @page=Page.find(params[:id])
@@ -73,14 +73,8 @@ class PagesController < ApplicationController
       render :edit
     end
   end
-
   private
 
-  # Use strong_parameters for attribute whitelisting
-  # Be sure to update your create() and update() controller methods.
-  # def set_Page
-  # 	@Page = Page.find(params[:id])
-  # end
   def get_page
     @page=Page.find(params[:id])
   end
@@ -97,5 +91,18 @@ class PagesController < ApplicationController
     elsif @page.design==1
       "page_normal"
     end
+  end
+
+  def add_utm_end
+    # utm хвосты из текущего url присоединить к ссылке на товар\предложение
+    require 'uri'
+    # @uri=URI.parse(request.original_url)
+    @uri=request.fullpath
+    if @uri!=nil
+      @uri.to_s.split('?')[1]
+    else
+      @uri="?utm_source=empty"
+    end
+    @link_params="?"+@uri
   end
 end
