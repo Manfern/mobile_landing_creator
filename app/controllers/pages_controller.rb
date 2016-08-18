@@ -10,7 +10,11 @@ class PagesController < ApplicationController
 
   def index
     if admin_signed_in?
-       @page=Page.find_by(id: current_admin.selected_page)
+       if current_admin.selected_page.nil?
+         @page=Page.first
+       else
+         @page=Page.find_by(id: current_admin.selected_page)
+       end
     else
       @page=Page.first
     end
@@ -18,9 +22,9 @@ class PagesController < ApplicationController
     @advantages=Page.first.advantages.all
     @offers=Page.first.offers.all
     @feedbacks=Page.first.feedbacks.all
-    respond_to do |format|
-      format.html
-    end
+    # respond_to do |format|
+    #   format.html
+    # end
 
   end
 
@@ -84,12 +88,17 @@ class PagesController < ApplicationController
   end
 
   def resolve_layout
-    if @page.design==3
-      "page_dark"
-    elsif @page.design==2
-      "page_bright"
-    elsif @page.design==1
-      "page_normal"
+    if admin_signed_in?
+      "application"
+    else
+      case @page.design
+        when 1
+          "page_normal"
+        when 2
+          "page_bright"
+        when 3
+          "page_dark"
+      end
     end
   end
 
@@ -98,7 +107,7 @@ class PagesController < ApplicationController
     require 'uri'
     # @uri=URI.parse(request.original_url)
     @uri=request.fullpath
-    if @uri!=nil
+    if @uri==nil
       @uri=@uri.to_s.split('?')[1]
     else
       @uri="?utm_source=empty"

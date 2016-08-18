@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery.Jcrop.min
+//= require jquery.cropzoom
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets

@@ -80,16 +80,21 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:name, :discount, :price, :price_old, :button_text,:link, :image)
+    params.require(:offer).permit(:name, :discount, :price, :price_old, :button_text,:link, :image, :crop_x, :crop_y, :crop_w, :crop_h)
   end
-  # , :crop_x, :crop_y, :crop_w, :crop_
+
   def resolve_layout
-    if @page.design==3
-      "page_dark"
-    elsif @page.design==2
-      "page_bright"
-    elsif @page.design==1
-      "page_normal"
+    if admin_signed_in?
+      "application"
+    else
+      case @page.design
+        when 1
+          "page_normal"
+        when 2
+          "page_bright"
+        when 3
+          "page_dark"
+      end
     end
   end
 end

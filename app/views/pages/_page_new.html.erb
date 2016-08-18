@@ -1,0 +1,63 @@
+
+<%= link_to "Выйти из редактирования", destroy_admin_session_path, method: :delete, class: "btn btn-warning edit_block" %>
+<%= link_to "Добавить новую страницу", new_page_path(page_id: @page.id+1),class: "btn btn-success edit_block"  %>
+<%= link_to "Редактировать страницу", edit_page_path(id: @page.id, page_id: @page.id),class: "btn btn-info edit_block"  %>
+<h3>Выбрать страницу</h3>
+
+
+  <%= select_tag 'select_page', options_from_collection_for_select(@pages, "id", "name"),prompt: "Выберите страницу", onchange: "window.location.replace('/pages/'+this.value);" %>
+
+
+<div class="row">
+  <div class="header">
+    <div class="errors">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+
+    <h1><%= @page.title %></h1>
+    <div class="logo">
+      <img src="" alt="">
+    </div>
+    <p><%= @page.offer %></p>
+
+  </div>
+</div>
+<div class="offers">
+  <h1>Предложения</h1>
+  <%= link_to new_page_offer_path(page_id: @page.id) do  %>
+      <button type="button" class="btn btn-success btn-circle btn-lg">
+        <i class="glyphicon glyphicon-plus"></i>
+      </button>
+  <% end %>
+
+</div>
+
+<div class="advantages">
+  <h1>Преимущества</h1>
+  <%= link_to new_page_advantage_path(page_id: @page.id) do  %>
+      <button type="button" class="btn btn-success btn-circle btn-lg">
+        <i class="glyphicon glyphicon-plus"></i>
+      </button>
+  <% end %>
+
+</div>
+
+<div class="feedbacks">
+  <h1>Отзывы</h1>
+  <%= link_to new_page_feedback_path(page_id: @page.id) do  %>
+      <button type="button" class="btn btn-success btn-circle btn-lg">
+        <i class="glyphicon glyphicon-plus"></i>
+      </button>
+  <% end %>
+
+  </div>
+
+
+<div class="footer">
+
+  <a href=""><p text-center><%=@page.footer_text %></p></a>
+</div>
+
+
+

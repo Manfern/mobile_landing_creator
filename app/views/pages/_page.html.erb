@@ -25,6 +25,14 @@
 </div>
 <div class="offers">
   <%= form_tag edit_all_page_offers_path(page_id: @page.id), method: :get do %>
+      <% if @offers.count==0 %>
+          <h1>Отзывы</h1>
+          <%= link_to new_page_offer_path(page_id: @page.id) do  %>
+              <button type="button" class="btn btn-success btn-circle btn-lg">
+                <i class="glyphicon glyphicon-plus"></i>
+              </button>
+          <% end %>
+      <% end %>
       <% @offers.shuffle.each_with_index do |offer, index | %>
           <hr>
           <div class="add_for_edit_check">
@@ -80,37 +88,46 @@
 
 <div class="advantages">
   <%= form_tag edit_all_page_advantages_path(page_id:@page.id), method: :get do %>
-
+      <% if @advantages.count==0 %>
+          <h1>Преимущества</h1>
+          <%= link_to new_page_advantage_path(page_id: @page.id) do  %>
+              <button type="button" class="btn btn-success btn-circle btn-lg">
+                <i class="glyphicon glyphicon-plus"></i>
+              </button>
+          <% end %>
+      <% end %>
       <% @advantages.shuffle.each_with_index do |advantage, index | %>
 
           <hr>
           <div class="add_for_edit_check">
             <span><%= check_box_tag "advantage_ids[]", advantage.id,class:"big_check" %>Редактировать </span>
           </div>
+
           <div class="advantage">
+            <div class="adv_image">
+              <%= image_tag advantage.icon.normal %>
+            </div>
             <p><%= advantage.description %></p>
           </div>
 
-          <div class="edit_buttons">
 
+          <div class="edit_buttons">
+            <% if index==@advantages.count-1 %>
+                <%= link_to new_page_advantage_path(page_id: @page.id) do  %>
+                    <button type="button" class="btn btn-success btn-circle btn-lg">
+                      <i class="glyphicon glyphicon-plus"></i>
+                    </button>
+                <% end %>
+            <% end %>
             <%= link_to edit_page_advantage_path(page_id: @page.id, id: advantage.id) do  %>
                 <button type="button" class="btn btn-info btn-circle btn-lg">
                   <i class="glyphicon glyphicon-pencil"></i>
                 </button>
             <% end %>
-            <%= link_to new_page_offer_path(page_id: @page.id) do  %>
+            <%= link_to  page_advantage_path(page_id: @page.id,id: advantage.id), method: :delete, data: {confirm: "Вы уверены что хотите удалить элемент?"}  do  %>
                 <button type="button" class="btn btn-danger btn-circle btn-lg">
                   <i class="glyphicon glyphicon-minus"></i>
                 </button>
-            <% end %>
-          </div>
-          <div class="edit_buttons">
-            <% if index==@advantages.count-1 %>
-                <%= link_to new_page_offer_path(page_id: @page.id) do  %>
-                    <button type="button" class="btn btn-success btn-circle btn-lg">
-                      <i class="glyphicon glyphicon-plus"></i>
-                    </button>
-                <% end %>
             <% end %>
           </div>
       <% end %>
@@ -120,6 +137,14 @@
 
 <div class="feedbacks">
   <%= form_tag edit_all_page_feedbacks_path(page_id: @page.id), method: :get do %>
+      <% if @feedbacks.count==0 %>
+          <h1>Отзывы</h1>
+          <%= link_to new_page_feedback_path(page_id: @page.id) do  %>
+              <button type="button" class="btn btn-success btn-circle btn-lg">
+                <i class="glyphicon glyphicon-plus"></i>
+              </button>
+          <% end %>
+      <% end %>
       <% @feedbacks.shuffle.each_with_index do |feedback, index | %>
           <div class="feedback">
             <hr>
@@ -127,6 +152,7 @@
               <span><%= check_box_tag "feedback_ids[]", feedback.id,class:"big_check" %>Редактировать </span>
             </div>
             <p><%= feedback.description %></p>
+            <%= image_tag feedback.photo.normal %>
             <span><b><%= feedback.author %></b></span>
             <div class="edit_buttons">
 

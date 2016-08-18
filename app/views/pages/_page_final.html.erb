@@ -45,8 +45,8 @@
         <% @advantages.shuffle.each_with_index do |advantage, index | %>
 
             <div class="advantage">
-              <div class="adv_image"><img src="" alt="">
-
+              <div class="adv_image">
+                <%= image_tag advantage.icon.normal %>
               </div>
               <p><%= advantage.description %></p>
             </div>
@@ -62,7 +62,7 @@
           </div>
           <div class="feedback_author">
             <div class="feed_image">
-              <img src="" alt="">
+              <%= image_tag feedback.photo.normal %>
             </div>
             <div class="feed_author">
               <%= feedback.author %>

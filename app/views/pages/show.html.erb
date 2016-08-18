@@ -1,2 +1,11 @@
 
-<%= render partial: "page", object: @page   %>
+<% if admin_signed_in? %>
+    <% if @offers.count==0 %>
+        <%= render partial: 'page_new', object: @page  %>
+    <% else %>
+        <%= render partial: 'page', object: @page  %>
+    <% end %>
+<% else %>
+    <%= render partial: 'page_final', object: @page  %>
+<% end %>
+

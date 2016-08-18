@@ -68,16 +68,21 @@ class FeedbacksController < ApplicationController
   end
 
   def feedback_params
-    params.require(:feedback).permit(:description, :author)
+    params.require(:feedback).permit(:description, :author, :photo)
   end
 
   def resolve_layout
-    if @page.design==3
-      "page_dark"
-    elsif @page.design==2
-      "page_bright"
-    elsif @page.design==1
-      "page_normal"
+    if admin_signed_in?
+      "application"
+    else
+      case @page.design
+        when 1
+          "page_normal"
+        when 2
+          "page_bright"
+        when 3
+          "page_dark"
+      end
     end
   end
 end

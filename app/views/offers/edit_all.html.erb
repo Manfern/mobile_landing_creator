@@ -1,11 +1,11 @@
 <%#= simple_fields_for "offers[]", offer, html: {multipart: true } do |f| %>
 <h1 class="text-center">Редактирование предложений</h1>
-<%= form_tag update_all_page_offers_path, method: :put do  %>
+<%= form_tag update_all_page_offers_path, multipart: true,  method: :put do  %>
     <% @offers.each do |offer| %>
           <%= simple_fields_for "offers[]", offer, multipart: true do |f| %>
               <% if offer.errors.any?  %>
                   <div id="error_explanation">
-                    <h2><%= pluralize(offer.errors.count, "error") %>prohibited this post from being saved</h2>
+                    <h2><%= pluralize(offer.errors.count, "ошибка") %> мешает сохранению</h2>
                     <ul>
                       <% offer.errors.full_messages.each do |message|  %>
                           <li><%= message %></li>

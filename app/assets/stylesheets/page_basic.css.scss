@@ -10,7 +10,6 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  *= require jquery-ui.min
  *= require jquery.cropzoom
@@ -124,8 +123,14 @@
       max-width:100%;
       max-height:100%;
       .feed_author{
+        margin-top: 15px;
         font-weight: bold;
       }
+      .feed_image{
+        margin: 0 auto;
+        margin-top: 15px;
+      }
+
     }
     .feed_image{
       height: 100px;

@@ -1,7 +1,7 @@
 <h3 class="text-center">Редактирование преимуществ</h3>
-<%= form_tag update_all_page_advantages_path, method: :put do  %>
+<%= form_tag update_all_page_advantages_path, multipart: true, method: :put do  %>
     <% @advantages.each do |advantage| %>
-          <%= simple_fields_for "advantages[]", advantage, class: 'form-horizontal' do |f| %>
+          <%= simple_fields_for "advantages[]", advantage, multipart: true, class: 'form-horizontal' do |f| %>
               <% if advantage.errors.any?  %>
                   <div id="error_explanation">
                     <h2><%= pluralize(advantage.errors.count, "error") %> ошибки препятствуют сохранению</h2>
@@ -17,7 +17,9 @@
           <div class="field">
             <%= f.input :description, as: :text, label: 'Текст преимущества', error: 'Введите текст описания'  %>
           </div>
-
+          <div class="field">
+            <%= f.input :icon, as: :file, label: 'Иконка', error: 'Приложите изображение' %>
+          </div>
       </div>
     <% end %>
   <% end %>

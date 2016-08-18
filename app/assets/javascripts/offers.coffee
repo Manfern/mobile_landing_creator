@@ -23,7 +23,7 @@ class ImageCropper
 
   updatePreview: (coords) =>
     $('#preview').css
-      width: Math.round(200/coords.w * $('#cropbox').width()) + 'px'
-      height: Math.round(200/coords.h * $('#cropbox').height()) + 'px'
-      marginLeft: '-' + Math.round(200/coords.w * coords.x) + 'px'
-      marginTop: '-' + Math.round(200/coords.h * coords.y) + 'px'
+      width: Math.round(150/coords.w * $('#cropbox').width()) + 'px'
+      height: Math.round(150/coords.h * $('#cropbox').height()) + 'px'
+      marginLeft: '-' + Math.round(150/coords.w * coords.x) + 'px'
+      marginTop: '-' + Math.round(150/coords.h * coords.y) + 'px'

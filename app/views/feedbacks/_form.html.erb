@@ -1,9 +1,7 @@
-
-
-<%= simple_form_for([@page,@feedback], class: 'form-horizontal' ) do |f| %>
+<%= simple_form_for([@page,@feedback], class: 'form-horizontal', multipart:true ) do |f| %>
     <% if @feedback.errors.any?  %>
         <div id="error_explanation">
-          <h2><%= pluralize(@feedback.errors.count, "error") %>препятствует сохранению отзыва</h2>
+          <h2><%= pluralize(@feedback.errors.count, "ошибка") %> препятствует сохранению отзыва</h2>
 
           <ul>
             <% @feedback.errors.full_messages.each do |message|  %>
@@ -22,7 +20,9 @@
     <div class="field">
       <%= f.input :author, label: 'Автор отзыва', error: 'Введите автора отзыва', defautl: "" %>
     </div>
-
+    <div class="field">
+      <%= f.input :photo, as: :file, label: 'Фото автора', error: 'Приложите изображение' %>
+    </div>
     <div class="actions">
       <%= f.button :submit, "Сохранить отзыв", class: "btn-success btn-lg" %>
     </div>

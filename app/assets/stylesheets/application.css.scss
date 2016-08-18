@@ -12,7 +12,6 @@
  *
 
 
- *= require_tree .
  *= require_self
  *= require jquery-ui.min
  *= require jquery.cropzoom
@@ -26,6 +25,10 @@
   background-color: #e0e0eb;
   width: 320px !important;
   padding-bottom: 20px;
+
+  #select_page{
+    width: 280px;
+  }
   .actions{
     margin-top: 20px;
 
@@ -49,6 +52,9 @@
 }
 body{
   //background-color: #e0e0eb;
+}
+.btn{
+  font-size: 18px !Important;
 }
 .btn-lg{
   //width: 100% !important;

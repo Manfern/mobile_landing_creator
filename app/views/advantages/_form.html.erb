@@ -1,0 +1,31 @@
+
+
+<%= simple_form_for([@page, @advantage], class: 'form-horizontal' ) do |f| %>
+    <% if @advantage.errors.any?  %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@advantage.errors.count, "ошибка") %> препятствует сохранению отзыва</h2>
+
+          <ul>
+            <% @advantage.errors.full_messages.each do |message|  %>
+                <li><%= message %></li>
+            <% end %>
+
+          </ul>
+        </div>
+
+    <% end %>
+
+    <div class="field">
+      <%= f.input :description, as: :text, label: 'Текст преимущества', error: 'Введите текст описания'  %>
+    </div>
+
+    <div class="field">
+      <%= f.input :icon, as: :file, label: 'Иконка', error: 'Приложите изображение' %>
+    </div>
+
+    <div class="actions">
+      <%= f.button :submit, "Сохранить преимущество", class: "btn-success btn-lg" %>
+    </div>
+<% end %>
+
+

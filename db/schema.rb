@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160817005647) do
+ActiveRecord::Schema.define(version: 20160818113720) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160817005647) do
     t.text     "description", limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.string   "icon"
     t.index ["page_id"], name: "index_advantages_on_page_id", using: :btree
   end
 
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(version: 20160817005647) do
     t.string   "author"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.string   "photo"
     t.index ["page_id"], name: "index_feedbacks_on_page_id", using: :btree
   end
 
@@ -66,9 +68,9 @@ ActiveRecord::Schema.define(version: 20160817005647) do
     t.string   "title"
     t.text     "offer",       limit: 65535
     t.text     "footer_text", limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.integer  "design", default: 1
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.integer  "design",                    default: 1
   end
 
 end

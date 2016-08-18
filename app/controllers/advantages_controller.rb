@@ -15,9 +15,13 @@ class AdvantagesController < ApplicationController
   end
 
   def create
-    @advantage=Advantage.new(advantage_params)
+    @advantage = @page.advantages.new(advantage_params)
     if @advantage.save
-      redirect_to advantages_path
+      # if params[:advantage][:icon].present?
+      #   render :crop
+      # else
+        redirect_to pages_path(@page), notice: "Предложение добавлено."
+      # end
     else
       render :new
     end
@@ -41,14 +45,22 @@ class AdvantagesController < ApplicationController
     end
   end
 
+  def crop
+    @advantage = @page.advantages.find(params[:id])
+  end
+
   def edit
     @advantage=Advantage.find(params[:id])
   end
 
   def update
-    @advantage=Advantage.find(params[:id])
-    if @advantage.update!(advantage_params)
-      redirect_to advantage_path
+    @advantage = @page.advantages.find(params[:id])
+    if @advantage.update(advantage_params)
+      # if params[:advantage][:icon].present?
+      #   render :crop
+      # else
+        redirect_to page_path(@page), notice: "Предложение отредактировано."
+      # end
     else
       render :edit
     end
@@ -71,16 +83,21 @@ class AdvantagesController < ApplicationController
 
 
   def advantage_params
-    params.require(:Advantage).permit(:description)
+    params.require(:advantage).permit(:description, :icon, :crop_x, :crop_y, :crop_w, :crop_h)
   end
 
   def resolve_layout
-    if @page.design==3
-      "page_dark"
-    elsif @page.design==2
-      "page_bright"
-    elsif @page.design==1
-      "page_normal"
+    if admin_signed_in?
+      "application"
+    else
+      case @page.design
+        when 1
+          "page_normal"
+        when 2
+          "page_bright"
+        when 3
+          "page_dark"
+      end
     end
   end
 end
