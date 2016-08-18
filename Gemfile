@@ -7,7 +7,8 @@ gem 'devise'
 gem 'devise-i18n'
 # gem 'rails', '4.2.4'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.18', '< 0.5'
+# gem 'mysql2', '>=
+gem 'pg'
 # Use Puma as the app server
 gem 'rails-i18n'
 gem 'puma'
@@ -21,7 +22,8 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 gem 'rmagick'
-group :development do
+group :development, :test do
+  gem 'pg'
   gem 'better_errors'
   gem 'meta_request'
 end
