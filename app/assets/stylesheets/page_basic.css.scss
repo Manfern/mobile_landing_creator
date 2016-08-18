@@ -22,7 +22,6 @@
 .container{
   text-align: center;
   width: 320px !important;
-  padding-bottom: 20px;
   .logo{
     margin-top: 30px;
   }
@@ -52,20 +51,24 @@
   }
   .offer{
     border-radius: 5px;
-    height: 425px;
+    height: 455px;
     color: #000;
     padding: 10px;
     margin: 5px;
     margin-top: 20px;
       .discount{
         font-size: 20px;
+        padding: 20px;
+        padding-top: 25px;
         font-weight: bold;
         background-image: image-url(up_label);
         background-size: cover;
         margin: 0 auto;
-        padding-top: 25px;
+        .discount_percent{
+          margin-left: 20px;
+        }
       }
-      .discount, .price{
+      .price{
         padding: 20px;
 
       }
@@ -75,6 +78,10 @@
       .img{
         margin: 0 auto;
         height:150px;
+        width: 150px;
+      }
+      .stars{
+        margin: 0 auto;
         width: 150px;
       }
       .price_old{
@@ -106,7 +113,6 @@
   .feedbacks{
     padding-top: 10px;
     height: 100%;
-    padding-bottom: 15px;
     background-image: image-url(texture);
     .feedback{
       text-align: left;
@@ -115,12 +121,32 @@
       background-color: #fff;
       color: #000;
       border-radius: 10px;
+      max-width:100%;
+      max-height:100%;
+      .feed_author{
+        font-weight: bold;
+      }
+    }
+    .feed_image{
+      height: 100px;
+      width: 100px;
     }
   }
+  .footer{
+    background-image: image-url(footer_back);
+    background-size: cover;
+    height: 140px;
+    padding-top: 55px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: -20px;
+    a{
+      color: #000;
+    }
+    text-decoration: underline;
+  }
 }
-body{
-  //background-color: #e0e0eb;
-}
+
 .btn-file{
   width: 290px;
 }
@@ -198,10 +224,7 @@ body{
 .offer{
   margin-top: 20px;
 }
-.btn-success{
-  //width: 290px;
-  //margin-bottom: 10px;
-}
+
 .add_for_edit_check{
   padding-bottom: 10px;
   text-align: center;

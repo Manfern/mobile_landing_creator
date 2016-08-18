@@ -13,9 +13,16 @@
 <div class="offers">
       <% @offers.shuffle.each_with_index do |offer, index | %>
           <div class="offer">
-            <div class="discount"><%= offer.discount %>%</div>
+            <div class="discount">
+              <div class="discount_percent">
+                <%= offer.discount %>%
+              </div>
+            </div>
             <div class="img"><%= image_tag offer.image.normal %></div>
             <h3><%= offer.name %></h3>
+            <div class="offer_stars">
+              <%=  image_tag("5stars.png", class: "stars") %>
+            </div>
             <div class="price">
               <div class="price_old">
                 <strike><%= offer.price_old %></strike>
@@ -54,16 +61,24 @@
             <%= feedback.description %>
           </div>
           <div class="feedback_author">
-            <b><%= feedback.author %></b>
+            <div class="feed_image">
+              <img src="" alt="">
+            </div>
+            <div class="feed_author">
+              <%= feedback.author %>
+            </div>
+
           </div>
         </div>
     <% end %>
   </div>
 </div>
-
-<div class="footer">
-  <a href=""><p text-center><%=@page.footer_text %></p></a>
+<div class="row">
+  <div class="footer">
+    <a href=""><p text-center><%=@page.footer_text %></p></a>
+  </div>
 </div>
+
 
 
 

@@ -99,7 +99,7 @@ class PagesController < ApplicationController
     # @uri=URI.parse(request.original_url)
     @uri=request.fullpath
     if @uri!=nil
-      @uri.to_s.split('?')[1]
+      @uri=@uri.to_s.split('?')[1]
     else
       @uri="?utm_source=empty"
     end
