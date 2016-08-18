@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20160817005647) do
     t.text     "footer_text", limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
-    t.integer  "design"
+    t.integer  "design", default: 1
   end
 
 end

@@ -11,24 +11,47 @@
  * It is generally better to create a new file per style scope.
  *
 
-
- *= require_tree .
- *= require_self
- *= require jquery-ui.min
- *= require jquery.cropzoom
- *= require jquery.Jcrop.min
  */
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 
 .container{
   text-align: center;
-  background-color: #000;
+  background-color: #69b7e5;
   color: #fff;
   width: 320px !important;
   padding-bottom: 20px;
+  .header{
+    background-image: image-url(normal_back);
+    background-size: cover;
+    h1{
+      font-size: 25px;
+      color: #1d3f99;
+    }
+  }
+  .header_offer{
+    padding-top: 80px;
+    color: #c837ab;
+    font-size: 30px;
+    height: 180px;
+    font-weight: bold;
+    background-image: image-url(label);
+    background-size: cover;
+  }
+  .icon{
+    margin-top: 25px;
+  }
+  .offer{
+    background-color: white;
+
+  }
   .actions{
     margin-top: 20px;
+  }
+  .btn{
+    background-color: #69b7e5;
+  }
+  .btn:hover{
+    background-color: darkblue;
   }
   form.new_admin{
     background-color: lightskyblue;
@@ -59,9 +82,7 @@ body{
   }
 }
 
-h1{
-  font-size: 28px;
-}
+
 .add_for_edit_check{
   display: inline-block;
   width: 100%;

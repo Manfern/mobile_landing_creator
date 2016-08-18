@@ -8,6 +8,8 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
+  # add ru locale
+  config.i18n.available_locales = ['ru', :ru]
 
   # Show full error reports.
   config.consider_all_requests_local = true

@@ -34,11 +34,10 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
   version :normal do
     process :crop
-    resize_to_fill(200, 200)
+    resize_to_fill(150, 150)
   end
 
   version :fullfill do
-
     resize_to_fill(200, 200)
   end
 

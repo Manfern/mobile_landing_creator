@@ -1,18 +1,21 @@
-
-<div class="header">
-  <h1><%= @page.title %></h1>
-    <img src="" alt="">
-
-  <p><%= @page.offer %></p>
-
+<div class="row">
+  <div class="header">
+    <%=  image_tag("logo.png", class: "logo") %>
+    <div class="header_title">
+      <h1><%= @page.title %></h1>
+    </div>
+    <div class="header_offer">
+      <p><%= @page.offer %></p>
+    </div>
+    <%=  image_tag("love_icon.png", class: "icon") %>
+  </div>
 </div>
-
 <div class="offers">
       <% @offers.shuffle.each_with_index do |offer, index | %>
           <div class="offer">
-            <span class="discount"><%= offer.discount %>%</span>
-            <h3><%= offer.name %></h3>
+            <div class="discount"><%= offer.discount %>%</div>
             <div class="img"><%= image_tag offer.image.normal %></div>
+            <h3><%= offer.name %></h3>
             <div class="price">
               <div class="price_old">
                 <strike><%= offer.price_old %></strike>
@@ -30,21 +33,34 @@
           </div>
       <% end %>
 </div>
-<div class="feedbacks">
-      <% @feedbacks.shuffle.each_with_index do |feedback, index | %>
-          <div class="feedback">
-            <p><%= feedback.description %></p>
-            <span><b><%= feedback.author %></b></span>
-      <% end %>
+<div class="row">
+  <div class="advantages">
+        <% @advantages.shuffle.each_with_index do |advantage, index | %>
+
+            <div class="advantage">
+              <div class="adv_image"><img src="" alt="">
+
+              </div>
+              <p><%= advantage.description %></p>
+            </div>
+        <% end %>
+  </div>
+</div>
+<div class="row">
+  <div class="feedbacks">
+    <% @feedbacks.shuffle.each_with_index do |feedback, index | %>
+        <div class="feedback">
+          <div class="feedback_descr">
+            <%= feedback.description %>
+          </div>
+          <div class="feedback_author">
+            <b><%= feedback.author %></b>
+          </div>
+        </div>
+    <% end %>
+  </div>
 </div>
 
-<div class="advantages">
-      <% @advantages.shuffle.each_with_index do |advantage, index | %>
-          <div class="advantage">
-            <p><%= advantage.description %></p>
-          </div>
-      <% end %>
-</div>
 <div class="footer">
   <a href=""><p text-center><%=@page.footer_text %></p></a>
 </div>

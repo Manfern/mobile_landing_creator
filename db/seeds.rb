@@ -17,29 +17,30 @@ pages_list=[
     "Интернет магазин женских часов - крашений",
       "РАСПРОДАЖА ИНТЕРНЕТ МАГАЗИНА ЖЕНСКИХ ЧАСОВ - УКРАШЕНИЙ",
      "Распродажа  -70%",
-     "Политика конфиденциальности "
+     "Политика конфиденциальности ",
+    1
     ]
 ]
 offers_list=[
     [
         "Браслет Pandora",
-        "-50%",
-        "5635р.",
-        "1690р.",
+        50,
+        5635,
+        1690,
         "Перейти в корзину"
     ],
     [
         "Браслет Swarovski",
-        "-50%",
-        "3180р.",
-        "1590р.",
+        50,
+        3180,
+        1590,
         "Перейти в корзину"
     ],
     [
         "Cерьги Dior пуссеты",
-        "-50%",
-        "3720р.",
-        "1750р.",
+        50,
+        3720,
+        1750,
         "Перейти в корзину"
     ]
 ]
@@ -60,8 +61,8 @@ feedbacks_list=[
 ]
 advantages_list=['Доставка почтой, бандеролями 1‑го класса, в течение 5‑10 рабочих дней. Стоимость доставки товара от 350 р.','Никаких предоплат! Оплата заказов осуществляется непосредственно по факту получения заказа.', 'Вы вправе отказаться от покупки в течение 14 дней с момента получения заказа, независимо от причины возврата.']
 
-  pages_list.each do |name, title, offer, footer_text|
-    Page.create!( name: name,title: title, offer: offer, footer_text: footer_text)
+  pages_list.each do |name, title, offer, footer_text, design|
+    Page.create!( name: name,title: title, offer: offer, footer_text: footer_text, design: design)
   end
   offers_list.each do |name, discount, price_old, price, button_text|
     Offer.create!( name: name,discount: discount, price_old: price_old, price: price, button_text: button_text, page_id: 1)

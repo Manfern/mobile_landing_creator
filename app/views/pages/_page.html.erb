@@ -8,22 +8,21 @@
   <%= select_tag 'select_page', options_from_collection_for_select(@pages, "id", "name"),prompt: "Выберите страницу", onchange: "window.location.replace('/pages/'+this.value);" %>
 
 
+<div class="row">
+  <div class="header">
+    <div class="errors">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
 
-<div class="header">
-  <div class="errors">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <h1><%= @page.title %></h1>
+    <div class="logo">
+      <img src="" alt="">
+    </div>
+    <p><%= @page.offer %></p>
+
   </div>
-
-  <h1><%= @page.title %></h1>
-  <h2><%= current_admin.selected_page %></h2>
-  <div class="logo">
-    <img src="" alt="">
-  </div>
-  <p><%= @page.offer %></p>
-
 </div>
-
 <div class="offers">
   <%= form_tag edit_all_page_offers_path(page_id: @page.id), method: :get do %>
       <% @offers.shuffle.each_with_index do |offer, index | %>
@@ -78,42 +77,6 @@
       <%= submit_tag "Редактировать предложения", class: "btn btn-info edit_block" %>
   <% end %>
 </div>
-<div class="feedbacks">
-  <%= form_tag edit_all_page_feedbacks_path(page_id: @page.id), method: :get do %>
-      <% @feedbacks.shuffle.each_with_index do |feedback, index | %>
-          <div class="feedback">
-            <hr>
-            <div class="add_for_edit_check">
-              <span><%= check_box_tag "feedback_ids[]", feedback.id,class:"big_check" %>Редактировать </span>
-            </div>
-            <p><%= feedback.description %></p>
-            <span><b><%= feedback.author %></b></span>
-            <div class="edit_buttons">
-
-              <% if index==@feedbacks.count-1 %>
-                  <%= link_to new_page_feedback_path(page_id: @page.id) do  %>
-                      <button type="button" class="btn btn-success btn-circle btn-lg">
-                        <i class="glyphicon glyphicon-plus"></i>
-                      </button>
-                  <% end %>
-              <% end %>
-              <%= link_to edit_page_feedback_path(page_id: @page.id, id: feedback.id) do  %>
-                  <button type="button" class="btn btn-info btn-circle btn-lg">
-                    <i class="glyphicon glyphicon-pencil"></i>
-                  </button>
-              <% end %>
-              <%= link_to  page_feedback_path(page_id: @page.id,id: feedback.id), method: :delete, data: {confirm: "Вы уверены что хотите удалить элемент?"}  do  %>
-                  <button type="button" class="btn btn-danger btn-circle btn-lg">
-                    <i class="glyphicon glyphicon-minus"></i>
-                  </button>
-              <% end %>
-
-            </div>
-      <% end %>
-      <%= submit_tag "Редактировать отзывы", class:"btn btn-info edit_block" %>
-  <% end %>
-  </div>
-</div>
 
 <div class="advantages">
   <%= form_tag edit_all_page_advantages_path(page_id:@page.id), method: :get do %>
@@ -153,9 +116,45 @@
       <% end %>
       <%= submit_tag "Редактировать преимущества", class:"btn btn-info edit_block" %>
   <% end %>
-
-
 </div>
+
+<div class="feedbacks">
+  <%= form_tag edit_all_page_feedbacks_path(page_id: @page.id), method: :get do %>
+      <% @feedbacks.shuffle.each_with_index do |feedback, index | %>
+          <div class="feedback">
+            <hr>
+            <div class="add_for_edit_check">
+              <span><%= check_box_tag "feedback_ids[]", feedback.id,class:"big_check" %>Редактировать </span>
+            </div>
+            <p><%= feedback.description %></p>
+            <span><b><%= feedback.author %></b></span>
+            <div class="edit_buttons">
+
+              <% if index==@feedbacks.count-1 %>
+                  <%= link_to new_page_feedback_path(page_id: @page.id) do  %>
+                      <button type="button" class="btn btn-success btn-circle btn-lg">
+                        <i class="glyphicon glyphicon-plus"></i>
+                      </button>
+                  <% end %>
+              <% end %>
+              <%= link_to edit_page_feedback_path(page_id: @page.id, id: feedback.id) do  %>
+                  <button type="button" class="btn btn-info btn-circle btn-lg">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                  </button>
+              <% end %>
+              <%= link_to  page_feedback_path(page_id: @page.id,id: feedback.id), method: :delete, data: {confirm: "Вы уверены что хотите удалить элемент?"}  do  %>
+                  <button type="button" class="btn btn-danger btn-circle btn-lg">
+                    <i class="glyphicon glyphicon-minus"></i>
+                  </button>
+              <% end %>
+
+            </div>
+      <% end %>
+      <%= submit_tag "Редактировать отзывы", class:"btn btn-info edit_block" %>
+  <% end %>
+  </div>
+</div>
+
 <div class="footer">
 
   <a href=""><p text-center><%=@page.footer_text %></p></a>

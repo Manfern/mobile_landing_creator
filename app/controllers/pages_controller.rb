@@ -45,7 +45,9 @@ class PagesController < ApplicationController
     @advantages=@page.advantages.all
     @offers=@page.offers.all
     @feedbacks=@page.feedbacks.all
-    current_admin.update!(selected_page: @page.id)
+    if admin_signed_in?
+      current_admin.update!(selected_page: @page.id)
+    end
     respond_to do |format|
       format.html
     end
@@ -63,8 +65,6 @@ class PagesController < ApplicationController
       render :edit
     end
   end
-
-
 
   def destroy
     if @page.destroy
