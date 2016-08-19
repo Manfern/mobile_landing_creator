@@ -3,7 +3,7 @@
   <%= simple_form_for(@page, class: 'form-horizontal' ) do |f| %>
       <% if @page.errors.any?  %>
           <div id="error_explanation">
-            <h2><%= pluralize(@page.errors.count, "error") %>prohibited this post from being saved</h2>
+            <h2><%= pluralize(@page.errors.count, "ошибка") %> препятствует сохранению</h2>
 
             <ul>
               <% @page.errors.full_messages.each do |message|  %>

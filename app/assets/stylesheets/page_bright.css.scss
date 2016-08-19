@@ -10,112 +10,43 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+
  */
-
-
 .container{
-  text-align: center;
-  background-color: #000;
-  color: #fff;
-  width: 320px !important;
-  padding-bottom: 20px;
+  .header{
+    background-image: image-url(bright_back);
+    background-size: cover;
+    height: 540px;
+    h1{
+      font-size: 25px;
+      color: #1d3f99;
+    }
+  }
+  .header_offer{
+    padding-top: 80px;
+    color: #c837ab;
+    font-size: 30px;
+    height: 180px;
+    font-weight: bold;
+    background-image: image-url(label);
+    background-size: cover;
+  }
+  .icon{
+    margin-top: 5px;
+  }
+  .offer{
+    margin-top: 20px;
+    background-color: white;
+  }
   .actions{
     margin-top: 20px;
   }
-  form.new_admin{
-    background-color: lightskyblue;
-    color: #000;
+  .btn{
+    background-color: #69b7e5;
   }
-}
-body{
-  //background-color: #e0e0eb;
-}
-.btn-file{
-  width: 290px;
-}
-.price{
-  text-align: center;
-  width: 100%;
-  display: inline-block;
-  padding-bottom: 15px;
-  .price_new{
-    width: 50%;
-    float: right;
+  .btn:hover{
+    background-color: darkblue;
   }
-  .price_old{
-    width: 50%;
-    float: left;
-  }
-}
-
-h1{
-  font-size: 28px;
-}
-.add_for_edit_check{
-  display: inline-block;
-  width: 100%;
-  text-align: left;
-  //height: 35px;
-  height: auto;
-  background-color: lightgreen;
-  padding: 5px;
-}
-.edit_block{
-  font-weight: bold;
-  font-size: 20px;
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px;
-}
-
-.edit_buttons{
-  padding: 20px;
-}
 
 
-.btn-circle {
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
-  line-height: 1.428571429;
-  border-radius: 15px;
-}
-.btn-circle.btn-lg {
-  width: 50px;
-  height: 50px;
-  padding: 10px 16px;
-  font-size: 18px;
-  line-height: 1.33;
-  border-radius: 25px;
-}
-.btn-circle.btn-xl {
-  width: 70px;
-  height: 70px;
-  padding: 10px 16px;
-  font-size: 24px;
-  line-height: 1.33;
-  border-radius: 35px;
-}
-.add_for_edit_check input{
-  width: 30px;
-  height: 30px;
-}
-.discount, .price{
-  padding: 20px;
-  font-size: 20px;
-  font-weight: bold;
-}
-.offer{
-  margin-top: 20px;
-}
-.btn-success{
-  //width: 290px;
-  //margin-bottom: 10px;
-}
-.add_for_edit_check{
-  padding-bottom: 10px;
-  text-align: center;
-  font-size: 25px;
 }

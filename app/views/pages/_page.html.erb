@@ -10,11 +10,6 @@
 
 <div class="row">
   <div class="header">
-    <div class="errors">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
-
     <h1><%= @page.title %></h1>
     <div class="logo">
       <img src="" alt="">
@@ -152,8 +147,14 @@
               <span><%= check_box_tag "feedback_ids[]", feedback.id,class:"big_check" %>Редактировать </span>
             </div>
             <p><%= feedback.description %></p>
-            <%= image_tag feedback.photo.normal %>
-            <span><b><%= feedback.author %></b></span>
+            <div class="feedback_author">
+              <div class="feed_image">
+                <%= image_tag feedback.photo.normal %>
+              </div>
+              <div class="feed_author">
+                <%= feedback.author %>
+              </div>
+            </div>
             <div class="edit_buttons">
 
               <% if index==@feedbacks.count-1 %>

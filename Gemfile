@@ -1,18 +1,18 @@
 source 'https://rubygems.org'
 
-ruby '2.3.1'
+ruby "2.3.1"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 gem 'devise'
 gem 'devise-i18n'
 # gem 'rails', '4.2.4'
 # Use mysql as the database for Active Record
-# gem 'mysql2', '>=
-gem 'pg'
+gem 'mysql2'
+# gem 'pg'
 # Use Puma as the app server
 gem 'rails-i18n'
 gem 'puma'
-# gem 'thin', '~> 1.7'
+# gem 'thin', '~> 1.7'bundle
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.2.0'
 # gem 'paperclip'
@@ -23,10 +23,17 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier'
 gem 'rmagick'
 group :development, :test do
-  gem 'pg'
+  # gem 'pg'
   gem 'better_errors'
   gem 'meta_request'
 end
+group :production do
+  gem 'capistrano', '~> 3.1.0'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rails', '~> 1.1.1'
+  gem 'capistrano-rvm', github: "capistrano/rvm"
+end
+
 gem 'jquery-rails'
 gem "binding_of_caller"
 # gem for uploading and cropping images

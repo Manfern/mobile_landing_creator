@@ -9,6 +9,8 @@ Rails.application.configure do
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 
+  ruby ENV['CUSTOM_RUBY_VERSION'] || '2.3.1'
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
