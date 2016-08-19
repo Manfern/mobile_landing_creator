@@ -18,6 +18,7 @@ default: &default
   password: AtrForMe1!
   socket: /var/run/mysqld/mysqld.sock
 
+
 development:
   <<: *default
   database: mobile_landing_creator_development
@@ -53,3 +54,4 @@ production:
   database: mobile_landing_creator_production
   username: mobile_landing_creator
   password: AtrForMe1!
+  host: localhost

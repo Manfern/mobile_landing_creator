@@ -1,15 +1,15 @@
 # config valid only for Capistrano 3.1
-lock '3.1.0'
+lock '3.4.1'
 
 # Added for deploy to VPS
-set :application, 'mobile_landing_creator'
-set :repo_url, 'git@github.com:excid3/mobile_landing_creator.git'
+set :application, 'mobile_creator'
+set :repo_url, 'https://gitlab.com/Sergemanfern/mobile_creator.git'
 
 set :deploy_to, '/home/deploy/mobile_landing_creator'
 
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
-
+set :branch, "master"
 namespace :deploy do
 
   desc 'Restart application'
