@@ -51,15 +51,15 @@
     color: #000;
   }
   .offers{
-    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
   }
   .offer{
     border-radius: 5px;
     height: 475px;
     color: #000;
     padding: 10px;
-    margin: 5px;
-    margin-top: 20px;
       .discount{
         font-size: 20px;
         padding: 20px;
@@ -91,10 +91,11 @@
       }
       .price_old{
         font-size: 25px;
+        padding-top: 2px;
       }
       .price_new{
         font-size: 25px;
-        color: #dcc76b;
+        color: #d0b337;
         font-weight: bold;
       }
   }

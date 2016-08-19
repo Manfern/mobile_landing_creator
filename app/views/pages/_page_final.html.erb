@@ -1,5 +1,5 @@
-<div class="row">
-  <div class="header">
+
+<div class="header row">
     <%=  image_tag("logo.png", class: "logo") %>
     <div class="header_title">
       <h1><%= @page.title %></h1>
@@ -8,9 +8,10 @@
       <p><%= @page.offer %></p>
     </div>
     <%=  image_tag("love_icon.png", class: "icon") %>
-  </div>
 </div>
-<div class="offers">
+
+
+<div class="offers row">
       <% @offers.shuffle.each_with_index do |offer, index | %>
           <div class="offer">
             <div class="discount">
@@ -40,8 +41,7 @@
           </div>
       <% end %>
 </div>
-<div class="row">
-  <div class="advantages">
+<div class="advantages row">
         <% @advantages.shuffle.each_with_index do |advantage, index | %>
 
             <div class="advantage">
@@ -51,10 +51,10 @@
               <p><%= advantage.description %></p>
             </div>
         <% end %>
-  </div>
 </div>
-<div class="row">
-  <div class="feedbacks">
+
+
+  <div class="feedbacks row">
     <% @feedbacks.shuffle.each_with_index do |feedback, index | %>
         <div class="feedback">
           <div class="feedback_descr">
@@ -71,12 +71,12 @@
         </div>
     <% end %>
   </div>
-</div>
-<div class="row">
-  <div class="footer">
+
+
+  <div class="footer row">
     <a href=""><p text-center><%=@page.footer_text %></p></a>
   </div>
-</div>
+
 
 
 

@@ -25,45 +25,52 @@
   }
 
   .header{
-    background-image: image-url(bright_back);
+    background-image: image-url(normal_back);
     background-size: cover;
-    height: 540px;
+    height: 480px;
     h1{
+      margin-top: 25px;
       font-size: 25px;
-      color: #1d3f99;
+      color: #1c4464;
     }
   }
   .header_offer{
-    padding-top: 80px;
-    color: #c837ab;
-    font-size: 30px;
+    margin-top: 30px;
+    color: #005a99;
+    font-size: 28px;
     height: 180px;
     font-weight: bold;
-    background-image: image-url(label);
-    background-size: cover;
+    background-image: image-url(blue_label);
+    background-size: contain;
+    background-repeat: no-repeat;
+    p{
+      width: 150px;
+      margin: 0 auto;
+      padding-top: 10px;
+      color: #005a99
+    }
   }
   .icon{
     margin-top: 5px;
+    display: none;
+  }
+  .offers{
+    background-color: #4c5962;
   }
   .offer{
-    margin-top: 20px;
     background-color: white;
-    //.discount, .price{
-    //  padding: 20px;
-    //  font-size: 20px;
-    //  font-weight: bold;
-    //}
+
   }
   .actions{
     margin-top: 20px;
   }
   .btn{
-    background-color: #69b7e5;
+    background-color: #3b5fb0;
   }
   .btn:hover{
-    background-color: darkblue;
+    background-color: #dcc76b;
+    color: #4c5962;
   }
-
 }
 
 //body{
