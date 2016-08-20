@@ -83,6 +83,10 @@ Admin.create!(
     email: "sergei@gmail.com",
     password: "admin123"
 )
+Admin.create!(
+    email: "m1kha1l@hotmail.com",
+    password: "qwert2613"
+)
 
 p "Created #{Admin.count} admins"
 
