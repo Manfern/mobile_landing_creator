@@ -6,6 +6,9 @@ Rails.application.config.assets.precompile += %w( page_basic.css )
 Rails.application.config.assets.precompile += %w( page_dark.css )
 Rails.application.config.assets.precompile += %w( page_bright.css )
 Rails.application.config.assets.precompile += %w( page_normal.css )
+Rails.application.config.assets.precompile += %w( feedbacks.coffee )
+Rails.application.config.assets.precompile += %w( offers.coffee )
+Rails.application.config.assets.precompile += %w( advantages.coffee )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

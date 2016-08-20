@@ -4,9 +4,9 @@
 
 jQuery ->
   event.preventDefault()
-  new IconCropper()
+  new ImageCropper()
 
-class IconCropper
+class ImageCropper
   constructor: ->
     $('#cropbox').Jcrop
       aspectRatio: 1

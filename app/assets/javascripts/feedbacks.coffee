@@ -3,13 +3,13 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
   event.preventDefault()
-  new PhotoCropper()
+  new ImageCropper()
 
-class PhotoCropper
+class ImageCropper
   constructor: ->
     $('#cropbox').Jcrop
       aspectRatio: 1
-      setSelect: [0, 0, 300, 300]
+      setSelect: [0, 0, 320, 300]
       onSelect: @update
       onChange: @update
 

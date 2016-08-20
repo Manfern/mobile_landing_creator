@@ -17,7 +17,7 @@ class AdvantagesController < ApplicationController
   def create
     @advantage = @page.advantages.new(advantage_params)
     if @advantage.save
-      if params[:advantage][:icon].present?
+      if params[:advantage][:image].present?
         render :crop
       else
         redirect_to pages_path(@page), notice: "Предложение добавлено."
@@ -56,7 +56,7 @@ class AdvantagesController < ApplicationController
   def update
     @advantage=Advantage.find(params[:id])
     if @advantage.update(advantage_params)
-      if params[:advantage][:icon].present?
+      if params[:advantage][:image].present?
         render :crop
       else
         redirect_to pages_path, notice: "Предложение отредактировано."
@@ -83,7 +83,7 @@ class AdvantagesController < ApplicationController
 
 
   def advantage_params
-    params.require(:advantage).permit(:description, :icon, :crop_x, :crop_y, :crop_w, :crop_h)
+    params.require(:advantage).permit(:description, :image, :crop_x, :crop_y, :crop_w, :crop_h)
   end
 
   def resolve_layout

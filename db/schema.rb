@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20160818113720) do
     t.text     "description", limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
-    t.string   "icon"
+    t.string   "image"
     t.index ["page_id"], name: "index_advantages_on_page_id", using: :btree
   end
 
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20160818113720) do
     t.string   "author"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
-    t.string   "photo"
+    t.string   "image"
     t.index ["page_id"], name: "index_feedbacks_on_page_id", using: :btree
   end
 

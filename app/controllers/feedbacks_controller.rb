@@ -20,7 +20,7 @@ class FeedbacksController < ApplicationController
   def create
     @feedback = @page.feedbacks.new(feedback_params)
     if @feedback.save
-      if params[:feedback][:photo].present?
+      if params[:feedback][:image].present?
         render :crop
       else
         redirect_to pages_path(@page), notice: "Отзыв добавлен."
@@ -57,7 +57,7 @@ class FeedbacksController < ApplicationController
   def update
     @feedback = @page.feedbacks.find(params[:id])
     if @feedback.update(feedback_params)
-      if params[:feedback][:photo].present?
+      if params[:feedback][:image].present?
         render :crop
       else
         redirect_to page_path(@page), notice: "Предложение отредактировано."
@@ -78,7 +78,7 @@ class FeedbacksController < ApplicationController
   end
 
   def feedback_params
-    params.require(:feedback).permit(:description, :author, :photo, :crop_x, :crop_y, :crop_w, :crop_h)
+    params.require(:feedback).permit(:description, :author, :image, :crop_x, :crop_y, :crop_w, :crop_h)
   end
 
   def resolve_layout
