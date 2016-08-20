@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
 //= require jquery.Jcrop.min
 //= require jquery.cropzoom
-//= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .

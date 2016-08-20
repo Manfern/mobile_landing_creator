@@ -4,12 +4,15 @@ lock '3.4.1'
 # Added for deploy to VPS
 set :application, 'mobile_creator'
 set :repo_url, 'https://gitlab.com/Sergemanfern/mobile_creator.git'
-
 set :deploy_to, '/home/deploy/mobile_landing_creator'
-
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
-set :branch, "master"
+set :branch, "capistrano_deploy"
+set :scm, :git
+set :user, "Sergemanfern"
+set :password, "inferndb89"
+set :scm_passphrase, "awesome"
+
 namespace :deploy do
 
   desc 'Restart application'

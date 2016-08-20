@@ -62,16 +62,16 @@ feedbacks_list=[
 advantages_list=['Доставка почтой, бандеролями 1‑го класса, в течение 5‑10 рабочих дней. Стоимость доставки товара от 350 р.','Никаких предоплат! Оплата заказов осуществляется непосредственно по факту получения заказа.', 'Вы вправе отказаться от покупки в течение 14 дней с момента получения заказа, независимо от причины возврата.']
 
   pages_list.each do |name, title, offer, footer_text, design|
-    Page.create!( name: name,title: title, offer: offer, footer_text: footer_text, design: design)
+    Page.create( name: name,title: title, offer: offer, footer_text: footer_text, design: design)
   end
   offers_list.each do |name, discount, price_old, price, button_text|
-    Offer.create!( name: name,discount: discount, price_old: price_old, price: price, button_text: button_text, page_id: 1)
+    Offer.create( name: name,discount: discount, price_old: price_old, price: price, button_text: button_text, page_id: 1)
   end
   feedbacks_list.each do |description, author|
-    Feedback.create!( description: description, author: author, page_id: 1)
+    Feedback.create( description: description, author: author, page_id: 1)
   end
   advantages_list.each do |description|
-    Advantage.create!( description: description, page_id: 1)
+    Advantage.create( description: description, page_id: 1)
   end
 
 p "Created #{Page.count} pages"
@@ -79,6 +79,12 @@ p "Created #{Offer.count} offers"
 p "Created #{Advantage.count} advantage blocks"
 p "Created #{Feedback.count} feedback blocks"
 
+Admin.create!(
+    email: "sergei@gmail.com",
+    password: "admin123"
+)
+
+p "Created #{Admin.count} admins"
 
 # Different style of seeds.rb
 # Page.create(
