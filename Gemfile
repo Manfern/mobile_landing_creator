@@ -22,6 +22,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 gem 'rmagick'
+gem 'rubysl-resolv', '~> 2.1', '>= 2.1.2'
 group :development, :test do
   # gem 'pg'
   gem 'better_errors'
