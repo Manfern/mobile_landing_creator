@@ -22,19 +22,18 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 gem 'rmagick'
-gem 'rubysl-resolv', '~> 2.1', '>= 2.1.2'
-group :development, :test do
-  # gem 'pg'
-  gem 'better_errors'
-  gem 'meta_request'
+group :development do
+  gem 'capistrano', '3.5.0'
+  gem 'capistrano-rvm'
+  gem 'capistrano-nginx'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails'
+  gem 'capistrano-rails-db'
+  gem 'capistrano-rails-console'
+  gem 'capistrano-upload-config'
+  gem 'sshkit-sudo'
 end
-group :production do
-  gem 'capistrano', '~> 3.4.0'
-  gem 'capistrano-bundler', '~> 1.1.2'
-  gem 'capistrano-rails', '~> 1.1.1'
-  gem 'capistrano-rvm', github: "capistrano/rvm"
-  gem 'capistrano-puma'
-end
+
 
 gem 'jquery-rails'
 gem 'binding_of_caller'
@@ -42,6 +41,7 @@ gem 'binding_of_caller'
 gem 'carrierwave'
 # gem 'mini_magick'
 gem 'jcrop-rails-v2'
+gem 'passenger'
 # imageMagick install
 # sudo apt-get -y install imagemagick
 # sudo apt-get -y install libmagic-dev

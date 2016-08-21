@@ -1,0 +1,86 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ */
+/* line 19, /home/sergei/rails/mobile_landing_creator/app/assets/stylesheets/page_dark.css.scss */
+.container {
+  text-align: center;
+  background-color: #69b7e5;
+  color: #000;
+  width: 320px !important;
+}
+/* line 24, /home/sergei/rails/mobile_landing_creator/app/assets/stylesheets/page_dark.css.scss */
+.container #new_admin {
+  color: #000;
+}
+/* line 28, /home/sergei/rails/mobile_landing_creator/app/assets/stylesheets/page_dark.css.scss */
+.container .header {
+  background-image: url(/assets/dark_back2-1399479a8824db949da97e97e08082ce28f574273c709fd4a751f364c43ef159.jpg);
+  background-size: cover;
+  height: 583px;
+}
+/* line 32, /home/sergei/rails/mobile_landing_creator/app/assets/stylesheets/page_dark.css.scss */
+.container .header h1 {
+  margin-top: 25px;
+  font-size: 25px;
+  color: #fff;
+}
+/* line 38, /home/sergei/rails/mobile_landing_creator/app/assets/stylesheets/page_dark.css.scss */
+.container .header_offer {
+  margin-top: 30px;
+  color: #292618;
+  font-size: 28px;
+  font-weight: bold;
+  background-image: url(/assets/gold_shield);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  height: 270px;
+  width: 220px;
+}
+/* line 49, /home/sergei/rails/mobile_landing_creator/app/assets/stylesheets/page_dark.css.scss */
+.container .header_offer p {
+  width: 170px;
+  margin: 0 auto;
+  padding-top: 80px;
+  color: #292618;
+}
+/* line 57, /home/sergei/rails/mobile_landing_creator/app/assets/stylesheets/page_dark.css.scss */
+.container .icon {
+  margin-top: 5px;
+  display: none;
+}
+/* line 61, /home/sergei/rails/mobile_landing_creator/app/assets/stylesheets/page_dark.css.scss */
+.container .offers {
+  color: #c623a4;
+  background-color: #27577f;
+}
+/* line 65, /home/sergei/rails/mobile_landing_creator/app/assets/stylesheets/page_dark.css.scss */
+.container .offer {
+  color: #c623a4;
+  background-color: #000;
+}
+/* line 70, /home/sergei/rails/mobile_landing_creator/app/assets/stylesheets/page_dark.css.scss */
+.container .actions {
+  margin-top: 20px;
+}
+/* line 73, /home/sergei/rails/mobile_landing_creator/app/assets/stylesheets/page_dark.css.scss */
+.container .btn {
+  color: #000;
+  background-color: #c623a4;
+}
+/* line 77, /home/sergei/rails/mobile_landing_creator/app/assets/stylesheets/page_dark.css.scss */
+.container .btn:hover {
+  background-color: #dcc76b;
+  color: #000;
+}
