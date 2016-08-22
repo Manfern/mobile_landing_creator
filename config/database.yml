@@ -14,14 +14,13 @@ default: &default
 #  adapter: postgresql
   encoding: utf8
   pool: 5
-  username: root
-  password: AtrForMe1!
   socket: /var/run/mysqld/mysqld.sock
 
 
 development:
   <<: *default
   database: mobile_landing_creator_development
+  adapter: mysql2
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -29,6 +28,13 @@ development:
 test:
   <<: *default
   database: mobile_landing_creator_test
+  adapter: mysql2
+
+production:
+  <<: *default
+  database: mobile_landing_creator_production
+  host: localhost
+  adapter: mysql2
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,9 +55,4 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: mobile_landing_creator_production
-  username: mobile_landing_creator
-  password: AtrForMe1!
-  host: localhost
+

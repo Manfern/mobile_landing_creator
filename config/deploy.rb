@@ -1,12 +1,16 @@
 # config valid only for current version of Capistrano
 lock '3.5.0'
 
-set :repo_url, 'https://github.com/Manfern/mobile_landing_creator.git'
+set :repo_url, 'git@github.com:Manfern/mobile_landing_creator.git'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-set :user, 'deploy'
+set :user, 'root'
+set :use_sudo, true
+set :password, "1.YyamNBC@96qPQB"
 set :application, 'mobile_landing_creator'
 set :rails_env, 'production'
+set :branch, 'capistrano_deploy'
+
 server '107.191.46.60', user: "#{fetch(:user)}", roles: %w{app db web}, primary: true
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 set :pty, true

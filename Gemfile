@@ -41,7 +41,7 @@ gem 'binding_of_caller'
 gem 'carrierwave'
 # gem 'mini_magick'
 gem 'jcrop-rails-v2'
-gem 'passenger'
+# gem 'passenger'
 # imageMagick install
 # sudo apt-get -y install imagemagick
 # sudo apt-get -y install libmagic-dev
