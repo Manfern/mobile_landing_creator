@@ -1,13 +1,8 @@
 require 'capistrano/setup'
 require 'capistrano/deploy'
-require 'capistrano/nginx'
-require 'capistrano/puma'
-require 'capistrano/puma/nginx'
-require 'capistrano/rvm'
-require 'capistrano/rails'
-require 'capistrano/rails/db'
-require 'capistrano/rails/console'
-require 'capistrano/upload-config'
-require 'sshkit/sudo'
 
-Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
+require 'capistrano/bundler'
+require 'capistrano/rails'
+require 'capistrano/rvm'
+set :rvm_type, :user
+set :rvm_ruby_version, '2.3.1p112'

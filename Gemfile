@@ -12,6 +12,7 @@ gem 'mysql2'
 # Use Puma as the app server
 gem 'rails-i18n'
 gem 'puma'
+gem 'listen', '~> 3.1.5'
 # gem 'thin', '~> 1.7'bundle
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.2.0'
@@ -22,18 +23,11 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 gem 'rmagick'
-group :development do
-  gem 'capistrano', '3.5.0'
-  gem 'capistrano-rvm'
-  gem 'capistrano-nginx'
-  gem 'capistrano3-puma'
-  gem 'capistrano-rails'
-  gem 'capistrano-rails-db'
-  gem 'capistrano-rails-console'
-  gem 'capistrano-upload-config'
-  gem 'sshkit-sudo'
-end
 
+gem 'capistrano', '~> 3.5.0'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rails', '~> 1.1.1'
+gem 'capistrano-rvm', github: "capistrano/rvm"
 
 gem 'jquery-rails'
 gem 'binding_of_caller'
@@ -69,9 +63,10 @@ group :development, :test do
 end
 
 group :development do
+  gem 'listen', '~> 3.1.5'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
-  gem 'listen'
+  # gem 'listen'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   # gem 'spring-watcher-listen'
