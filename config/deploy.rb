@@ -4,9 +4,9 @@ lock '3.5.0'
 set :repo_url, 'git@github.com:Manfern/mobile_landing_creator.git'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-set :user, 'root'
+set :user, 'deploy'
 set :use_sudo, true
-set :password, "1.YyamNBC@96qPQB"
+set :password, "admin"
 set :application, 'mobile_landing_creator'
 set :rails_env, 'production'
 set :branch, 'capistrano_deploy'

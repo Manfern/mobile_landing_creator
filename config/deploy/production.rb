@@ -8,7 +8,7 @@
 # role :web, %w{deploy@example.com}
 # role :db,  %w{deploy@example.com}
 
-server '107.191.46.60', user: 'root', roles: %w{web app}
+server '107.191.46.60', user: 'deploy', roles: %w{web app}
 set :stage, :production
 
 # Extended Server Syntax
