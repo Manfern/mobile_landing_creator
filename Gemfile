@@ -43,7 +43,7 @@ gem 'jcrop-rails-v2'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'
 gem 'validate_url'
-
+gem 'rails_layout'
 # gem 'therubyracer', platforms: :ruby
 
 

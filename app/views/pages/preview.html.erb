@@ -1,5 +1,12 @@
+<% case @page.design %>
+  <% when 1 %>
+    <%= render "layouts/page_normal" %>
+  <% when 2 %>
+    <%= render "layouts/page_bright" %>
+  <% when 3 %>
+    <%= render "layouts/page_dark" %>
+<% end %>
 <div class="row">
   <%= link_to "Назад к редактированию", page_path(id: @page.id, page_id: @page.id),class: "btn btn-info btn_preview" %>
 </div>
-
 <%= render partial: 'page_final', object: @page  %>

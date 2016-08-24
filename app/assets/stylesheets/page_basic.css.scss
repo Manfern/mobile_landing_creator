@@ -17,12 +17,15 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+.errors{
+  display: none;
+}
 .container{
   text-align: center;
   width: 320px !important;
   background-color: #69b7e5;
   color: #000;
+
   a{
     color: #000;
   }

@@ -19,7 +19,9 @@
                 <%= offer.discount %>%
               </div>
             </div>
-            <div class="img"><%= image_tag offer.image.normal %></div>
+            <%= link_to (offer.link+@link_params) do  %>
+                <div class="img"><%= image_tag offer.image.normal %></div>
+            <% end %>
             <h3><%= offer.name %></h3>
             <div class="offer_stars">
               <%=  image_tag("5stars.png", class: "stars") %>

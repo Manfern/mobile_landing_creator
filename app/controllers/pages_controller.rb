@@ -2,29 +2,15 @@ class PagesController < ApplicationController
   # layout 'admin'
   # before_action :authenticate_admin!, only: [:new, :create, :edit, :update,:destroy]
   before_action :get_page, only: [:preview, :show, :edit, :update]
-  before_action :load_page, only: [:index, :show, :preview]
+  before_action :load_page, only: [  :index,:show, :preview]
   before_action :add_utm_end, only: [:index, :show, :preview]
-  layout :resolve_layout, except: [:preview]
-  layout :resolve_preview_layout, only: [:preview]
+  layout :resolve_layout
   # skip_before_action :verify_authenticity_token
 
 
 
-
   def index
-    if admin_signed_in?
-       if current_admin.selected_page.nil?
-          @page=Page.first if @page.nil?
-       else
-         @page=Page.find_by(id: current_admin.selected_page)
-       end
-    else
-      @page=Page.first
-    end
 
-    # respond_to do |format|
-    #   format.html
-    # end
 
   end
 
@@ -34,7 +20,6 @@ class PagesController < ApplicationController
 
   def create
     @page=Page.new(page_params)
-    # @page.page_id = params[:page_id] if params.has_key?(:page_id)
     if @page.save
       redirect_to page_path(@page), notice: "Страница добавлена."
     else
@@ -44,11 +29,7 @@ class PagesController < ApplicationController
 
   def show
     @page_id=params[:id]
-    # @page=Page.find(params[:id])
-    # @pages=Page.all
-    # @advantages=@page.advantages.all
-    # @offers=@page.offers.all
-    # @feedbacks=@page.feedbacks.all
+
     if admin_signed_in?
       current_admin.update!(selected_page: @page.id)
     end
@@ -58,16 +39,15 @@ class PagesController < ApplicationController
   end
 
   def edit
-    # @page=Page.find(params[:id])
+
   end
 
   def preview
-    # @page=Page.find(params[:id])
+
 
   end
 
   def update
-    # @page=Page.find(params[:id])
     if @page.update!(page_params)
       redirect_to page_path(@page), notice: "Страница отредактирована."
     else
@@ -98,24 +78,16 @@ class PagesController < ApplicationController
     else
       case @page.design
         when 1
-          "page_normal"
+          "layouts/_page_normal"
         when 2
-          "page_bright"
+          "layouts/_page_bright"
         when 3
-          "page_dark"
+          "layouts/_page_dark"
       end
     end
   end
-  def resolve_preview_layout
-    case @page.design
-      when 1
-        "page_normal"
-      when 2
-        "page_bright"
-      when 3
-        "page_dark"
-    end
-  end
+
+
 
   def add_utm_end
     # utm хвосты из текущего url присоединить к ссылке на товар\предложение
@@ -131,9 +103,20 @@ class PagesController < ApplicationController
   end
 
   def load_page
+    if admin_signed_in?
+      if current_admin.selected_page.nil?
+        @page=Page.first if @page.nil?
+      else
+        @page=Page.find_by(id: current_admin.selected_page)
+      end
+    else
+      @page=Page.first
+    end
+
     @pages=Page.all
-    @advantages=Page.first.advantages.all
-    @offers=Page.first.offers.all
-    @feedbacks=Page.first.feedbacks.all
+    @advantages=@page.advantages.all
+    @offers=@page.offers.all
+    @feedbacks=@page.feedbacks.all
   end
+
 end
