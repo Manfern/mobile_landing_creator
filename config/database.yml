@@ -10,10 +10,9 @@
 #   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
 #
 default: &default
+  password: AtrForMe1!
   adapter: mysql2
 #  adapter: postgresql
-  password: admin
-  user: root
   encoding: utf8
   pool: 5
   socket: /var/run/mysqld/mysqld.sock
@@ -37,9 +36,6 @@ production:
   database: mobile_landing_creator_production
   host: localhost
   adapter: mysql2
-  password: admin
-  #  username: <%= ENV['APPNAME_DATABASE_USER'] %>
-#  password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is

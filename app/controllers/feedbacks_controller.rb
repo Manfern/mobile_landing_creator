@@ -23,7 +23,7 @@ class FeedbacksController < ApplicationController
       if params[:feedback][:image].present?
         render :crop
       else
-        redirect_to pages_path(@page), notice: "Отзыв добавлен."
+        redirect_to page_path(@page), notice: "Отзыв добавлен."
       end
     else
       render :new
@@ -41,7 +41,7 @@ class FeedbacksController < ApplicationController
     @feedbacks=Feedback.update(params[:feedbacks].keys, params[:feedbacks].values)
     @feedbacks.reject! {|p| p.errors.empty? }
     if @feedbacks.empty?
-      redirect_to pages_path
+      redirect_to page_path(@page)
     else
       render "edit_all"
     end

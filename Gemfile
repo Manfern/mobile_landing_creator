@@ -23,11 +23,13 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 gem 'rmagick'
+group :production do
+  gem 'capistrano', '~> 3.5.0'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rails', '~> 1.1.1'
+  gem 'capistrano-rvm', github: "capistrano/rvm"
+end
 
-gem 'capistrano', '~> 3.5.0'
-gem 'capistrano-bundler', '~> 1.1.2'
-gem 'capistrano-rails', '~> 1.1.1'
-gem 'capistrano-rvm', github: "capistrano/rvm"
 
 gem 'jquery-rails'
 gem 'binding_of_caller'
@@ -36,16 +38,15 @@ gem 'carrierwave'
 # gem 'mini_magick'
 gem 'jcrop-rails-v2'
 # gem 'passenger'
-# imageMagick install
-# sudo apt-get -y install imagemagick
-# sudo apt-get -y install libmagic-dev
-# sudo apt-get -y install libmagickwand-d
+
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'
-# See https://github.com/rails/execjs#readme for more supported runtimes
+gem 'validate_url'
+
 # gem 'therubyracer', platforms: :ruby
-# Use jquery as the JavaScript library
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+
+
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
@@ -57,12 +58,10 @@ gem 'jbuilder'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
-end
 
 group :development do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platform: :mri
   gem 'listen', '~> 3.1.5'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'

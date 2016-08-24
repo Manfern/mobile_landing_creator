@@ -17,8 +17,7 @@
   <%#= form_for @offer do |f| %>
 
       <% %w[x y w h].each do |attribute| %>
-          <%= f.input "crop_#{attribute}" %> <br>
-          <%#= f.input "crop_#{attribute}", as: :hidden %> <br>
+          <%= f.input "crop_#{attribute}", as: :hidden %> <br>
       <% end %>
       <div class="actions">
         <%= f.button :submit, "Сохранить изображение", class: "btn-success btn-lg" %>

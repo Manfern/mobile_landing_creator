@@ -22,7 +22,7 @@ class OffersController < ApplicationController
       if params[:offer][:image].present?
         render :crop
       else
-        redirect_to pages_path(@page), notice: "Предложение добавлено."
+        redirect_to page_path(@page), notice: "Предложение добавлено."
       end
     else
       render :new
@@ -37,7 +37,7 @@ class OffersController < ApplicationController
     @offers=Offer.update(params[:offers].keys, params[:offers].values)
     @offers.reject! {|p| p.errors.empty? }
     if @offers.empty?
-      redirect_to pages_path
+      redirect_to page_path(@page), notice: "Предложение добавлено."
     else
       render "edit_all"
     end
@@ -52,7 +52,7 @@ class OffersController < ApplicationController
   def destroy
     @offer = @page.offers.find(params[:id])
     @offer.destroy
-    redirect_to pages_path(@page)
+    redirect_to page_path(@page)
   end
 
   def update

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   resources :pages do
+    get :preview
     resources :offers do
       collection do
         get :edit_all

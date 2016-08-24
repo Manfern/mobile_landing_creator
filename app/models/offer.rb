@@ -7,7 +7,7 @@ class Offer < ApplicationRecord
   validates :price, numericality: true
   validates :price_old, numericality: true
   validates :discount, numericality: true
-
+  validates :link, url: true
 
   def crop_image
     image.recreate_versions! if crop_x.present?

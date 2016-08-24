@@ -20,7 +20,7 @@ class AdvantagesController < ApplicationController
       if params[:advantage][:image].present?
         render :crop
       else
-        redirect_to pages_path(@page), notice: "Предложение добавлено."
+        redirect_to page_path(@page), notice: "Предложение добавлено."
       end
     else
       render :new
@@ -39,7 +39,7 @@ class AdvantagesController < ApplicationController
     @advantages=Advantage.update(params[:advantages].keys, params[:advantages].values)
     @advantages.reject! {|p| p.errors.empty? }
     if @advantages.empty?
-      redirect_to pages_path
+      redirect_to page_path(@page)
     else
       render "edit_all"
     end
@@ -59,7 +59,7 @@ class AdvantagesController < ApplicationController
       if params[:advantage][:image].present?
         render :crop
       else
-        redirect_to pages_path, notice: "Предложение отредактировано."
+        redirect_to page_path(@page), notice: "Предложение отредактировано."
       end
     else
       render :edit
