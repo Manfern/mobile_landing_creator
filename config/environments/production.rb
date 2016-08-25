@@ -1,15 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  # cCONFIG FOR HEROKU, onfig/environments/production.rb
-  # config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
-  # if ENV["RAILS_LOG_TO_STDOUT"].present?
-  #   logger           = ActiveSupport::Logger.new(STDOUT)
-  #   logger.formatter = config.log_formatter
-  #   config.logger = ActiveSupport::TaggedLogging.new(logger)
-  # end
 
-  ruby ENV['CUSTOM_RUBY_VERSION'] || '2.3.1'
+
+  # ruby ENV['CUSTOM_RUBY_VERSION'] || '2.3.1'
 
   # Code is not reloaded between requests.
   config.cache_classes = true
