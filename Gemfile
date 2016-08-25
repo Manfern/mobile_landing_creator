@@ -12,7 +12,7 @@ gem 'mysql2'
 # Use Puma as the app server
 gem 'rails-i18n'
 gem 'puma'
-gem 'listen', '~> 3.1.5'
+
 # gem 'thin', '~> 1.7'bundle
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.2.0'
@@ -47,7 +47,7 @@ gem 'validate_url'
 gem 'rails_layout'
 # gem 'therubyracer', platforms: :ruby
 
-gem 'mina'
+gem 'mina', '~>0.3.8'
 gem 'mina-puma'
 
 gem 'turbolinks'
