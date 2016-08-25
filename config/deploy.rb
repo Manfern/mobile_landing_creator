@@ -13,7 +13,7 @@ require 'mina/puma'
 
 set :domain, '45.32.187.60'
 set :password, 'admin'
-set :deploy_to, '/apps/mobile_landing_creator'
+set :deploy_to, '/apps/mobile_landing_creator/'
 set :repository, 'git@github.com:Manfern/mobile_landing_creator.git'
 set :branch, 'capistrano_deploy'
 set :rail_env, 'production'
