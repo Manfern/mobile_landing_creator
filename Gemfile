@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.3.1"
+ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 gem 'devise'
@@ -29,7 +29,6 @@ group :development do
   gem 'mina'
   gem 'mina-puma'
   gem 'byebug', platform: :mri
-  gem 'listen', '~> 3.1.5'
   gem 'web-console'
   gem 'spring'
 end
