@@ -35,6 +35,8 @@ production:
   <<: *default
   database: mobile_landing_creator_production
   host: localhost
+  login: root
+  password: "admin"
   adapter: mysql2
 
 # As with config/secrets.yml, you never want to store sensitive information,
