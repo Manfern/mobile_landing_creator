@@ -35,7 +35,7 @@ production:
   <<: *default
   database: mobile_landing_creator_production
   host: localhost
-  login: root
+  username: root
   password: "admin"
   adapter: mysql2
 
