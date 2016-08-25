@@ -23,12 +23,13 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 gem 'rmagick'
-group :production do
-  gem 'capistrano', '~> 3.5.0'
-  gem 'capistrano-bundler', '~> 1.1.2'
-  gem 'capistrano-rails', '~> 1.1.1'
-  gem 'capistrano-rvm', github: "capistrano/rvm"
-end
+
+# group :production do
+#   gem 'capistrano', '~> 3.5.0'
+#   gem 'capistrano-bundler', '~> 1.1.2'
+#   gem 'capistrano-rails', '~> 1.1.1'
+#   gem 'capistrano-rvm', github: "capistrano/rvm"
+# end
 
 
 gem 'jquery-rails'
@@ -46,6 +47,8 @@ gem 'validate_url'
 gem 'rails_layout'
 # gem 'therubyracer', platforms: :ruby
 
+gem 'mina'
+gem 'mina-puma'
 
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
