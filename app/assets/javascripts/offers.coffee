@@ -3,7 +3,6 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 jQuery ->
-  event.preventDefault()
   new ImageCropper()
 
 class ImageCropper
