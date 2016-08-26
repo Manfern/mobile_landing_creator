@@ -7,8 +7,8 @@ gem 'devise'
 gem 'devise-i18n'
 # gem 'rails', '4.2.4'
 # Use mysql as the database for Active Record
-gem 'mysql2'
-# gem 'pg'
+# gem 'mysql2'
+gem 'pg'
 # Use Puma as the app server
 gem 'rails-i18n'
 gem 'puma'
@@ -62,7 +62,7 @@ gem 'jbuilder'
 
 
 group :development do
-  gem 'mina', '~>0.3.8', require: false
+  gem 'mina', '~>0.3.7', require: false
   gem 'mina-puma', require: false
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

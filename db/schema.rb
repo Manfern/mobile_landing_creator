@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 20160818113720) do
 
-  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -30,26 +33,26 @@ ActiveRecord::Schema.define(version: 20160818113720) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
   end
 
-  create_table "advantages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "advantages", force: :cascade do |t|
     t.integer  "page_id"
-    t.text     "description", limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "image"
     t.index ["page_id"], name: "index_advantages_on_page_id", using: :btree
   end
 
-  create_table "feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "feedbacks", force: :cascade do |t|
     t.integer  "page_id"
-    t.text     "description", limit: 65535
+    t.text     "description"
     t.string   "author"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "image"
     t.index ["page_id"], name: "index_feedbacks_on_page_id", using: :btree
   end
 
-  create_table "offers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "offers", force: :cascade do |t|
     t.integer  "page_id"
     t.integer  "discount"
     t.string   "name"
@@ -63,14 +66,14 @@ ActiveRecord::Schema.define(version: 20160818113720) do
     t.index ["page_id"], name: "index_offers_on_page_id", using: :btree
   end
 
-  create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "pages", force: :cascade do |t|
     t.string   "name"
     t.string   "title"
-    t.text     "offer",       limit: 65535
-    t.text     "footer_text", limit: 65535
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
-    t.integer  "design",                    default: 1
+    t.text     "offer"
+    t.text     "footer_text"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "design",      default: 1
   end
 
 end
