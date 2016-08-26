@@ -7,8 +7,8 @@ gem 'devise'
 gem 'devise-i18n'
 # gem 'rails', '4.2.4'
 # Use mysql as the database for Active Record
-# gem 'mysql2'
-gem 'pg'
+gem 'mysql2'
+# gem 'pg'
 # Use Puma as the app server
 gem 'rails-i18n'
 gem 'puma'
@@ -24,13 +24,17 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier'
 gem 'rmagick'
 
-# group :production do
-#   gem 'capistrano', '~> 3.5.0'
-#   gem 'capistrano-bundler', '~> 1.1.2'
-#   gem 'capistrano-rails', '~> 1.1.1'
-#   gem 'capistrano-rvm', github: "capistrano/rvm"
-# end
+group :development do
+  gem 'capistrano', '~> 3.5.0'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rails', '~> 1.1.1'
+  # gem 'capistrano-rvm', github: "capistrano/rvm"
+  gem 'capistrano-rbenv'
 
+end
+
+# Use Capistrano for deployment
+# gem 'capistrano-rails', group: :development
 
 gem 'jquery-rails'
 gem 'binding_of_caller'
@@ -57,8 +61,7 @@ gem 'jbuilder'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+
 
 
 group :development do

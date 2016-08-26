@@ -10,20 +10,19 @@
 #   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
 #
 default: &default
-#  adapter: mysql2
-#  username: root
-#  password: "admin"
-  adapter: postgresql
+  adapter: mysql2
+  username: root
+  password: "admin"
   encoding: utf8
   pool: 5
-#  socket: /var/run/mysqld/mysqld.sock
+  socket: /var/run/mysqld/mysqld.sock
 
 
 development:
   <<: *default
   database: mobile_landing_creator_development
-#  adapter: mysql2
-#  password: AtrForMe1!
+  adapter: mysql2
+  password: AtrForMe1!
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -31,7 +30,7 @@ development:
 test:
   <<: *default
   database: mobile_landing_creator_test
-#  adapter: mysql2
+  adapter: mysql2
 
 production:
   <<: *default
@@ -39,7 +38,7 @@ production:
   host: localhost
   username: root
   password: "admin"
-#  adapter: mysql2
+  adapter: mysql2
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
