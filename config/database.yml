@@ -10,7 +10,6 @@
 #   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
 #
 default: &default
-  password: AtrForMe1!
   adapter: mysql2
 #  adapter: postgresql
   encoding: utf8
@@ -22,6 +21,7 @@ development:
   <<: *default
   database: mobile_landing_creator_development
   adapter: mysql2
+  password: AtrForMe1!
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
