@@ -10,6 +10,8 @@ set :branch, "capistrano_deploy"
 set :deploy_to, '/apps/mobile_landing_creator'
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :user, "deploy"
+set :use_sudo, true
 
   namespace :deploy do
 

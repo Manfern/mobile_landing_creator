@@ -37,15 +37,14 @@ end
 # gem 'capistrano-rails', group: :development
 
 gem 'jquery-rails'
+gem 'jcrop-rails-v2'
 gem 'binding_of_caller'
 # gem for uploading and cropping images
 gem 'carrierwave'
 # gem 'mini_magick'
-gem 'jcrop-rails-v2'
 # gem 'passenger'
-
-
 # Use CoffeeScript for .coffee assets and views
+
 gem 'coffee-rails'
 gem 'validate_url'
 gem 'rails_layout'
