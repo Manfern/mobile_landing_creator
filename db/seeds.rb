@@ -9,6 +9,7 @@ Page.destroy_all
 Offer.destroy_all
 Advantage.destroy_all
 Feedback.destroy_all
+Admin.destroy_all
 p "Cleared database before loading seeds data"
 
 
