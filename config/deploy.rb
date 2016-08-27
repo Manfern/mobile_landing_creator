@@ -1,4 +1,4 @@
-lock '3.6.1'
+lock '3.3.5'
 
 set :application, 'mobile_landing_creator'
 set :repo_url, 'git@github.com:Manfern/mobile_landing_creator.git'

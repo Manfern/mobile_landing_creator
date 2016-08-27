@@ -27,7 +27,7 @@ gem 'rmagick'
 
 group :development do
   gem 'puma',   require: false
-  gem 'capistrano', '~> 3.5.0',   require: false
+  gem 'capistrano', '~> 3.3.5',   require: false
   gem 'capistrano-bundler', '~> 1.1.2',   require: false
   gem 'capistrano-rails', '~> 1.1.1',   require: false
   # gem 'capistrano-rvm', github: "capistrano/rvm"
