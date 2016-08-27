@@ -11,11 +11,12 @@ gem 'mysql2'
 # gem 'pg'
 # Use Puma as the app server
 gem 'rails-i18n'
-# gem 'puma'
+
 gem 'listen', '~> 3.1.5'
 # gem 'thin', '~> 1.7'bundle
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'unicorn'
 # gem 'paperclip'
 # mysql pass AtrForMe1!
 # Use SCSS for stylesheets
@@ -25,11 +26,13 @@ gem 'uglifier'
 gem 'rmagick'
 
 group :development do
-  gem 'capistrano', '~> 3.5.0'
-  gem 'capistrano-bundler', '~> 1.1.2'
-  gem 'capistrano-rails', '~> 1.1.1'
+  gem 'puma',   require: false
+  gem 'capistrano', '~> 3.5.0',   require: false
+  gem 'capistrano-bundler', '~> 1.1.2',   require: false
+  gem 'capistrano-rails', '~> 1.1.1',   require: false
   # gem 'capistrano-rvm', github: "capistrano/rvm"
-  gem 'capistrano-rbenv'
+  gem 'capistrano-rbenv',   require: false
+  # gem 'capistrano3-puma',   require: false
 
 end
 
@@ -59,13 +62,13 @@ gem 'jbuilder'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'therubyracer', platforms: :ruby, group: :production
 
 
 
 group :development do
-  gem 'mina', '~>0.3.7', require: false
-  gem 'mina-puma', require: false
+  # gem 'mina', '~>0.3.7', require: false
+  # gem 'mina-puma', require: false
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'listen', '~> 3.1.5'
@@ -75,6 +78,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   # gem 'spring-watcher-listen'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -9,7 +9,7 @@
 # role :db,  %w{deploy@example.com}
 set :stage, :production
 
-server '45.32.187.60', user: 'deploy', roles: %w{web app}
+server '45.76.103.9', user: 'deploy', roles: %w{web app}
 
 # Extended Server Syntax
 # ======================
