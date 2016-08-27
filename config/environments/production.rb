@@ -4,7 +4,7 @@ Rails.application.configure do
 
 
   # ruby ENV['CUSTOM_RUBY_VERSION'] || '2.3.1'
-
+  config.force_ssl = true
   # Code is not reloaded between requests.
   config.cache_classes = true
 

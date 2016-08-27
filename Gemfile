@@ -11,7 +11,7 @@ gem 'mysql2'
 # gem 'pg'
 # Use Puma as the app server
 gem 'rails-i18n'
-gem 'puma'
+# gem 'puma'
 gem 'listen', '~> 3.1.5'
 # gem 'thin', '~> 1.7'bundle
 gem 'simple_form'

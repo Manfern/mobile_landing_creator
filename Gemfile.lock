@@ -241,7 +241,6 @@ DEPENDENCIES
   mina (~> 0.3.7)
   mina-puma
   mysql2
-  puma
   rails
   rails-i18n
   rails_layout
