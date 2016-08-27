@@ -32,6 +32,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.1.1',   require: false
   # gem 'capistrano-rvm', github: "capistrano/rvm"
   gem 'capistrano-rbenv',   require: false
+  gem 'capistrano3-unicorn'
   # gem 'capistrano3-puma',   require: false
 
 end
@@ -67,10 +68,7 @@ gem 'therubyracer', platforms: :ruby, group: :production
 
 
 group :development do
-  # gem 'mina', '~>0.3.7', require: false
-  # gem 'mina-puma', require: false
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+
   gem 'listen', '~> 3.1.5'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
@@ -80,6 +78,8 @@ group :development do
   # gem 'spring-watcher-listen'
 
 end
+
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

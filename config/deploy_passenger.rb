@@ -1,5 +1,5 @@
 require "bundler/capistrano"
-
+lock '3.5.0'
 server "45.76.103.9", :web, :app, :db, primary: true
 
 set :application, "mobile_landing_creator"
