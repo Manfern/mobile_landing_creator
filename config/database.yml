@@ -11,8 +11,6 @@
 #
 default: &default
   adapter: mysql2
-  username: root
-  password: "admin"
   encoding: utf8
   pool: 5
   socket: /var/run/mysqld/mysqld.sock
@@ -31,12 +29,12 @@ test:
   <<: *default
   database: mobile_landing_creator_test
   adapter: mysql2
+  password: AtrForMe1!
 
 production:
   <<: *default
   database: mobile_landing_creator_production
   host: localhost
-  username: root
   password: "admin"
   adapter: mysql2
 

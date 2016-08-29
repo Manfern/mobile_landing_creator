@@ -28,21 +28,24 @@ offers_list=[
         50,
         5635,
         1690,
-        "Перейти в корзину"
+        "Перейти в корзину",
+        "http://google.com"
     ],
     [
         "Браслет Swarovski",
         50,
         3180,
         1590,
-        "Перейти в корзину"
+        "Перейти в корзину",
+        "http://google.com"
     ],
     [
         "Cерьги Dior пуссеты",
         50,
         3720,
         1750,
-        "Перейти в корзину"
+        "Перейти в корзину",
+        "http://google.com"
     ]
 ]
 
@@ -65,8 +68,8 @@ advantages_list=['Доставка почтой, бандеролями 1‑го
   pages_list.each do |name, title, offer, footer_text, design|
     Page.create( name: name,title: title, offer: offer, footer_text: footer_text, design: design)
   end
-  offers_list.each do |name, discount, price_old, price, button_text|
-    Offer.create( name: name,discount: discount, price_old: price_old, price: price, button_text: button_text, page_id: 1)
+  offers_list.each do |name, discount, price_old, price, button_text, link|
+    Offer.create( name: name,discount: discount, price_old: price_old, price: price, button_text: button_text,  link: link,page_id: 1)
   end
   feedbacks_list.each do |description, author|
     Feedback.create( description: description, author: author, page_id: 1)

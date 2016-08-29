@@ -4,33 +4,16 @@
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
 # Don't declare `role :all`, it's a meta role
-# role :app, %w{deploy@example.com}
-# role :web, %w{deploy@example.com}
-# role :db,  %w{deploy@example.com}
+role :app, %w{deploy@45.76.103.9}
+role :web, %w{deploy@45.76.103.9}
+
 set :stage, :production
+set :user, "deploy"
+server '45.76.103.9', roles: %w(web app)
 
-# server '45.76.103.9', user: 'deploy', roles: %w{web app}
-set :port, 22
-set :user, 'deploy'
-set :deploy_via, :remote_cache
-set :use_sudo, false
 
-server '45.76.103.9',
-       roles: [:web, :app, :db],
-       port: fetch(:port),
-       user: fetch(:user),
-       primary: true
-
-set :deploy_to, "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
-
-set :ssh_options, {
-    forward_agent: true,
-    auth_methods: %w(publickey),
-    user: 'deploy',
-}
-
-set :rails_env, :production
-set :conditionally_migrate, true
+# set :rails_env, :production
+# set :conditionally_migrate, true
 
 # Extended Server Syntax
 # ======================

@@ -25,21 +25,20 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier'
 gem 'rmagick'
 
-group :development do
-  gem 'puma',   require: false
-  gem 'capistrano', '~> 3.3.5',   require: false
-  gem 'capistrano-bundler', '~> 1.1.2',   require: false
-  gem 'capistrano-rails', '~> 1.1.1',   require: false
-  # gem 'capistrano-rvm', github: "capistrano/rvm"
-  gem 'capistrano-rbenv',   require: false
-  gem 'capistrano3-unicorn'
-  # gem 'capistrano3-puma',   require: false
 
+group :development do
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
 end
+
+gem 'puma'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 gem 'jquery-rails'
 gem 'jcrop-rails-v2'
 gem 'binding_of_caller'
@@ -53,8 +52,6 @@ gem 'coffee-rails'
 gem 'validate_url'
 gem 'rails_layout'
 # gem 'therubyracer', platforms: :ruby
-
-
 
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
