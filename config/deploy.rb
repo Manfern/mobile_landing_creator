@@ -14,17 +14,18 @@
 
 # Change these
 server '45.76.103.9',port: 22, roles: [:web, :app, :db], primary: true
+# server '45.76.103.9',port: 22, roles: [:web, :app, :db], primary: true
 
 ## Defaults:
-set :scm,           :git
-set :branch,        :capistrano_deploy
-set :format,        :pretty
-# set :log_level,     :debug
-set :keep_releases, 3
 
-set :repo_url,        'git@github.com:Manfern/mobile_landing_creator.git'
-set :application,     'mobile_landing_creator'
-set :user,            'deploy'
+set :repo_url, 'git@github.com:Manfern/mobile_landing_creator.git'
+set :scm, :git
+set :branch, :capistrano_deploy
+set :format,        :pretty
+set :log_level,     :debug
+set :keep_releases, 3
+set :application, 'mobile_landing_creator'
+set :user, 'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
@@ -46,8 +47,8 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 
 
 ## Linked Files & Directories (Default None):
-set :linked_files, %w{config/database.yml}
-set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+# set :linked_files, %w{config/database.yml}
+# set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
