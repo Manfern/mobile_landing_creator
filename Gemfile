@@ -7,8 +7,8 @@ gem 'devise'
 gem 'devise-i18n'
 # gem 'rails', '4.2.4'
 # Use mysql as the database for Active Record
-gem 'mysql2'
-# gem 'pg'
+# gem 'mysql2'
+gem 'pg'
 # Use Puma as the app server
 gem 'rails-i18n'
 
@@ -24,13 +24,13 @@ gem 'uglifier'
 gem 'rmagick'
 
 
-group :development do
-  gem 'capistrano',         require: false
-  gem 'capistrano-rvm',     require: false
-  gem 'capistrano-rails',   require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano3-puma',   require: false
-end
+# group :development do
+#   gem 'capistrano',         require: false
+#   gem 'capistrano-rvm',     require: false
+#   gem 'capistrano-rails',   require: false
+#   gem 'capistrano-bundler', require: false
+#   gem 'capistrano3-puma',   require: false
+# end
 
 gem 'puma'
 # Use Capistrano for deployment
