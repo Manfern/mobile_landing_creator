@@ -1,7 +1,8 @@
-server 'your_server_ip', roles: [:web, :app, :db], primary: true
+server '45.76.103.9', roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'git@example.com:Manfern/mobile_landing_creator.git'
+set :repo_url,        'git@github.com:Manfern/mobile_landing_creator.git'
 set :application,     'mobile_landing_creator'
+set :branch, :capistrano_deploy
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
@@ -46,7 +47,7 @@ namespace :puma do
 end
 
 namespace :deploy do
-  desc "Make sure local git is in sync with remote."
+  # desc "Make sure local git is in sync with remote."
   # task :check_revision do
   #   on roles(:app) do
   #     unless `git rev-parse HEAD` == `git rev-parse origin/master`
@@ -72,7 +73,7 @@ namespace :deploy do
     end
   end
 
-  before :starting,     :check_revision
+  # before :starting,     :check_revision
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart

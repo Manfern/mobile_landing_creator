@@ -10,6 +10,7 @@
 #   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
 #
 default: &default
+#  adapter: postgresql
   adapter: mysql2
   encoding: utf8
   pool: 5
@@ -19,7 +20,6 @@ default: &default
 development:
   <<: *default
   database: mobile_landing_creator_development
-  adapter: mysql2
   password: AtrForMe1!
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +28,6 @@ development:
 test:
   <<: *default
   database: mobile_landing_creator_test
-  adapter: mysql2
   password: AtrForMe1!
 
 production:
@@ -36,7 +35,6 @@ production:
   database: mobile_landing_creator_production
   host: localhost
   password: "admin"
-  adapter: mysql2
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is

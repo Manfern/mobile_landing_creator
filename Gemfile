@@ -13,10 +13,8 @@ gem 'mysql2'
 gem 'rails-i18n'
 
 gem 'listen', '~> 3.1.5'
-# gem 'thin', '~> 1.7'bundle
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.2.0'
-gem 'unicorn'
 # gem 'paperclip'
 # mysql pass AtrForMe1!
 # Use SCSS for stylesheets
@@ -35,7 +33,6 @@ group :development do
 end
 
 gem 'puma'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
