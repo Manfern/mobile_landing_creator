@@ -13,7 +13,7 @@
 # set :passenger_restart_with_touch, true
 
 # Change these
-server '45.76.103.9', roles: [:web, :app, :db], primary: true
+server '45.76.103.9',port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:Manfern/mobile_landing_creator.git'
 set :application,     'mobile_landing_creator'
