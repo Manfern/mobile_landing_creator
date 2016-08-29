@@ -38,7 +38,7 @@ gem 'puma'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
+# gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 gem 'jquery-rails'
 gem 'jcrop-rails-v2'
 gem 'binding_of_caller'
