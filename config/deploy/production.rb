@@ -4,12 +4,9 @@
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
 # Don't declare `role :all`, it's a meta role
-role :app, %w{deploy@45.76.103.9}
-role :web, %w{deploy@45.76.103.9}
-
 set :stage, :production
 set :user, "deploy"
-server '45.76.103.9', roles: %w(web app)
+server '45.76.103.9', roles: %w(web app db)
 
 
 # set :rails_env, :production
