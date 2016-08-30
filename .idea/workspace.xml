@@ -2,6 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d773fa63-8cac-46b4-8691-0f3a46cd320b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-601fa302ae0078de4e4dd8885794f474.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/5stars-c1fff11baa8568b2629c0f187213276b2e7d630a0137b7a682c57501fde4b730.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Jcrop-752309673bbd9d9b2ba0bd58d0a7071a2c59c30e2824d85bcd2a3bc0a07ef1f1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/advantages-98f3f8db22f44b7d848153192a160ff60ccb8dc28807c017f2a02e8b17363acb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/advantages-98f3f8db22f44b7d848153192a160ff60ccb8dc28807c017f2a02e8b17363acb.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/advantages-9f541f78c8814d47ffab172ba5d7aebdb28fa944d8f47d9c5a05aae98d668b14.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/advantages-9f541f78c8814d47ffab172ba5d7aebdb28fa944d8f47d9c5a05aae98d668b14.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-0970d5064544e86c5945c208fa5e6cdc83a10c21e113f0f4109c77b4c0bdddbd.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-0970d5064544e86c5945c208fa5e6cdc83a10c21e113f0f4109c77b4c0bdddbd.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-6d2652e99c885b30d649fcf101231445851eed6bd45c7045e38d139f90048be0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-6d2652e99c885b30d649fcf101231445851eed6bd45c7045e38d139f90048be0.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-a2a468d41e74eebc212967b908232ec11587ce6812eb6b7843b4b24a1de44d0a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-a2a468d41e74eebc212967b908232ec11587ce6812eb6b7843b4b24a1de44d0a.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-c8c7b9d0561941846d2c6e47776f268a0bc1bba609ab18f201499e8570df7357.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-c8c7b9d0561941846d2c6e47776f268a0bc1bba609ab18f201499e8570df7357.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blue_label-b800f3502c339bb2805b2e8f2431a6bb8a2e39ed7af6cc7ff95a92746e86ce1a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-bd18efd3efd70fec8ad09611a20cdbf99440b2c1d40085c29be036f891d65358.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-bd18efd3efd70fec8ad09611a20cdbf99440b2c1d40085c29be036f891d65358.ttf.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-d168d50a88c730b4e6830dc0da2a2b51dae4658a77d9619943c27b8ecfc19d1a.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-d168d50a88c730b4e6830dc0da2a2b51dae4658a77d9619943c27b8ecfc19d1a.svg.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-f495f34e4f177cf0115af995bbbfeb3fcabc88502876e76fc51a4ab439bc8431.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-f495f34e4f177cf0115af995bbbfeb3fcabc88502876e76fc51a4ab439bc8431.eot.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-fc969dc1c6ff531abcf368089dcbaf5775133b0626ff56b52301a059fc0f9e1e.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bright_back-b645057b922d763e99f4d2881c35708b0b91f3d92710c56c543dd8a07afea096.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/dark_back-32064c290fc032a35491310677f1367c02d57c4b9e1fd624c7eba6876bea0934.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/dark_back2-1399479a8824db949da97e97e08082ce28f574273c709fd4a751f364c43ef159.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/feedbacks-78340ead5e1e2c1ed5d1c73ac79fae7f15007ef7f13222344530db3fb2b135f7.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/feedbacks-78340ead5e1e2c1ed5d1c73ac79fae7f15007ef7f13222344530db3fb2b135f7.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/feedbacks-d2ee9999bd451666aea3435b19969b72155349d9949a783c298eb5c5b0fa28ab.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/feedbacks-d2ee9999bd451666aea3435b19969b72155349d9949a783c298eb5c5b0fa28ab.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/footer_back-d6db2e32d2710cbd59f1367416c6e4670277782d9b4ef0eba91371b6f1f02aa5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/four-stars-6cb3b3ca70cd23988996c2843df845146355cbf430009886f89946008dd6fc4a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/gold_shield" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/label-1e3558249348d044601605aabb44aefa1b86e80903ddabf3099bb4e74fb5d71f.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/logo-1cd1df261eb58ecd4b346dd51d6598b12b2d6483236bd1b36c729f59b5a2b850.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/love_icon-7330672a5f481d10fdd7809bfe9a695401570142f6a8495a5526dff1d92520ef.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/normal_back-ffd227a89e5c675b1cc92590b84716b978f404fc40d6b2d3868eef2f96cdafcd.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/offers-2514f65aad3b0f145608c288cda3c3e5652b4ce304ab3e8b259c0d548624f4f0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/offers-2514f65aad3b0f145608c288cda3c3e5652b4ce304ab3e8b259c0d548624f4f0.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/offers-fc1acdc9f89d1eb29b40ef55cef33bc10c4f16a94ef12a0b1985d116362584ac.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/offers-fc1acdc9f89d1eb29b40ef55cef33bc10c4f16a94ef12a0b1985d116362584ac.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_basic-c067a8fc8bed4e106c341b82c8b4dc63eb84579bb157403be288578306922fc7.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_basic-c067a8fc8bed4e106c341b82c8b4dc63eb84579bb157403be288578306922fc7.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_basic-f2ae093c61b8b856dfa77e98e09dc6291336987ab0fd845533fc1dba79aea189.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_basic-f2ae093c61b8b856dfa77e98e09dc6291336987ab0fd845533fc1dba79aea189.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_bright-c4a9fdde1f05984a59e2607ab0f142ad90aa91e288541c87db644b1b27c86b5f.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_bright-c4a9fdde1f05984a59e2607ab0f142ad90aa91e288541c87db644b1b27c86b5f.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_bright-caa186226b259c3303f8465da9c094beb8e9cea8cbed0208f48fce15b3d3363b.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_bright-caa186226b259c3303f8465da9c094beb8e9cea8cbed0208f48fce15b3d3363b.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_dark-843fb61836521590b414693f2495aac7f60a8156f5c2587ea21aa3f30e864dcb.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_dark-843fb61836521590b414693f2495aac7f60a8156f5c2587ea21aa3f30e864dcb.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_dark-b9863b5c69d09f3381dd8276ef0f286f98be343d8eb422a3f4e7fab0c62ada39.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_dark-b9863b5c69d09f3381dd8276ef0f286f98be343d8eb422a3f4e7fab0c62ada39.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_normal-19106327343116010c7e3cb3e0e2a47f103e124d85fd78626617e7108789cb8c.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_normal-19106327343116010c7e3cb3e0e2a47f103e124d85fd78626617e7108789cb8c.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_normal-442c093c718f2aa6648c03a7f14894cb9aa34a98b79c6b9fa3923b921d9099ff.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_normal-442c093c718f2aa6648c03a7f14894cb9aa34a98b79c6b9fa3923b921d9099ff.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/texture-9d92504d2123c7babb7ec2916ce3700cc707cc7ef272a426fb8c3b1b4fa2384a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/up_label-74079d65c8374b3bbc175a0f89b88fed7098b280acdec3d44428ed8bb4f06a43.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mobile_landing_creator.iws" />
@@ -269,24 +328,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mobile_landing_creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mobile_landing_creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -531,12 +572,12 @@
       <workItem from="1471500010273" duration="106139000" />
       <workItem from="1472129599407" duration="55640000" />
       <workItem from="1472400576461" duration="50208000" />
-      <workItem from="1472571820598" duration="12574000" />
+      <workItem from="1472571820598" duration="13843000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="557099000" />
+    <option name="totallyTimeSpent" value="558368000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
