@@ -69,7 +69,7 @@ class AdvantagesController < ApplicationController
   def destroy
     @advantage=Advantage.find(params[:id])
     if @advantage.destroy
-      redirect_to root_path
+      redirect_to page_path(@page), notice: "Преимущество удалено."
     else
       render :edit
     end

@@ -52,7 +52,7 @@ class OffersController < ApplicationController
   def destroy
     @offer = @page.offers.find(params[:id])
     @offer.destroy
-    redirect_to page_path(@page)
+    redirect_to page_path(@page), notice: "Предложение удалено."
   end
 
   def update

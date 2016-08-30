@@ -1,7 +1,7 @@
 
 <% if admin_signed_in? %>
-    <% if @offers.count==0 %>
-        <%# if @offers.count==0&&@advantages.count==0&&@feedbacks.count==0 @%>
+    <% if @offers.count==0&&@advantages.count==0&&@feedbacks.count==0 %>
+        <%#= if @offers.count==0&&@advantages.count==0&&@feedbacks.count==0 %>
 
             <%= render partial: 'page_new', object: @page  %>
     <% else %>

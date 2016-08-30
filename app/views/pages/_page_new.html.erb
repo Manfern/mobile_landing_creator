@@ -1,7 +1,7 @@
 <%= link_to "Выйти из редактирования", destroy_admin_session_path, method: :delete, class: "btn btn-warning edit_block" %>
 <%= link_to "Добавить новую страницу", new_page_path(page_id: @page.id+1),class: "btn btn-success edit_block"  %>
 <%= link_to "Редактировать страницу", edit_page_path(id: @page.id, page_id: @page.id),class: "btn btn-info edit_block"  %>
-<h3>Выбрать страницу</h3>
+<%= link_to "Посмотреть страницу", page_preview_path(id: @page.id, page_id: @page.id),class: "btn btn-default edit_block" %>
 
 
   <%= select_tag 'select_page', options_from_collection_for_select(@pages, "id", "name"),prompt: "Выберите страницу", onchange: "window.location.replace('/pages/'+this.value);" %>

@@ -16,7 +16,7 @@
   <%= simple_form_for([@page,@offer],multipart:true, class: 'form-horizontal' ) do |f| %>
   <%#= form_for @offer do |f| %>
       <% %w[x y w h].each do |attribute| %>
-          <%= f.input "crop_#{attribute}", as: :hidden %> <br>
+          <%= f.input "crop_#{attribute}", as: :hidden %>
       <% end %>
       <div class="actions">
         <%= f.button :submit, "Сохранить изображение", class: "btn-success btn-lg" %>

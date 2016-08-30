@@ -15,14 +15,16 @@
     <div class="logo">
       <img src="" alt="">
     </div>
-    <p><%= @page.offer %></p>
+    <p><%= truncate(@page.offer, length: 66) %></p>
 
   </div>
 </div>
+<hr>
 <div class="offers">
   <%= form_tag edit_all_page_offers_path(page_id: @page.id), method: :get do %>
+      <h1>Предложения</h1>
       <% if @offers.count==0 %>
-          <h1>Отзывы</h1>
+
           <%= link_to new_page_offer_path(page_id: @page.id) do  %>
               <button type="button" class="btn btn-success btn-circle btn-lg">
                 <i class="glyphicon glyphicon-plus"></i>
@@ -30,7 +32,6 @@
           <% end %>
       <% end %>
       <% @offers.shuffle.each_with_index do |offer, index | %>
-          <hr>
           <div class="add_for_edit_check">
             <%= check_box_tag "offer_ids[]",offer.id, class:"big_check" %>
             <span>Редактировать</span>
@@ -75,6 +76,7 @@
                 </button>
             <% end %>
           </div>
+          <hr>
       <% end %>
 
       <%= submit_tag "Редактировать предложения", class: "btn btn-info edit_block" %>
@@ -83,8 +85,9 @@
 
 <div class="advantages">
   <%= form_tag edit_all_page_advantages_path(page_id:@page.id), method: :get do %>
+      <hr>
+      <h1>Преимущества</h1>
       <% if @advantages.count==0 %>
-          <h1>Преимущества</h1>
           <%= link_to new_page_advantage_path(page_id: @page.id) do  %>
               <button type="button" class="btn btn-success btn-circle btn-lg">
                 <i class="glyphicon glyphicon-plus"></i>
@@ -92,8 +95,6 @@
           <% end %>
       <% end %>
       <% @advantages.shuffle.each_with_index do |advantage, index | %>
-
-          <hr>
           <div class="add_for_edit_check">
             <span><%= check_box_tag "advantage_ids[]", advantage.id,class:"big_check" %>Редактировать </span>
           </div>
@@ -125,6 +126,7 @@
                 </button>
             <% end %>
           </div>
+          <hr>
       <% end %>
       <%= submit_tag "Редактировать преимущества", class:"btn btn-info edit_block" %>
   <% end %>
@@ -132,8 +134,10 @@
 
 <div class="feedbacks">
   <%= form_tag edit_all_page_feedbacks_path(page_id: @page.id), method: :get do %>
+      <hr>
+      <h1>Отзывы</h1>
       <% if @feedbacks.count==0 %>
-          <h1>Отзывы</h1>
+
           <%= link_to new_page_feedback_path(page_id: @page.id) do  %>
               <button type="button" class="btn btn-success btn-circle btn-lg">
                 <i class="glyphicon glyphicon-plus"></i>
@@ -142,7 +146,6 @@
       <% end %>
       <% @feedbacks.shuffle.each_with_index do |feedback, index | %>
           <div class="feedback">
-            <hr>
             <div class="add_for_edit_check">
               <span><%= check_box_tag "feedback_ids[]", feedback.id,class:"big_check" %>Редактировать </span>
             </div>
@@ -176,6 +179,7 @@
               <% end %>
 
             </div>
+            <hr>
       <% end %>
       <%= submit_tag "Редактировать отзывы", class:"btn btn-info edit_block" %>
   <% end %>

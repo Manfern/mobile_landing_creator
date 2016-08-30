@@ -51,7 +51,7 @@ class FeedbacksController < ApplicationController
   def destroy
     @feedback = @page.feedbacks.find(params[:id])
     @feedback.destroy
-    redirect_to pages_path(@page)
+    redirect_to page_path(@page), notice: "Отзыв удален."
   end
 
   def update
