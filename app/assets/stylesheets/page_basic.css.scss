@@ -25,9 +25,9 @@
   color: #000;
   .strikeout {
     font-size: 1em;
-    line-height: 1.4em;
+    line-height: 1.3em;
     position: relative;
-    width: 55px;
+    width: 70px;
     margin: 0 auto;
   }
   .strikeout::after {
@@ -37,7 +37,7 @@
     //margin-top: calc(0.125em / 2 * -1);
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 45%;
   }
   a{
     color: #000;
