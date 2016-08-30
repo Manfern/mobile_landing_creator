@@ -23,6 +23,22 @@
   .container{
     display: none;
   }
+  .strikeout {
+    font-size: 1em;
+    line-height: 1.5em;
+    position: relative;
+    width: 50px;
+    margin: 0 auto;
+  }
+  .strikeout::after {
+    border-bottom: 0.15em solid #000;
+    content: "";
+    left: 0;
+    //margin-top: calc(0.125em / 2 * -1);
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
   text-align: center;
   background-color: #e0e0eb;
   width: 320px !important;

@@ -23,7 +23,22 @@
   width: 320px !important;
   background-color: #69b7e5;
   color: #000;
-
+  .strikeout {
+    font-size: 1em;
+    line-height: 1.4em;
+    position: relative;
+    width: 55px;
+    margin: 0 auto;
+  }
+  .strikeout::after {
+    border-bottom: 0.15em solid #000;
+    content: "";
+    left: 0;
+    //margin-top: calc(0.125em / 2 * -1);
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
   a{
     color: #000;
   }

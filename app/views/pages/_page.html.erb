@@ -43,7 +43,7 @@
             <div class="img"><%= image_tag offer.image.normal %></div>
             <div class="price">
               <div class="price_old">
-                <strike><%= offer.price_old %></strike>
+                <div class="strikeout"><%= offer.price_old %></div>
               </div>
               <div class="price_new">
                 <%= offer.price %>
