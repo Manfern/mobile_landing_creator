@@ -20,6 +20,9 @@
 @import "bootstrap";
 
 .container{
+  .container{
+    display: none;
+  }
   text-align: center;
   background-color: #e0e0eb;
   width: 320px !important;

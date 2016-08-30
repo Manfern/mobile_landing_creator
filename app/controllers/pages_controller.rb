@@ -110,7 +110,12 @@ class PagesController < ApplicationController
         @page=Page.find_by(id: current_admin.selected_page)
       end
     else
-      @page=Page.first
+      if params[:id].nil?
+        @page=Page.first
+      else
+        @page=Page.find(params[:id])
+      end
+
     end
 
     @pages=Page.all
