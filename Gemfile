@@ -13,9 +13,10 @@ gem 'pg'
 gem 'rails-i18n'
 gem 'rails_12factor'
 # Gem for storing images on s3
-gem 'aws-sdk', '~> 2'
-gem 'fog', '~> 1.0.0'
-gem 'listen', '~> 3.1.5'
+# gem 'aws-sdk', '~> 2'
+# gem 'fog'
+
+# gem 'fog-aws'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.2.0'
 # gem 'paperclip'
@@ -44,6 +45,7 @@ gem 'jcrop-rails-v2'
 gem 'binding_of_caller'
 # gem for uploading and cropping images
 gem 'carrierwave'
+gem 'cloudinary'
 # gem 'mini_magick'
 # gem 'passenger'
 # Use CoffeeScript for .coffee assets and views
@@ -69,14 +71,9 @@ group :development do
   gem 'listen', '~> 3.1.5'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
-  # gem 'listen'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  # gem 'spring-watcher-listen'
+
 
 end
 
 
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

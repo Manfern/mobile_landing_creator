@@ -1,15 +1,20 @@
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
-
-  # Include RMagick or MiniMagick support:
   include CarrierWave::RMagick
+  include Cloudinary::CarrierWave
+  # storage :fog
+  #
+  # include CarrierWave::MimeTypes
+  # process :set_content_type
+  # Include RMagick or MiniMagick support:
+
   # include CarrierWave::MiniMagick
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
   # Choose what kind of storage to use for this uploader:
-  storage :file
+
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -37,6 +42,11 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :image_crop
     resize_to_fill(150, 150)
   end
+  # ENV['S3_KEY']='AKIAIGHVE4PT2WBVDHGQ'
+  # ENV['S3_SECRET']='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'
+  # ENV['S3_BUCKET_NAME']='mobile-landing-creator/assets'
+  #
+
 
   version :icon do
     process :image_crop
