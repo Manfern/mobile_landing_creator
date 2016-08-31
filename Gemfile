@@ -11,7 +11,7 @@ gem 'devise-i18n'
 gem 'pg'
 # Use Puma as the app server
 gem 'rails-i18n'
-
+gem 'rails_12factor'
 # Gem for storing images on s3
 gem 'aws-sdk', '~> 2'
 gem 'fog', '~> 1.0.0'
