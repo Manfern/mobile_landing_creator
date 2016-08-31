@@ -12,6 +12,9 @@ gem 'pg'
 # Use Puma as the app server
 gem 'rails-i18n'
 
+# Gem for storing images on s3
+gem 'aws-sdk', '~> 2'
+
 gem 'listen', '~> 3.1.5'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.2.0'
