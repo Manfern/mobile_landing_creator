@@ -14,7 +14,7 @@ gem 'rails-i18n'
 
 # Gem for storing images on s3
 gem 'aws-sdk', '~> 2'
-
+gem 'fog', '~> 1.0.0'
 gem 'listen', '~> 3.1.5'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.2.0'
