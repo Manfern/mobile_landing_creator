@@ -1,21 +1,19 @@
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
-  include Cloudinary::CarrierWave
+  # include Cloudinary::CarrierWave
   include CarrierWave::RMagick
 
-  # storage :fog
-  #
   # include CarrierWave::MimeTypes
   # process :set_content_type
   # Include RMagick or MiniMagick support:
 
   # include CarrierWave::MiniMagick
-  def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-  end
+  # def store_dir
+  #   "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  # end
   # Choose what kind of storage to use for this uploader:
-
+  storage :fog
   # storage :file
 
   # Override the directory where uploaded files will be stored.

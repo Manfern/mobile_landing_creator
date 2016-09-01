@@ -45,7 +45,8 @@ gem 'jcrop-rails-v2'
 gem 'binding_of_caller'
 # gem for uploading and cropping images
 gem 'carrierwave'
-gem 'cloudinary'
+# gem 'cloudinary'
+gem 'fog'
 # gem 'mini_magick'
 # gem 'passenger'
 # Use CoffeeScript for .coffee assets and views
