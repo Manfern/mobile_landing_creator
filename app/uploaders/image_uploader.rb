@@ -2,7 +2,7 @@
 
 class ImageUploader < CarrierWave::Uploader::Base
 
-  include Cloudinary::CarrierWave
+  # include Cloudinary::CarrierWave
   include CarrierWave::RMagick
 
   # include CarrierWave::MimeTypes
@@ -16,6 +16,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Choose what kind of storage to use for this uploader:
   # storage :file
   # storage :file
+  storage :fog
+
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -80,7 +82,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   def custom_crop
     return :x => model.crop_x, :y => model.crop_y,
-        :width => model.crop_width, :height => model.crop_height, :crop => :crop
+        :width => model.crop_w, :height => model.crop_h, :crop => :crop
   end
 
 

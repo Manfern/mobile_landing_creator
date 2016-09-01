@@ -45,15 +45,15 @@ gem 'jcrop-rails-v2'
 gem 'binding_of_caller'
 # gem for uploading and cropping images
 gem 'carrierwave'
-gem 'cloudinary'
-# gem 'fog'
+# gem 'cloudinary'
+gem 'fog'
+gem 'figaro'
 # gem 'google-api-client', '< 0.9', '>= 0.6.2'
 # gem 'fog-google'
 # gem 'google-api-client', '~> 0.8.6'
 # gem 'mini_magick'
 # gem 'passenger'
 # Use CoffeeScript for .coffee assets and views
-
 gem 'coffee-rails'
 gem 'validate_url'
 gem 'rails_layout'

@@ -18,3 +18,6 @@
 /config/database.production.yml
 /config/secrets.production.yml
 .env
+
+# Ignore application configuration
+/config/application.yml
