@@ -33,14 +33,14 @@
       <% end %>
       <% @offers.shuffle.each_with_index do |offer, index | %>
           <div class="add_for_edit_check">
-            <%= check_box_tag "offer_ids[]",offer.id, class:"big_check" %>
+            <%= check_box_tag "offer_ids[]", offer.id, class:"big_check" %>
             <span>Редактировать</span>
           </div>
           <div class="offer">
             <span class="discount"><%= offer.discount %>%</span>
             <h3><%= offer.name %></h3>
             <!--<div class="img"><%#= image_tag offer.image.normal %></div>-->
-            <div class="img"><%= image_tag offer.image.normal %></div>
+            <div class="img"><%= cl_image_tag(offer.image.normal, version: 1315746344) %></div>
             <div class="price">
               <div class="price_old">
                 <div class="strikeout"><%= offer.price_old %></div>

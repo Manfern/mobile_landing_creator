@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
-  # include Cloudinary::CarrierWave
+  include Cloudinary::CarrierWave
   include CarrierWave::RMagick
 
   # include CarrierWave::MimeTypes
@@ -13,7 +13,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   # end
   # Choose what kind of storage to use for this uploader:
-  storage :fog
+  storage :file
   # storage :file
 
   # Override the directory where uploaded files will be stored.

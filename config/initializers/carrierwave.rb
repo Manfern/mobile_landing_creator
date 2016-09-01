@@ -21,5 +21,5 @@ CarrierWave.configure do |config|
 
   }
 
-  config.fog_directory = 'mobile_landing_creator '
+  config.fog_directory = 'decisive-bazaar-142102'
 end

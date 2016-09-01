@@ -1,0 +1,5 @@
+my_credential:
+    google_project: decisive-bazaar-142102
+    google_client_email: xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@developer.gserviceaccount.com
+    google_json_key_location: /path/to/my-project-xxxxxxxxxxxx.json
+
