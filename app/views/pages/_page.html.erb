@@ -40,7 +40,7 @@
             <span class="discount"><%= offer.discount %>%</span>
             <h3><%= offer.name %></h3>
             <!--<div class="img"><%#= image_tag offer.image.normal %></div>-->
-            <div class="img"><%= cl_image_tag(offer.image.normal, version: 1315746344) %></div>
+            <div class="img"><%= image_tag offer.image.normal %></div>
             <div class="price">
               <div class="price_old">
                 <div class="strikeout"><%= offer.price_old %></div>

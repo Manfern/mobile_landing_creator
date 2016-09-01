@@ -14,7 +14,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   # end
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  # storage :file
   # storage :file
 
   # Override the directory where uploaded files will be stored.
@@ -47,6 +47,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # ENV['S3_BUCKET_NAME']='mobile-landing-creator/assets'
   #
 
+  process :custom_crop
 
   version :icon do
     process :image_crop
@@ -77,6 +78,10 @@ class ImageUploader < CarrierWave::Uploader::Base
     end
   end
 
+  def custom_crop
+    return :x => model.crop_x, :y => model.crop_y,
+        :width => model.crop_width, :height => model.crop_height, :crop => :crop
+  end
 
 
 
