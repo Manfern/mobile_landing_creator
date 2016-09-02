@@ -5,7 +5,7 @@ class Advantage < ApplicationRecord
   validates :description, presence: true
 
   mount_uploader :image, ImageUploader
-
+  # process_in_background :image
 
   def crop_image
     image.recreate_versions! if crop_x.present?

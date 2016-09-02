@@ -2,6 +2,7 @@ class Offer < ApplicationRecord
   after_update :crop_image
   belongs_to :page
   mount_uploader :image, ImageUploader
+  # process_in_background :image
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
   validates :page_id, :discount, :name, :price, :price_old, :button_text, presence: true
   validates :price, numericality: true
