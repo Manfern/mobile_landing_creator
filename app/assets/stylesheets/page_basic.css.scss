@@ -15,12 +15,31 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+@media(min-width: 480px){
+  .container{
+    margin: 0 auto;
+    width: 400px !important;
+  }
+
+}
+@media(max-width: 400px) {
+  .container {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+
+}
 .errors{
   display: none;
 }
 .container{
-  text-align: center;
   width: 320px !important;
+
+  //width: 960px;
+  text-align: center;
+
   background-color: #69b7e5;
   color: #000;
   .strikeout {
@@ -86,9 +105,12 @@
   }
   .offer{
     border-radius: 5px;
-    height: 475px;
+    height: auto;
     color: #000;
     padding: 10px;
+    .btn{
+      margin-bottom: 10px;
+    }
       .discount{
         font-size: 20px;
         padding: 20px;
