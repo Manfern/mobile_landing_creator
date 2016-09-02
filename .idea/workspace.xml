@@ -1,51 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d773fa63-8cac-46b4-8691-0f3a46cd320b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-f04cc63ae12c22457db1ef5b2f9daeac.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/5stars-c1fff11baa8568b2629c0f187213276b2e7d630a0137b7a682c57501fde4b730.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Jcrop-752309673bbd9d9b2ba0bd58d0a7071a2c59c30e2824d85bcd2a3bc0a07ef1f1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/advantages-0fd6ef2977e4bcbc724fad5061bb21bd08eaf17e4600e2b40c73802047c23122.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/advantages-0fd6ef2977e4bcbc724fad5061bb21bd08eaf17e4600e2b40c73802047c23122.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-3c432f5f131bbda5af8d85ce528c7ee97812e4d1e47b8be65013e60e3d16488c.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-3c432f5f131bbda5af8d85ce528c7ee97812e4d1e47b8be65013e60e3d16488c.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-5d82f117d47b18e4a32b0d3c363ab9b908676361dbfb1eea2f3e05bc60f0a4b7.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-5d82f117d47b18e4a32b0d3c363ab9b908676361dbfb1eea2f3e05bc60f0a4b7.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blue_label-b800f3502c339bb2805b2e8f2431a6bb8a2e39ed7af6cc7ff95a92746e86ce1a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-bd18efd3efd70fec8ad09611a20cdbf99440b2c1d40085c29be036f891d65358.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-bd18efd3efd70fec8ad09611a20cdbf99440b2c1d40085c29be036f891d65358.ttf.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-d168d50a88c730b4e6830dc0da2a2b51dae4658a77d9619943c27b8ecfc19d1a.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-d168d50a88c730b4e6830dc0da2a2b51dae4658a77d9619943c27b8ecfc19d1a.svg.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-f495f34e4f177cf0115af995bbbfeb3fcabc88502876e76fc51a4ab439bc8431.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-f495f34e4f177cf0115af995bbbfeb3fcabc88502876e76fc51a4ab439bc8431.eot.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap/glyphicons-halflings-regular-fc969dc1c6ff531abcf368089dcbaf5775133b0626ff56b52301a059fc0f9e1e.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bright_back-b645057b922d763e99f4d2881c35708b0b91f3d92710c56c543dd8a07afea096.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/dark_back-32064c290fc032a35491310677f1367c02d57c4b9e1fd624c7eba6876bea0934.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/dark_back2-1399479a8824db949da97e97e08082ce28f574273c709fd4a751f364c43ef159.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/feedbacks-1e3ae05867307c7eb21c4d9b23bf616af18809dd34c9a237189fd80f9ba74106.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/feedbacks-1e3ae05867307c7eb21c4d9b23bf616af18809dd34c9a237189fd80f9ba74106.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/footer_back-d6db2e32d2710cbd59f1367416c6e4670277782d9b4ef0eba91371b6f1f02aa5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/four-stars-6cb3b3ca70cd23988996c2843df845146355cbf430009886f89946008dd6fc4a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/gold_shield" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/label-1e3558249348d044601605aabb44aefa1b86e80903ddabf3099bb4e74fb5d71f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/logo-1cd1df261eb58ecd4b346dd51d6598b12b2d6483236bd1b36c729f59b5a2b850.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/love_icon-7330672a5f481d10fdd7809bfe9a695401570142f6a8495a5526dff1d92520ef.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/normal_back-ffd227a89e5c675b1cc92590b84716b978f404fc40d6b2d3868eef2f96cdafcd.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/offers-4f68f7fb23ebc1befb7e0fd72f31a2fb14d19676cd677407ebb1abd79633cd05.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/offers-4f68f7fb23ebc1befb7e0fd72f31a2fb14d19676cd677407ebb1abd79633cd05.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_basic-87535c05b3b1cd845f68e549f203fe6f522dbc88c0a0d708d2f73bae0b9eb1ee.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_basic-87535c05b3b1cd845f68e549f203fe6f522dbc88c0a0d708d2f73bae0b9eb1ee.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_bright-286fa26f43b89d67e4d0fc393b45869a7485ac400fa63327f3c4ed9bd4810726.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_bright-286fa26f43b89d67e4d0fc393b45869a7485ac400fa63327f3c4ed9bd4810726.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_dark-8ac4160b14827e95dc443b9d6cf991ad8c9e502f1c553044a5d22d750f98ac03.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_dark-8ac4160b14827e95dc443b9d6cf991ad8c9e502f1c553044a5d22d750f98ac03.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_normal-515efa38d25b616de0ab0b1167e3eb6635db8496e638f462d46be8c3c6404c98.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_normal-515efa38d25b616de0ab0b1167e3eb6635db8496e638f462d46be8c3c6404c98.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/texture-9d92504d2123c7babb7ec2916ce3700cc707cc7ef272a426fb8c3b1b4fa2384a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/up_label-74079d65c8374b3bbc175a0f89b88fed7098b280acdec3d44428ed8bb4f06a43.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/page_dark.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/page_dark.css.scss" />
-    </list>
+    <list default="true" id="d773fa63-8cac-46b4-8691-0f3a46cd320b" name="Default" comment="" />
     <ignored path="mobile_landing_creator.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -167,8 +123,8 @@
       <file leaf-file-name="page_dark.css.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/page_dark.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+            <state relative-caret-position="264">
+              <caret line="78" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -653,12 +609,12 @@
       <workItem from="1472129599407" duration="55640000" />
       <workItem from="1472400576461" duration="50208000" />
       <workItem from="1472571820598" duration="70783000" />
-      <workItem from="1472831422762" duration="299000" />
+      <workItem from="1472831422762" duration="545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="615607000" />
+    <option name="totallyTimeSpent" value="615853000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1072,8 +1028,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/page_dark.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        <state relative-caret-position="264">
+          <caret line="78" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
           <folding />
         </state>
       </provider>
