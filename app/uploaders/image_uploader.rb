@@ -4,7 +4,6 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # include Cloudinary::CarrierWave
   include CarrierWave::RMagick
-
   # include CarrierWave::MimeTypes
   # process :set_content_type
   # Include RMagick or MiniMagick support:
