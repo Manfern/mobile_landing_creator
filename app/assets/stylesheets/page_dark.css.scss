@@ -61,12 +61,14 @@
     display: none;
   }
   .offers{
-    color: #c623a4;
+    //color: #c623a4;
+    color: #b300b3;
     //background-color: #27577f;
     background-color: #4c5962;
   }
   .offer{
-    color: #c623a4;
+    //color: #c623a4;
+    color: #b300b3;
     background-color: #000;
     .price_new{
       font-size: 25px;
@@ -79,8 +81,9 @@
     margin-top: 20px;
   }
   .btn{
-    color: #000;
-    background-color: #c623a4;
+    color: #fff;
+    //background-color: #c623a4;
+    background-color: #b300b3;
   }
   .btn:hover{
     background-color: #dcc76b;
