@@ -7,6 +7,7 @@ Rails.application.configure do
   config.force_ssl = true
   # Code is not reloaded between requests.
   config.cache_classes = true
+  config.serve_static_assets = true
   config.public_file_server.headers = { 'Cache-Control' => 'public, max-age=31536000' }
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
