@@ -2,36 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d773fa63-8cac-46b4-8691-0f3a46cd320b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-1ac79c39d9beb44fa9a2fe7d196a64e2.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/5stars-c1fff11baa8568b2629c0f187213276b2e7d630a0137b7a682c57501fde4b730.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Jcrop-752309673bbd9d9b2ba0bd58d0a7071a2c59c30e2824d85bcd2a3bc0a07ef1f1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/advantages-0fd6ef2977e4bcbc724fad5061bb21bd08eaf17e4600e2b40c73802047c23122.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/advantages-0fd6ef2977e4bcbc724fad5061bb21bd08eaf17e4600e2b40c73802047c23122.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-3c432f5f131bbda5af8d85ce528c7ee97812e4d1e47b8be65013e60e3d16488c.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-3c432f5f131bbda5af8d85ce528c7ee97812e4d1e47b8be65013e60e3d16488c.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-5d82f117d47b18e4a32b0d3c363ab9b908676361dbfb1eea2f3e05bc60f0a4b7.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-5d82f117d47b18e4a32b0d3c363ab9b908676361dbfb1eea2f3e05bc60f0a4b7.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blue_label-b800f3502c339bb2805b2e8f2431a6bb8a2e39ed7af6cc7ff95a92746e86ce1a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bright_back-b645057b922d763e99f4d2881c35708b0b91f3d92710c56c543dd8a07afea096.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/dark_back-32064c290fc032a35491310677f1367c02d57c4b9e1fd624c7eba6876bea0934.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/dark_back2-1399479a8824db949da97e97e08082ce28f574273c709fd4a751f364c43ef159.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/feedbacks-1e3ae05867307c7eb21c4d9b23bf616af18809dd34c9a237189fd80f9ba74106.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/feedbacks-1e3ae05867307c7eb21c4d9b23bf616af18809dd34c9a237189fd80f9ba74106.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/four-stars-6cb3b3ca70cd23988996c2843df845146355cbf430009886f89946008dd6fc4a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/gold_shield" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/label-1e3558249348d044601605aabb44aefa1b86e80903ddabf3099bb4e74fb5d71f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/logo-1cd1df261eb58ecd4b346dd51d6598b12b2d6483236bd1b36c729f59b5a2b850.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/love_icon-7330672a5f481d10fdd7809bfe9a695401570142f6a8495a5526dff1d92520ef.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/normal_back-ffd227a89e5c675b1cc92590b84716b978f404fc40d6b2d3868eef2f96cdafcd.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/offers-4f68f7fb23ebc1befb7e0fd72f31a2fb14d19676cd677407ebb1abd79633cd05.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/offers-4f68f7fb23ebc1befb7e0fd72f31a2fb14d19676cd677407ebb1abd79633cd05.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_bright-286fa26f43b89d67e4d0fc393b45869a7485ac400fa63327f3c4ed9bd4810726.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_bright-286fa26f43b89d67e4d0fc393b45869a7485ac400fa63327f3c4ed9bd4810726.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_dark-c0fa2d168367f2e1a47a1a9fde2f8f9a6f5dc6ca065283dfcb5181001001d42b.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_dark-c0fa2d168367f2e1a47a1a9fde2f8f9a6f5dc6ca065283dfcb5181001001d42b.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_normal-515efa38d25b616de0ab0b1167e3eb6635db8496e638f462d46be8c3c6404c98.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page_normal-515efa38d25b616de0ab0b1167e3eb6635db8496e638f462d46be8c3c6404c98.css.gz" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/page_dark.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/page_dark.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/uploaders/image_uploader.rb" afterPath="$PROJECT_DIR$/app/uploaders/image_uploader.rb" />
     </list>
     <ignored path="mobile_landing_creator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_uploader.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="image_uploader.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+            <state relative-caret-position="308">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -151,7 +122,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page_dark.css.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page_dark.css.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/page_dark.css.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
@@ -210,7 +181,6 @@
         <option value="$PROJECT_DIR$/app/views/layouts/_page_bright.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/models/admin.rb" />
-        <option value="$PROJECT_DIR$/app/uploaders/image_uploader.rb" />
         <option value="$PROJECT_DIR$/app/models/offer.rb" />
         <option value="$PROJECT_DIR$/app/models/feedback.rb" />
         <option value="$PROJECT_DIR$/app/models/advantage.rb" />
@@ -220,6 +190,7 @@
         <option value="$PROJECT_DIR$/config/initializers/carrierwave_backgrounder.rb" />
         <option value="$PROJECT_DIR$/config/initializers/fog.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/page_dark.css.scss" />
+        <option value="$PROJECT_DIR$/app/uploaders/image_uploader.rb" />
       </list>
     </option>
   </component>
@@ -640,12 +611,12 @@
       <workItem from="1472129599407" duration="55640000" />
       <workItem from="1472400576461" duration="50208000" />
       <workItem from="1472571820598" duration="70783000" />
-      <workItem from="1472831422762" duration="3253000" />
+      <workItem from="1472831422762" duration="3571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="618561000" />
+    <option name="totallyTimeSpent" value="618879000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -658,7 +629,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="846" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17934003" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -666,7 +637,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.304698" sideWeight="0.4842181" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.304698" sideWeight="0.4842181" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33933163" sideWeight="0.49722221" order="8" side_tool="false" content_ui="tabs" />
@@ -1013,14 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/carrierwave_backgrounder.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1061,6 +1024,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
